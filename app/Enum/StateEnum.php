@@ -21,14 +21,14 @@ enum StateEnum: string
     public static function getLabel(self $value): string
     {
         return match ($value) {
-            self::NSW => 'NSW',
-            self::VIC => 'VIC',
-            self::QLD => 'QLD',
-            self::SA => 'SA',
-            self::WA => 'WA',
-            self::TAS => 'TAS',
-            self::ACT => 'ACT',
-            self::NT => 'NT',
+            self::NSW => 'New South Wales (NSW)',
+            self::VIC => 'Victoria (VIC)',
+            self::QLD => 'Queensland (QLD)',
+            self::SA => 'South Australia (SA)',
+            self::WA => 'Western Australia (WA)',
+            self::TAS => 'Tasmania (TAS)',
+            self::ACT => 'Australian Capital Territory (ACT)',
+            self::NT => 'Northern territory (NT)',
         };
     }
 }

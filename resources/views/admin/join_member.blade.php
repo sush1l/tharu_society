@@ -58,6 +58,11 @@
                                 <td>{{$membershipJoin->address}}</td>
                                 <td>
                                     <div class="action">
+
+                                        <a href="{{route('admin.joinRequest.show',$membershipJoin)}}" class="btn">
+                                            <i class="fa fa-eye"></i>
+                                           </a>
+
                                         <form action="{{route('admin.joinRequest.destroy',$membershipJoin)}}"
                                               method="POST">
                                             @csrf

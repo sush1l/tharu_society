@@ -16,6 +16,9 @@ class StoreMembershipJoinRequest extends FormRequest
     {
         return [
             'full_name' => ['required', 'string'],
+            'town' => ['required', 'string'],
+            'state' => ['required', 'string'],
+            'code' => ['required', 'string'],
             'contact_no' =>['required', 'required', 'integer', 'min:9'],
             'address' => ['required', 'string'],
             'email' => ['required', 'email']

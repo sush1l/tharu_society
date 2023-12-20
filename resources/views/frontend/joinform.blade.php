@@ -3,7 +3,7 @@
     <div id="body">
         <div class="about mt-4">
             <div class="container">
-                <h1>{{ __('Contact') }}</h1>
+                <h1>{{ __('Membership Join Form') }}</h1>
             </div>
         </div>
     </div>
@@ -73,6 +73,18 @@
                                     @enderror
                                 </div>
 
+                                <div class="col-md-6 p-3">
+                                    <label for="code" class="form-label">Postal Code<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" value="{{ old('code') }}" class="form-control"
+                                        name="code" id="code" placeholder="PostCode">
+                                    @error('code')
+                                        <div class="text-danger">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+
 
                                 <div class="col-md-6 p-3">
                                     <label for="contact_no" class="form-label">Contact No<span
@@ -90,7 +102,7 @@
                                 <div class="col-md-6 p-3">
                                     <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
                                     <input type="email" value="{{ old('email') }}" class="form-control" name="email"
-                                        id="email" placeholder="Contact No">
+                                        id="email" placeholder="Email">
                                     @error('email')
                                         <div class="text-danger">
                                             {{ $message }}

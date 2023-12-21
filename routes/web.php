@@ -61,8 +61,11 @@ class listing
         Route::get('languageChange/{languageChange}',[FrontendController::class,'languageChange'])->name('language');
         Route::get('detail/{slug}', [FrontendController::class, 'staticMenus'])->name('static');
         Route::get('officeDetail/{officeDetail:slug}', [FrontendController::class, 'officeDetails'])->name('officeDetail');
-        Route::get('city', [FrontendController::class, 'city'])->name('city');
-        Route::get('job', [FrontendController::class, 'job'])->name('job');
+        Route::get('addCity', [FrontendController::class, 'city'])->name('addCity');
+        Route::get('city/{addCity:id}', [FrontendController::class, 'job'])->name('city');
+
+        Route::get('jobDetail/{job:id}', [FrontendController::class, 'jobDetail'])->name('jobDetail');
+
     }
 }
 

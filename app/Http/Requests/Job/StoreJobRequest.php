@@ -18,7 +18,9 @@ class StoreJobRequest extends FormRequest
         return [
             'add_city_id' => ['nullable', Rule::exists('add_cities', 'id')->withoutTrashed()],
             'title' => ['required', 'string'],
+            'address' => ['required', 'string'],
             'image' => ['required','image'],
+            'salary' => ['nullable','integer'],
             'date' => ['required'],
             'end_date' => ['required'],
             'description' => ['required'],

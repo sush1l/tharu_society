@@ -14,7 +14,7 @@
                 <h5 class="section bg-intro text-center text-color px-3 mb-3">{{ __('Cities') }}</h5>
 
             </div>
-            @include('frontend.search.search')
+            
             <div class="row my-4 mb-4">
                 @foreach ($addCities as $addCity)
                     <div class="col-md-1 mb-2">

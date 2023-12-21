@@ -121,9 +121,9 @@ class FrontendController extends BaseController
         if (empty($keyword)) {
             return back();
         }
-        $documents = Document::search($keyword)->paginate(20);
+        $jobs = Job::search($keyword)->paginate(20);
 
-        return view('frontend.search.search_res', compact('keyword', 'documents'));
+        return view('frontend.search.search_res', compact('keyword', 'jobs'));
     }
 
 
@@ -191,12 +191,6 @@ class FrontendController extends BaseController
         return view('frontend.job.city', compact('addCities'));
     }
 
-    // public function job()
-    // {
-    //     $jobs = Job::with('addCity')->latest()->get();
-    //     $addCities = AddCity::latest()->get();
-    //     return view('frontend.job.job', compact('jobs','addCities'));
-    // }
     public function job(AddCity $addCity)
     {
         $addCity->load('jobs');

@@ -8,18 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
+use Laravel\Scout\Searchable;
 
 class Job extends Model
 {
-    use HasFactory,SoftDeletes;
-
-    protected $dates=[
+    use HasFactory, SoftDeletes;
+    use Searchable;
+    protected $dates = [
         'deleted_at',
         'created_at',
         'updated_at',
     ];
 
-    protected $fillable=[
+    protected $fillable = [
         'add_city_id',
         'title',
         'address',
@@ -39,8 +40,8 @@ class Job extends Model
     protected function image(): Attribute
     {
         return Attribute::make(
-            get:static fn ($value) => !empty($value) ? Storage::disk('public')->url($value): '',
-            set:static fn ($value) => (!empty($value) && !is_string($value)) ? $value->store('job','public'): null,
+            get: static fn($value) => !empty($value) ? Storage::disk('public')->url($value) : '',
+            set: static fn($value) => (!empty($value) && !is_string($value)) ? $value->store('job', 'public') : null,
         );
     }
 }

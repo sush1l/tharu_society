@@ -177,7 +177,7 @@ body {
 .navbar-light .navbar-nav .nav-link {
   margin-right: 30px;
   color: #FFFFFF;
-  font-size: 15px;
+  font-size: 18px;
   text-transform: uppercase;
   outline: none;
 }
@@ -1877,7 +1877,7 @@ body {
 }
 
 .city a:hover {
-  background-color: rgb(194, 109, 109);
+  background-color: rgb(12, 49, 214);
   color: white;
 }
 
@@ -2065,41 +2065,6 @@ body {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
   }
 
-/* searchbutton */
-.search {
-  display: inline-block;
-  position: relative;
-}
-
-.search input[type="text"] {
-  justify-content: end;
-  width: 300px;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.search button[type="submit"] {
-  background-color: #77e94e;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: .9s ease;
-}
-
-.search button[type="submit"]:hover {
-  transform: scale(1.1);
-  color: rgb(255, 255, 255);
-  background-color: blue;
-}
-
 .jobdetail_card {
   width: 500px;
   height: 400px;
@@ -2133,9 +2098,11 @@ body {
 .jobDetail_section .headerjob{
   margin-top: 20px;
   margin-left: 10px;
+  font-family: sans-serif;
 }
 
 .jobDate{
+  font-family: sans-serif;
   margin-left: 30px;
   font-size: 18px;
 }
@@ -2154,8 +2121,15 @@ body {
 }
 
 .jobDetail_desc .des{
+  font-family:  system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
 margin-top: 20px;
 margin-left: 30px;
 font-size: 16px;
 text-align: justify;
+}
+
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0 ! important;
+  padding-left:0.5rem;
 }

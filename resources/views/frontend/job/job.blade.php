@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <div id="body">
-        <div class="about mt-4">
+        <div class="about mt-2">
             <div class="container">
                 <h1>Jobs</h1>
             </div>
@@ -13,10 +13,10 @@
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-5">Jobs</h5>
             </div>
-            <div class="search d-flex justify-content-end">
-                <input placeholder="Search..." type="text">
-                <button type="submit"><i class="fa fa-search"></i></button>
+            <div class="py-3" style="display: flex; justify-content: flex-end;">
+                @include('frontend.search.search')
             </div>
+            
             <div class="row">
                 @foreach ($addCity->jobs as $key => $job)
                     <div class="col-lg-3 col-md-3 col-sm-6">

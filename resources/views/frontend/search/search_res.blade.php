@@ -1,72 +1,51 @@
 @extends('layouts.master')
 @section('content')
-    <div class="container-fluid">
-        <div class="col-md-12">
-            <div class="row" style="padding: 5px;">
-                <div class="col-md-12">
-                    <ul class="breadcrumb">
-                        <li><a href="/"><i class="fa fa-home"></i></a></li>
-                        <li><a href="#">Search</a></li>
-                        <li><a href="#">{{$keyword}}</a></li>
-                    </ul>
-                </div>
+    <div id="body">
+        <div class="about mt-4">
+            <div class="container">
+                <h1>Jobs</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5 category">
+        <div class="container mt-3">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <h5 class="section bg-intro text-center text-color px-3 mb-5">Results</h5>
+            </div>
+            <div style="display: flex; justify-content: flex-end;">
+                @include('frontend.search.search')
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="">{{$documents->count()}} Matching results for {{$keyword}}</div>
-            </div>
 
-            <div class="row" style="padding: 5px;">
-                <div class="col-md-12">
-                    <div class="well-heading" style="border-left: 10px solid #b31b1b; position: relative;">
-                        Documents
-                        <h6 class="content_title">
-                            <span class="pull-right"></span>
-                        </h6>
-                    </div>
-                    <div class="notice_list border top">
-                        <table id="example"
-                               class="table table-bordered table-condensed table-responsive table-hover">
 
-                            <thead>
-
-                            <tr class="success">
-                                <th width="7%">{{__('S.N')}}</th>
-                                <th width="50%">{{__('Title')}}</th>
-                                <th width="15%">{{__('Published Date')}}</th>
-                                <th width="15%">{{__('Publisher')}}</th>
-                                <th width="13%"></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($documents as $document)
-                                <tr class="ng-star-inserted">
-
-                                    <td> {{$loop -> iteration}}</td>
-                                    <td>
-                                        {{request()->language=='en' ? $document->title_en : $document->title}}
-                                    </td>
-                                    <td>
-                                        <small>{{$document->published_date->toDateString()}}</small>
-                                    </td>
-                                    <td>{{$document->published_date}}</td>
-                                    <td>
-                                        <a class="btn btn-sm btn-primary"
-                                           href="{{route('documentDetail',[$document->slug,'language'=>$language])}}"
-                                           target="blank">
-                                            <i class="fa fa-eye"></i> View
-                                        </a>
-                                    </td>
-                                </tr>
-
-                            @endforeach
-                            </tbody>
-                        </table>
-                    </div>
+    <div class="text-center py-3">{{ $jobs->count() }} Matching results for {{ $keyword }}</div>
+    <div class="container">
+        <div class="row">
+            @foreach ($jobs as $job)
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <a href="{{ route('jobDetail', $job) }}">
+                        <div class="blog__item">
+                            <div class="blog__item__pic">
+                                <img src="{{ $job->image }}" alt="" style="height: 200px; width:150px;">
+                            </div>
+                            <div class="blog__item__text">
+                                <h5><a href="#">{{ $job->title }}</a></h5>
+                                {{ request()->language == 'en' ? Str::limit(strip_tags($job->description), 100, '..') : Str::limit(strip_tags($job->description), 100, '..') }}
+                                <br>
+                                <i class="fa-solid fa-dollar-sign"></i> {{ $job->salary }} per/hrs<br>
+                                <i class="fa fa-location-dot"></i>{{ $job->address }}
+                                <ul>
+                                    <li><i class="fa fa-calendar"></i> StartDate: {{ $job->date }}</li>
+                                    <li><i class="fa fa-calendar"></i> EndDate: {{ $job->end_date }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
+            @endforeach
+        </div>
+    </div>
 @endsection

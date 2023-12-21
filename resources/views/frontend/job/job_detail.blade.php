@@ -26,8 +26,8 @@
                 <div class="jobDetail_section">
                     <h2 class="headerjob">{{ $job->title }}</h2>
                     <div class="jobDate">
-                        Address: {{ $job->address }},{{ $job->addCity->title }}<br>
-                        <i class="fas fa-dollar"></i>{{$job->salary}} per/Hrs <br>
+                        <i class="fa fa-location-dot"></i> {{ $job->address }},{{ $job->addCity->title }}<br>
+                        <i class="fa-solid fa-dollar-sign"></i> {{$job->salary}} per/Hrs <br>
                         <i class="fa fa-calendar"></i> LastDate: {{ $job->end_date }}
                     </div>
                 </div>
@@ -50,6 +50,7 @@
             @foreach ($addCities as $addCity)
                 @foreach ($addCity->jobs as $job)
                     <div class="col-lg-3 col-md-3 col-sm-6">
+                        <a href="{{ route('jobDetail', $job) }}">
                         <div class="blog__item">
                             <div class="blog__item__pic">
                                 <img src="{{ $job->image }}" alt="" style="height: 200px; width:150px;">
@@ -58,14 +59,15 @@
                                 <h5><a href="#">{{ $job->title }}</a></h5>
                                 {{ request()->language == 'en' ? Str::limit(strip_tags($job->description), 100, '..') : Str::limit(strip_tags($job->description), 100, '..') }}
                                 <br>
-                                 ${{$job->salary}} per/hrs<br>
-                                <span class="fas fa-map-marker-alt"></span> {{ $job->address }}
+                                <i class="fa-solid fa-dollar-sign"></i> {{$job->salary}} per/hrs<br>
+                                    <i class="fa fa-location-dot"></i>{{ $job->address }}
                                 <ul>
                                     <li><i class="fa fa-calendar"></i> StartDate: {{ $job->date }}</li>
                                     <li><i class="fa fa-calendar"></i> EndDate: {{ $job->end_date }}</li>
                                 </ul>
                             </div>
                         </div>
+                    </a>
                     </div>
                 @endforeach
             @endforeach

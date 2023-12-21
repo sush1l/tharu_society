@@ -13,6 +13,7 @@
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-5">Blogs</h5>
             </div>
+
             @foreach ($jobs as $job)
                 @if ($job->city == $addCities)
                     <div class="col-lg-3 col-md-3 col-sm-6">

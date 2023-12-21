@@ -32,9 +32,6 @@
         </button>
     </div>
 
-
-
-
     <section id="services" class="services mt-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
@@ -76,7 +73,7 @@
                         </a>
                     </div>
                     @foreach ($blogs as $blog)
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="single__news">
                                 <div class="thumb">
                                     <a href="{{ route('blog.blogDetail', [$blog, 'language' => $language]) }}">
@@ -85,12 +82,13 @@
                                 </div>
                                 <div class="news_info mt-2">
                                     <a href="{{ route('single_blog') }}">
-                                        <h4 class="mb-1">
+                                        <h5 class="mb-1" style="color: black">
                                             {{ request()->language == 'en' ? $blog->title_en : $blog->title }}
-                                        </h4>
+                                        </h5>
                                     </a>
                                     <div class="d-flex justify-content-between">
-                                        <p class="d-flex align-items-center"><span><i class="fa fa-calendar"></i>
+                                        <p class="d-flex align-items-center"><span style="color: black"><i
+                                                    class="fa fa-calendar"></i>
                                                 {{ $blog->date }}</span>
                                         </p>
                                         <a href="{{ route('blog.blogDetail', [$blog, 'language' => $language]) }}"
@@ -106,6 +104,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="container-xxl py-5 category  wow fadeInUp" data-wow-delay="0.1s"">
         <div class="container">
             <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -168,8 +168,34 @@
         </div>
     </div>
 
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s"">
+        <div class="container">
+            <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <h5 class="section bg-intro text-center text-color px-3 mb-3">Members</h5>
+                {{-- <h1 class="mb-3">{{ __('Photos') }}</h1> --}}
+            </div>
+            <div class="Container">
+                <h3 class="Head">Member<span class="Arrows"></span></h3>
+                <!-- Carousel Container -->
 
-
+                <div class="SlickCarousel">
+                    <!-- Item -->
+                    @foreach ($members as $member)
+                        <div class="ProductBlock">
+                            <div class="Content">
+                                <div class="img-fill">
+                                    <img src="{{ $member->photo }}">
+                                </div>
+                                <h3>{{ $member->title }}</h3>
+                            </div>
+                        </div>
+                    @endforeach
+                    <!-- Item -->
+                </div>
+                <!-- Carousel Container -->
+            </div>
+        </div>
+    </div>
 
     <div class="container mt-4">
         <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -177,6 +203,9 @@
             <h1 class="mb-3">What We Say</h1>
         </div>
     </div>
+
+
+
     <section class="testimonial showcase text-center">
         <div class="overlay">
             <div class="container-fluid">
@@ -189,22 +218,28 @@
                             <div class="testimonial4_slide">
                                 <img src="{{ asset('assets/frontend/images/dip.jpeg') }}"
                                     class="img-circle img-responsive" />
-                                <p>"As the President of Tharu Society Sydney Australia, I am honored to lead an organization
-                                    that unites and empowers the Nepalese Tharu community in Australia. Our society strives
+                                <p>"As the President of Tharu Society Sydney Australia, I am honored to lead an
+                                    organization
+                                    that unites and empowers the Nepalese Tharu community in Australia. Our society
+                                    strives
                                     to preserve and promote our rich Tharu culture, traditions, and values, while also
                                     providing a platform for social, educational, and economic development within our
                                     community.<br>
-                                 I am proud to witness the positive impact we have made in the lives of our members,
+                                    I am proud to witness the positive impact we have made in the lives of our members,
                                     fostering a sense of belonging and solidarity. Through various events, programs, and
                                     initiatives, we have strengthened the bonds among Tharu individuals and families,
                                     creating a strong support network that extends beyond geographical borders.
-                                    Together, we celebrate our heritage and work towards addressing the challenges faced by
+                                    Together, we celebrate our heritage and work towards addressing the challenges faced
+                                    by
                                     our community. Tharu Society Sydney Australia stands as a beacon of unity, fostering
-                                    inclusivity and embracing diversity. It is truly inspiring to witness the resilience,
+                                    inclusivity and embracing diversity. It is truly inspiring to witness the
+                                    resilience,
                                     talent, and determination of our Tharu community members as they contribute to the
                                     multicultural fabric of Australia.<br>
-                                I encourage all Tharu individuals in Australia to join our society and be part of this
-                                    incredible journey. Together, we can continue to make a difference and build a brighter
+                                    I encourage all Tharu individuals in Australia to join our society and be part of
+                                    this
+                                    incredible journey. Together, we can continue to make a difference and build a
+                                    brighter
                                     future for the Nepalese Tharu community in Australia. </p>
                                 <h4>President<br>
                                     Dip Narayan Chaudhary </h4>
@@ -215,17 +250,22 @@
                                 <img src="{{ asset('assets/frontend/images/arun.jpeg') }}"
                                     class="img-circle img-responsive" />
                                 <p>As the Public Relations Officer of Tharu Society Sydney Australia, I am proud to be a
-                                    part of an organization that brings together the Nepalese Tharu community in Australia.
+                                    part of an organization that brings together the Nepalese Tharu community in
+                                    Australia.
                                     Our society plays a vital role in fostering unity, promoting cultural awareness, and
                                     creating opportunities for growth and development among Tharu individuals.</p>
 
                                 <p>I am dedicated to ensuring that the voice and achievements of Tharu Society Sydney
                                     Australia are effectively communicated to the wider public. By sharing our stories,
-                                    experiences, and aspirations, we aim to break down stereotypes, promote inclusivity, and
-                                    build bridges of understanding between different cultures.I am grateful to be a part of
+                                    experiences, and aspirations, we aim to break down stereotypes, promote inclusivity,
+                                    and
+                                    build bridges of understanding between different cultures.I am grateful to be a part
+                                    of
                                     an organization that is committed to empowering the Tharu community and creating a
-                                    brighter future for all Nepalese Tharu people in Australia. Together, we can continue to
-                                    strengthen our community bonds, celebrate our rich heritage, and make a positive impact
+                                    brighter future for all Nepalese Tharu people in Australia. Together, we can
+                                    continue to
+                                    strengthen our community bonds, celebrate our rich heritage, and make a positive
+                                    impact
                                     on society. </p>
                                 <h4>Public Relation officer<br>Arun Aaryan Chaudhary</h4>
                             </div>
@@ -239,15 +279,23 @@
                                         class="img-circle img-responsive" />
                                 </div>
                                 <p>
-                                    We are privileged to be a part of Tharu Society Sydney Australia, an organization that
-                                    unites all Nepalese Tharu people in Australia. The sense of unity and belonging within
-                                    the community is truly remarkable. We have witnessed the organization's dedication to
+                                    We are privileged to be a part of Tharu Society Sydney Australia, an organization
+                                    that
+                                    unites all Nepalese Tharu people in Australia. The sense of unity and belonging
+                                    within
+                                    the community is truly remarkable. We have witnessed the organization's dedication
+                                    to
                                     preserving and promoting our Tharu culture. Through various cultural events and
-                                    activities, we are able to showcase our rich heritage to the wider Australian community.
-                                    Tharu Society Sydney Australia has leveraged technology to effectively communicate and
-                                    engage with our members. Together, we are proud to contribute to the growth and success
-                                    of Tharu Society Sydney Australia. It is an honor to serve our community and witness the
-                                    positive impact of our collective efforts. Tharu Society Sydney Australia truly embodies
+                                    activities, we are able to showcase our rich heritage to the wider Australian
+                                    community.
+                                    Tharu Society Sydney Australia has leveraged technology to effectively communicate
+                                    and
+                                    engage with our members. Together, we are proud to contribute to the growth and
+                                    success
+                                    of Tharu Society Sydney Australia. It is an honor to serve our community and witness
+                                    the
+                                    positive impact of our collective efforts. Tharu Society Sydney Australia truly
+                                    embodies
                                     the spirit of unity, culture, and progress. We are grateful to be a part of this
                                     incredible organization. </p>
                                 <h4>Cultural secretary and IT co-ordinator</h4>
@@ -264,8 +312,8 @@
 
     <div class="container-fluid my-5">
         <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-            <h5 class="section bg-intro text-center text-color px-3 mb-0">Gallery</h5>
-            <h1 class="mb-3">{{ __('Photos') }}</h1>
+            <h5 class="section bg-intro text-center text-color px-3 mb-3">Contact</h5>
+            {{-- <h1 class="mb-3">{{ __('') }}</h1> --}}
         </div>
         <div class="row">
             <div class="parallax"></div>

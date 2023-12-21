@@ -74,7 +74,10 @@
     <script src="{{ asset('assets/frontend/js/app.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/light.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/owlcarsouel.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/slick.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' type='text/javascript'></script>
+<script src='https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/slick.js' type='text/javascript'></script>
 
 
 

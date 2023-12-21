@@ -73,7 +73,8 @@ class FrontendController extends BaseController
         $blogs = Blog::limit(6)->get();
         $works = work::limit(8)->get();
         $sliders = Slider::latest()->get();
-        return view('frontend.index', compact('works', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups','sliders'));
+        $members= Member::orderby('position')->get();
+        return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups','sliders'));
 
     }
     public function languageChange($lang)
@@ -112,6 +113,17 @@ class FrontendController extends BaseController
             default:
                 return response(view('errors.404'), 404);
         }
+    }
+
+    public function search()
+    {
+        $keyword = request('keyword');
+        if (empty($keyword)) {
+            return back();
+        }
+        $documents = Document::search($keyword)->paginate(20);
+
+        return view('frontend.search.search_res', compact('keyword', 'documents'));
     }
 
 

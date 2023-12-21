@@ -13,7 +13,7 @@ class MemberController extends Controller
 {
     public function index()
     {
-       $members = Member::with('MembershipCategory')->get();
+        $members = Member::with('membershipCategory')->get();
        return view('admin.member.index', compact('members'));
     }
 

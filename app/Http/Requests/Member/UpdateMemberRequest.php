@@ -18,7 +18,7 @@ class UpdateMemberRequest extends FormRequest
         return [
             'membership_category_id' => ['nullable', Rule::exists('membership_categories', 'id')->withoutTrashed()],
             'title' => ['required', 'string'],
-            'photo' => ['required', 'image', 'mimes:png,jpg,jpeg'],
+            'photo' => ['nullable', 'image', 'mimes:png,jpg,jpeg'],
             'position' => ['nullable', 'integer']
         ];
     }

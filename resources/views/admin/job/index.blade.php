@@ -40,6 +40,7 @@
                             <th>SN</th>
                             <th>Job Title</th>
                             <th>Location</th>
+                            <th>Address</th>
                             <th>Image</th>
                             <th>Vaccany Date</th>
                             <th>Expire Date</th>
@@ -58,8 +59,9 @@
                                 <td>
                                     {{$job->addCity->title ?? ""}}
                                 </td>
+                            <td>{{$job->address}}</td>
                                 <td class="min-width">
-                                    <img src="{{$job->image}}" alt="{{$job->title}}" width="100">
+                                    <img src="{{$job->image}}"  width="100">
                                 </td>
                                 <td>
                                     {{$job->date}}

@@ -22,6 +22,8 @@ class Job extends Model
     protected $fillable=[
         'add_city_id',
         'title',
+        'address',
+        'salary',
         'date',
         'image',
         'end_date',

@@ -64,7 +64,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('city', ['language' => $language]) }}">{{ __('Job Opportunities') }}</a>
+                <a class="nav-link" href="{{ route('addCity', ['language' => $language]) }}">{{ __('Job Opportunities') }}</a>
             </li>
 
             <li class="nav-item">

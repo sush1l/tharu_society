@@ -65,6 +65,11 @@ class listing
         Route::get('job', [FrontendController::class, 'job'])->name('job');
         Route::get('member', [FrontendController::class, 'member'])->name('member');
         Route::get('search', [FrontendController::class, 'search'])->name('frontend.search');
+        Route::get('addCity', [FrontendController::class, 'city'])->name('addCity');
+        Route::get('city/{addCity:id}', [FrontendController::class, 'job'])->name('city');
+
+        Route::get('jobDetail/{job:id}', [FrontendController::class, 'jobDetail'])->name('jobDetail');
+
     }
 }
 

@@ -192,11 +192,21 @@ class FrontendController extends BaseController
         return view('frontend.job.city', compact('addCities'));
     }
 
-    public function job()
+    // public function job()
+    // {
+    //     $jobs = Job::with('addCity')->latest()->get();
+    //     $addCities = AddCity::latest()->get();
+    //     return view('frontend.job.job', compact('jobs','addCities'));
+    // }
+    public function job(AddCity $addCity)
     {
-        $jobs = Job::with('addCity')->latest()->get();
-        $addCities = AddCity::latest()->get();
-        return view('frontend.job.job', compact('jobs','addCities'));
+        $addCity->load('jobs');
+        return view('frontend.job.job', compact('addCity'));
+    }
+    public function jobDetail(Job $job, AddCity $addCity)
+    {
+        $addCities = AddCity::with('jobs')->get();
+        return view('frontend.job.job_detail',compact('job','addCities'));
     }
     public function photoGalleryDetail(PhotoGallery $photoGallery)
     {

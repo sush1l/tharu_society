@@ -14,6 +14,8 @@ return new class extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('image');
+            $table->string('address');
+            $table->integer('salary')->nullable();
             $table->string('date');
             $table->string('end_date');
             $table->integer('position');

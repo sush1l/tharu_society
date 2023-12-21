@@ -69,6 +69,27 @@
                         @enderror
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="input-style-1">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Job address"
+                            value="{{ old('address', $job->address) }}">
+                        @error('address')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-style-1">
+                        <label for="salary">Salary</label>
+                        <input type="number" id="salary" name="salary" placeholder="salary"
+                            value="{{ old('salary',$job->salary) }}">
+                        @error('salary')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                </div>
 
                 <div class="col-md-6">
                     <div class="input-style-1">

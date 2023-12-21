@@ -38,8 +38,8 @@
                         <thead>
                         <tr>
                             <th>SN</th>
-                            <th>Membership Category</th>
                             <th>Name</th>
+                            <th>Photo</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -50,10 +50,10 @@
                                     {{$loop->iteration}}
                                 </td>
                                 <td>
-                                    {{$membership->membershipCategory->title ?? ""}}
-                                </td>
-                                <td>
                                     {{$membership->title}}
+                                </td>
+                                <td class="min-width">
+                                    <img src="{{ $membership->image }}" alt="{{ $membership->title }}" width="100">
                                 </td>
                                 <td>
                                     <div class="action">

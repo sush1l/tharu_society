@@ -23,7 +23,7 @@
                                     @if (!empty($event->image))
                                         <img src="{{ $event->image }}" alt="">
                                     @else
-                                        <iframe width="100%" height="200" src="{{ $event->url }}" title="Online Video"
+                                        <iframe width="100%" height="200" src="{{ $event->videoGalleries->url }}" title="Online Video"
                                             frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
@@ -36,10 +36,10 @@
                                         @endif
                                     </ul>
                                     <h5>{{ $event->title }}</h5>
-                                    <p>{{ request()->language == 'en' ? Str::limit($event->description, 100, '..') : Str::limit($event->description, 100, '..') }}
+                                    <p>{{  Str::limit($event->description, 100, '..') }}
                                     </p>
                                     <a href="{{ route('events.eventDetail', [$event, 'language' => $language]) }}"
-                                        class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                        class="blog__btn">View More <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>

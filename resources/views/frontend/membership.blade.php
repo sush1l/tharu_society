@@ -20,30 +20,5 @@
                 </div>
             @endforeach
         </section>
-        <div class="row">
-            <table class="table table-striped table-bordered mt-2">
-                <thead>
-                    <tr>
-                        <th scope="col">{{ __('S.N') }}</th>
-                        <th scope="col">{{ __('Name') }}</th>
-                        <th scope="col">{{ __('Designation') }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($memberships as $membership)
-                        <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
-                            <td>
-                                {{ $membership->title }}
-                            </td>
-                            <td>
-                                {{ $membership->membershipCategory->title }}
-                            </td>
-
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
     </div>
 @endsection

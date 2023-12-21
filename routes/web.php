@@ -57,10 +57,14 @@ class listing
         Route::get('join', [FrontendController::class, 'join'])->name('join');
         Route::post('membershipForm', [FrontendController::class, 'membershipStore'])->name('membership.store');
         Route::get('link', [FrontendController::class, 'link'])->name('link');
-        Route::get('membership', [FrontendController::class, 'membership'])->name('membership');
+        Route::get('membershipIntro', [FrontendController::class, 'membershipIntro'])->name('membershipIntro');
         Route::get('languageChange/{languageChange}',[FrontendController::class,'languageChange'])->name('language');
         Route::get('detail/{slug}', [FrontendController::class, 'staticMenus'])->name('static');
         Route::get('officeDetail/{officeDetail:slug}', [FrontendController::class, 'officeDetails'])->name('officeDetail');
+        Route::get('city', [FrontendController::class, 'city'])->name('city');
+        Route::get('job', [FrontendController::class, 'job'])->name('job');
+        Route::get('member', [FrontendController::class, 'member'])->name('member');
+        Route::get('search', [FrontendController::class, 'search'])->name('frontend.search');
         Route::get('addCity', [FrontendController::class, 'city'])->name('addCity');
         Route::get('city/{addCity:id}', [FrontendController::class, 'job'])->name('city');
 

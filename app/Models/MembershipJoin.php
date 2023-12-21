@@ -18,6 +18,9 @@ class MembershipJoin extends Model
 
     protected $fillable = [
         'full_name',
+        'town',
+        'state',
+        'code',
         'contact_no',
         'address',
         'email'

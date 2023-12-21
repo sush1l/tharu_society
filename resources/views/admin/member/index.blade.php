@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2>Membership Join Request</h2>
+                    <h2>Member</h2>
                 </div>
             </div>
             <!-- end col -->
@@ -16,7 +16,7 @@
                                 <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Membership Join Request
+                              Member
                             </li>
                         </ol>
                     </nav>
@@ -26,12 +26,12 @@
         </div>
         <!-- end row -->
     </div>
-
     <div class="row">
         <div class="col-lg-12">
             <div class="card-style mb-30">
                 <div style="display: flex;justify-content: space-between">
-                    <h6 class="mb-10">Membership Join Request</h6>
+                    <h6 class="mb-10">Member List</h6>
+                    <a href="{{route('admin.member.create')}}" class="btn btn-sm btn-primary">Add New</a>
                 </div>
                 <div class=" table-responsive table-hover">
                     <table class="table">
@@ -39,31 +39,29 @@
                         <tr>
                             <th>SN</th>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Address</th>
+                            <th>Designation</th>
                             <th>Action</th>
                         </tr>
-                        <!-- end table row-->
                         </thead>
                         <tbody>
-                        @forelse($membershipJoins as $membershipJoin)
+                        @forelse($members as $member)
                             <tr>
                                 <td>
                                     {{$loop->iteration}}
                                 </td>
-                                <td>{{$membershipJoin->full_name}}</td>
-                                <td>{{$membershipJoin->email}}</td>
-                                <td>{{$membershipJoin->contact_no}}</td>
-                                <td>{{$membershipJoin->address}}</td>
+                                <td>
+                                    {{$member->title}}
+                                </td>
+                                <td>
+                                    {{$member->membershipCategory->title ?? ""}}
+                                </td>
+
                                 <td>
                                     <div class="action">
-
-                                        <a href="{{route('admin.joinRequest.show',$membershipJoin)}}" class="btn">
-                                            <i class="fa fa-eye"></i>
-                                           </a>
-
-                                        <form action="{{route('admin.joinRequest.destroy',$membershipJoin)}}"
+                                        <a href="{{route('admin.member.edit', $member)}}" class="text-info">
+                                            <i class="lni lni-pencil"></i>
+                                        </a>
+                                        <form action="{{route('admin.member.destroy',$member)}}"
                                               method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -77,7 +75,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td class="text-center" colspan="5">No Any Messages</td>
+                                <td class="text-center" colspan="4">No Result Found</td>
                             </tr>
                         @endforelse
 

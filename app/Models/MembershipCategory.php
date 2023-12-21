@@ -21,8 +21,8 @@ class MembershipCategory extends Model
         'title'
     ];
 
-    public function memberships(): HasMany
+    public function member(): HasMany
     {
-        return $this->hasMany(Membership::class);
+        return $this->hasMany(Member::class);
     }
 }

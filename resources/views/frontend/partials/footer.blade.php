@@ -73,7 +73,7 @@
                         <div class="col-md-6 fw-bold">
                             <ul>
                                 <li>Design & Developed By :<a href="https://ninjainfosys.com.np" target="_blank"
-                                        class="text-white"> Ninja Infosys Pvt. Ltd.</a></li>
+                                        class="text-white"> Techwork Company Pvt. Ltd.</a></li>
                             </ul>
                         </div>
                     </div>

@@ -8,14 +8,12 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('video_galleries', function (Blueprint $table) {
+        Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->nullableMorphs('model');
+            $table->foreignId('membership_category_id')->constrained();
             $table->string('title');
-            if (config('default.dual_language')) {
-                $table->string('title_en');
-            }
-            $table->string('url')->nullable();
+            $table->string('photo')->nullable();
+            $table->integer('position');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -23,6 +21,6 @@ return new class extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('video_galleries');
+        Schema::dropIfExists('members');
     }
 };

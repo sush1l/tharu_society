@@ -18,6 +18,7 @@ use App\Models\ExEmployee;
 use App\Models\Faq;
 use App\Models\Job;
 use App\Models\Link;
+use App\Models\Member;
 use App\Models\Membership;
 use App\Models\MembershipJoin;
 use App\Models\News;
@@ -72,7 +73,8 @@ class FrontendController extends BaseController
         $blogs = Blog::limit(6)->get();
         $works = work::limit(8)->get();
         $sliders = Slider::latest()->get();
-        return view('frontend.index', compact('works', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups','sliders'));
+        $members= Member::orderby('position')->get();
+        return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups','sliders'));
 
     }
     public function languageChange($lang)
@@ -111,6 +113,17 @@ class FrontendController extends BaseController
             default:
                 return response(view('errors.404'), 404);
         }
+    }
+
+    public function search()
+    {
+        $keyword = request('keyword');
+        if (empty($keyword)) {
+            return back();
+        }
+        $documents = Document::search($keyword)->paginate(20);
+
+        return view('frontend.search.search_res', compact('keyword', 'documents'));
     }
 
 
@@ -251,10 +264,16 @@ class FrontendController extends BaseController
     }
 
 
-    public function membership()
+    public function membershipIntro()
     {
-        $memberships = Membership::with('membershipCategory')->get();
+        $memberships = Membership::get();
         return view('frontend.membership', compact('memberships'));
+    }
+
+    public function member()
+    {
+        $members= Member::with('membershipCategory')->get();
+        return view('frontend.member', compact('members'));
     }
 
     // public function events()
@@ -271,12 +290,14 @@ class FrontendController extends BaseController
 
     public function events()
     {
-        $events = Events::latest()->get();
+
+        $events = Events::with("videoGalleries")->latest()->get();
         return view('frontend.pages.event.event',compact('events'));
     }
 
     public function eventDetail(Events $events)
     {
+       $events->load("videoGalleries");
         return view('frontend.pages.event.single_event',compact('events'));
     }
 

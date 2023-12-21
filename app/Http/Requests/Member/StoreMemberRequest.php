@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Requests\Membership;
+namespace App\Http\Requests\Member;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
-class UpdateMembershipRequest extends FormRequest
+class StoreMemberRequest extends FormRequest
 {
 
     public function authorize()
@@ -15,9 +16,10 @@ class UpdateMembershipRequest extends FormRequest
     public function rules()
     {
         return [
+            'membership_category_id' => ['nullable', Rule::exists('membership_categories', 'id')->withoutTrashed()],
             'title' => ['required', 'string'],
             'photo' => ['nullable', 'image', 'mimes:png,jpg,jpeg'],
-            'desc' => ['required'],
+            'position' => ['nullable', 'integer']
         ];
     }
 }

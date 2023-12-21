@@ -180,8 +180,8 @@
                                href="{{route('admin.photoGallery.index')}}"> Photo Gallery </a>
                             <a class="{{request()->is('admin/gallery/videoGallery*') ? 'active' : ''}}"
                                href="{{route('admin.videoGallery.index')}}"> Video Gallery </a>
-                            <a class="{{request()->is('admin/gallery/audio*') ? 'active' : ''}}"
-                               href="{{route('admin.audio.index')}}"> Audio Gallery </a>
+                            {{-- <a class="{{request()->is('admin/gallery/audio*') ? 'active' : ''}}"
+                               href="{{route('admin.audio.index')}}"> Audio Gallery </a> --}}
                             {{-- <a class="{{request()->is('admin/gallery/tikTok*') ? 'active' : ''}}"
                                href="{{route('admin.tikTok.index')}}"> Tiktok</a> --}}
                         </li>
@@ -238,7 +238,9 @@
                         <a class="{{request()->is('admin/membership/membershipCategory') ? 'active' : ''}}"
                            href="{{route('admin.membershipCategory.index')}}"> Add Category </a>
                            <a class="{{request()->is('admin/membership/membership') ? 'active' : ''}}"
-                            href="{{route('admin.membership.index')}}"> Add Membership </a>
+                            href="{{route('admin.membership.index')}}"> Introduction </a>
+                            <a class="{{request()->is('admin/membership/member') ? 'active' : ''}}"
+                                href="{{route('admin.member.index')}}">Add Member </a>
                             <a class="{{request()->is('admin/membership/membershipJoin') ? 'active' : ''}}"
                                 href="{{route('admin.joinRequest.index')}}">Membership Join Request </a>
                     </li>

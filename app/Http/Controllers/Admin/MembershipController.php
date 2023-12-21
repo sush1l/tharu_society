@@ -19,8 +19,7 @@ class MembershipController extends Controller
 
  public function create()
  {
-    $membershipCategories=MembershipCategory::all();
-    return view('admin.membership.create', compact('membershipCategories'));
+    return view('admin.membership.create');
  }
 
  public function store(StoreMembershipRequest $request)
@@ -32,8 +31,7 @@ class MembershipController extends Controller
 
  public function edit(Membership $membership)
  {
-    $membershipCategories=MembershipCategory::all();
-    return view('admin.membership.edit',compact('membershipCategories', 'membership'));
+    return view('admin.membership.edit',compact('membership'));
  }
 
  public function update(UpdateMembershipRequest $request, Membership $membership)

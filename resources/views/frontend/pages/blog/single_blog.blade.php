@@ -17,7 +17,7 @@
                 <div class="col-md-12">
                     <div class="singlepost">
                         <div class="featured">
-                            <img src="{{ $blog->image }}" alt="" height="500">
+                            <img src="{{ $blog->image }}" alt="" height="650">
                             <h1>{{request()->language=='en' ? $blog->title_en : $blog->title}}</h1>
                             <span>By Admin on {{$blog->date}}</span>
                            <p>{!! request()->language=='en' ? $blog->description_en : $blog->description !!}</p>
@@ -25,16 +25,16 @@
                         </div>
                     </div>
                 </div>
-{{--                <div class="col-md-4">--}}
-{{--                    <div class="sidebar">--}}
-{{--                        <h1 class="fw-bold">Recent Posts</h1>--}}
-{{--                        <img src="{{ asset('assets/frontend/images/login-officejpeg.jpg') }}" alt="">--}}
-{{--                        <h2>ON THE DIET</h2>--}}
-{{--                        <span>By Admin on November 28, 2023</span>--}}
-{{--                        <p>This is just a place holder, so you can see what the site would look like.</p>--}}
-{{--                        <a href="singlepost.html" class="more">Read More</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                {{-- <div class="col-md-4">
+                    <div class="sidebar">
+                        <h1 class="fw-bold">Related Post</h1>
+                        <img src="{{ $blog->image }}" alt="">
+                        <h2>{{request()->language=='en' ? $blog->title_en : $blog->title}}</h2>
+                        <span>By Admin on November 28, 2023</span>
+                        <p>{!! request()->language=='en' ? $blog->description_en : $blog->description !!}</p>
+                        <a href="{{ route('blog.blogDetail', [$blog,'language'=>$language])}}" class="more">Read More</a>
+                    </div>
+                </div> --}}
 
             </div>
         </div>

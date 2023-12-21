@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 
@@ -27,16 +28,16 @@ class Events extends Model
         'description',
     ];
 
-    protected function image(): Attribute
+    protected function image(): ?Attribute
     {
         return Attribute::make(
-            get: static fn ($value) => !empty($value) ? Storage::disk('public')->url($value) : '',
+            get: static fn ($value) => !empty($value) ? Storage::disk('public')->url($value) : null,
             set: static fn ($value) => (!empty($value) && !is_string($value)) ? $value->store('events', 'public') : null,
         );
     }
 
-    public function videoGalleries(): MorphMany
+    public function videoGalleries(): MorphOne
     {
-        return $this->morphMany(VideoGallery::class, 'model');
+        return $this->morphOne(VideoGallery::class, 'model');
     }
 }

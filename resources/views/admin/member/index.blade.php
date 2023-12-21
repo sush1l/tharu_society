@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2>Membership</h2>
+                    <h2>Member</h2>
                 </div>
             </div>
             <!-- end col -->
@@ -16,7 +16,7 @@
                                 <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                              Membership
+                              Member
                             </li>
                         </ol>
                     </nav>
@@ -30,8 +30,8 @@
         <div class="col-lg-12">
             <div class="card-style mb-30">
                 <div style="display: flex;justify-content: space-between">
-                    <h6 class="mb-10">Membership List</h6>
-                    <a href="{{route('admin.membership.create')}}" class="btn btn-sm btn-primary">Add New</a>
+                    <h6 class="mb-10">Member List</h6>
+                    <a href="{{route('admin.member.create')}}" class="btn btn-sm btn-primary">Add New</a>
                 </div>
                 <div class=" table-responsive table-hover">
                     <table class="table">
@@ -39,28 +39,29 @@
                         <tr>
                             <th>SN</th>
                             <th>Name</th>
-                            <th>Photo</th>
+                            <th>Designation</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse($memberships as $membership)
+                        @forelse($members as $member)
                             <tr>
                                 <td>
                                     {{$loop->iteration}}
                                 </td>
                                 <td>
-                                    {{$membership->title}}
-                                </td>
-                                <td class="min-width">
-                                    <img src="{{ $membership->image }}" alt="{{ $membership->title }}" width="100">
+                                    {{$member->title}}
                                 </td>
                                 <td>
+                                    {{$member->membershipCategory->title ?? ""}}
+                                </td>
+
+                                <td>
                                     <div class="action">
-                                        <a href="{{route('admin.membership.edit', $membership)}}" class="text-info">
+                                        <a href="{{route('admin.member.edit', $member)}}" class="text-info">
                                             <i class="lni lni-pencil"></i>
                                         </a>
-                                        <form action="{{route('admin.membership.destroy',$membership)}}"
+                                        <form action="{{route('admin.member.destroy',$member)}}"
                                               method="POST">
                                             @csrf
                                             @method('DELETE')

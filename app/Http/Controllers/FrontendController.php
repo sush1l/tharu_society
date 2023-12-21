@@ -18,6 +18,7 @@ use App\Models\ExEmployee;
 use App\Models\Faq;
 use App\Models\Job;
 use App\Models\Link;
+use App\Models\Member;
 use App\Models\Membership;
 use App\Models\MembershipJoin;
 use App\Models\News;
@@ -241,10 +242,16 @@ class FrontendController extends BaseController
     }
 
 
-    public function membership()
+    public function membershipIntro()
     {
-        $memberships = Membership::with('membershipCategory')->get();
+        $memberships = Membership::get();
         return view('frontend.membership', compact('memberships'));
+    }
+
+    public function member()
+    {
+        $members= Member::with('membershipCategory')->get();
+        return view('frontend.member', compact('members'));
     }
 
     // public function events()
@@ -261,12 +268,14 @@ class FrontendController extends BaseController
 
     public function events()
     {
-        $events = Events::latest()->get();
+
+        $events = Events::with("videoGalleries")->latest()->get();
         return view('frontend.pages.event.event',compact('events'));
     }
 
     public function eventDetail(Events $events)
     {
+       $events->load("videoGalleries");
         return view('frontend.pages.event.single_event',compact('events'));
     }
 

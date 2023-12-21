@@ -19,14 +19,14 @@ class StoreVideoGalleryRequest extends FormRequest
             return [
                 'title' => ['required', 'string'],
                 'title_en' => ['required', 'string'],
-                'url' => ['required','url']
+                'url' => ['nullable','url']
             ];
         }
         else
         {
             return [
                 'title' => ['required', 'string'],
-                'url' => ['required','url']
+                'url' => ['nullable','url']
             ];
         }
 

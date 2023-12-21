@@ -16,7 +16,7 @@ class UpdateVideoGalleryRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string'],
-            'url' => ['required', 'url']
+            'url' => ['nullable', 'url']
         ];
     }
 }

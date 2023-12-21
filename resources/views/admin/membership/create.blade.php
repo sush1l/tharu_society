@@ -32,30 +32,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="title">शीर्षक</label>
-                        <input type="text" id="title" name="title" placeholder="शीर्षक"
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Title"
                             value="{{ old('title') }}">
                         @error('title')
                             <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="input-style-1">
-                        <label for="membership_category_id">Category</label>
-                        <select name="membership_category_id" id="membership_category_id" class="form-control">
-                            <option value="">Select</option>
-                            @foreach ($membershipCategories as $membershipCategory)
-                                <option value="{{ $membershipCategory->id }}"
-                                    {{ old('membership_category_id') == $membershipCategory->id ? 'selected' : '' }}>
-                                    {{ $membershipCategory->title }}</option>
-                            @endforeach
-                        </select>
-                        @error('membership_category_id')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
                         @enderror
                     </div>
                 </div>
@@ -69,18 +50,6 @@
                         @enderror
                     </div>
                 </div>
-
-                <div class="col-md-6">
-                    <div class="input-style-1">
-                        <label for="position">Position</label>
-                        <input type="number" id="position" name="position" value="{{old('position')}}">
-                        @error('position')
-                        <p class="text-danger">{{$message}}</p>
-                        @enderror
-                    </div>
-                </div>
-
-
 
                 <div class="col-md-12">
                     <div class="input-style-1">

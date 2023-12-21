@@ -34,9 +34,12 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item"
-                            href="{{ route('membership', ['language' => $language]) }}">{{ __('Introduction') }}</a></li>
+                            href="{{ route('membershipIntro', ['language' => $language]) }}">{{ __('Introduction') }}</a></li>
                     <li><a class="dropdown-item"
-                            href="{{ route('join', ['language' => $language]) }}">{{ __('Membership Join Form') }}</a></li>
+                            href="{{ route('member', ['language' => $language]) }}">{{ __('Our Members') }}</a></li>
+                            <li><a class="dropdown-item"
+                                href="{{ route('join', ['language' => $language]) }}">{{ __('Membership Join Form') }}</a></li>
+
                 </ul>
             </li>
 

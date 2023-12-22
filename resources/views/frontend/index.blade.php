@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    <div id="slider" class="carousel slide" data-bs-ride="carousel">
+    <div data-aos="fade-up" id="slider" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             @foreach ($sliders as $sliderButton)
                 <button type="button" data-bs-target="#slider" data-bs-slide-to="{{ $loop->index }}"
@@ -22,17 +22,17 @@
                 </div>
             @endforeach
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+        <button data-aos="fade-up" class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+        <button data-aos="fade-up" class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 
-    <section id="services" class="services mt-5">
+    <section data-aos="fade-up" id="services" class="services mt-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -58,9 +58,9 @@
         </div>
     </section>
 
-    <div class="container-xxl py-5 category">
+    <div data-aos="fade-up" class="container-xxl py-5 category">
         <div class="container mt-3">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+            <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-0">Events/Blogs</h5>
                 <h1 class="mb-5">{{ __('Recent Blogs') }}</h1>
@@ -107,15 +107,15 @@
 
 
     <div class="container-xxl py-5 category  wow fadeInUp" data-wow-delay="0.1s"">
-        <div class="container">
-            <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <div data-aos="fade-up" class="container">
+            <div  data-aos="fade-up"class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-0">Gallery</h5>
                 <h1 class="mb-3">{{ __('Photos') }}</h1>
             </div>
-            <div class="row g-3">
-                <div class="col-lg-7 col-md-6">
+            <div  class="row g-3">
+                <div data-aos="fade-up" class="col-lg-7 col-md-6">
                     <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s"
+                        <div data-aos="fade-up" class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s"
                             style="visibility: visible; animation-delay: 0.1s; animation-name: zoomIn;">
                             <a class="position-relative d-block overflow-hidden" href="#">
                                 <img class="img"
@@ -131,7 +131,7 @@
                         </div>
                         @foreach ($galleries as $key => $data)
                             @if ($key == 1 || $key == 2)
-                                <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s"
+                                <div data-aos="fade-up" class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s"
                                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
                                     <a class="position-relative d-block overflow-hidden" href="">
                                         <img class="img" src="{{ asset('storage/' . $data->photos->random()->images) }}"
@@ -149,7 +149,7 @@
                 </div>
                 @foreach ($galleries as $key => $data)
                     @if ($key == 3)
-                        <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s"
+                        <div data-aos="fade-up" class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s"
                             style="min-height: 350px; visibility: visible; animation-delay: 0.7s; animation-name: zoomIn;">
                             <a class="position-relative d-block h-100 overflow-hidden" href="">
                                 <img class="img position-absolute w-100 h-100"
@@ -168,13 +168,13 @@
         </div>
     </div>
 
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s"">
+    <div data-aos="fade-up" class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s"">
         <div class="container">
             <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-3">Members</h5>
                 {{-- <h1 class="mb-3">{{ __('Photos') }}</h1> --}}
             </div>
-            <div class="Container">
+            <div data-aos="fade-up" class="Container">
                 <h3 class="Head">Member<span class="Arrows"></span></h3>
                 <!-- Carousel Container -->
 
@@ -197,7 +197,7 @@
         </div>
     </div>
 
-    <div class="container mt-4">
+    <div data-aos="fade-up" class="container mt-4">
         <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
             <h5 class="section bg-intro text-center text-color px-3 mb-0">Testominal</h5>
             <h1 class="mb-3">What We Say</h1>
@@ -206,10 +206,10 @@
 
 
 
-    <section class="testimonial showcase text-center">
+    <section  class="testimonial showcase text-center">
         <div class="overlay">
             <div class="container-fluid">
-                <div id="testimonial4"
+                <div data-aos="fade-up" id="testimonial4"
                     class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"
                     data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
 
@@ -245,7 +245,7 @@
                                     Dip Narayan Chaudhary </h4>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div data-aos="fade-up" class="carousel-item">
                             <div class="testimonial4_slide">
                                 <img src="{{ asset('assets/frontend/images/arun.jpeg') }}"
                                     class="img-circle img-responsive" />
@@ -270,7 +270,7 @@
                                 <h4>Public Relation officer<br>Arun Aaryan Chaudhary</h4>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div data-aos="fade-up" class="carousel-item">
                             <div class="testimonial4_slide">
                                 <div class="d-flex">
                                     <img src="{{ asset('assets/frontend/images/pooja.jpeg') }}"
@@ -311,14 +311,14 @@
 
 
     <div class="container-fluid my-5">
-        <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <div data-aos="fade-up" class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
             <h5 class="section bg-intro text-center text-color px-3 mb-3">Contact</h5>
             {{-- <h1 class="mb-3">{{ __('') }}</h1> --}}
         </div>
         <div class="row">
             <div class="parallax"></div>
             <div style="background-color:rgb(252, 250, 250);font-size:36px">
-                <div class="contact text-center">
+                <div data-aos="fade-up" class="contact text-center">
                     <h2 class="text-white fw-bold">Tharu Society Australia</h2>
                     <a href="{{ route('contact') }}">
                         <button class="btn text-black ">Connect with us</button>
@@ -331,11 +331,11 @@
 
 
     <div class="container-fluid my-5">
-        <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <div data-aos="fade-up" class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
             <h5 class="section bg-intro text-center text-color px-3 mb-0">Map</h5>
             <h1 class="mb-3">Our Location</h1>
         </div>
-        <div class="row">
+        <div data-aos="fade-up" class="row">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13247.484232735826!2d151.23997049929355!3d-33.89297450975691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12adf16a020b77%3A0x5017d681632ad90!2sBondi%20Junction%20NSW%202022%2C%20Australia!5e0!3m2!1sen!2snp!4v1702547342089!5m2!1sen!2snp"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"

@@ -323,7 +323,6 @@
                     <a href="{{ route('contact') }}">
                         <button class="btn text-black ">Connect with us</button>
                     </a>
-
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <div id="body">
-        <div class="about mt-4">
+        <div data-aos="fade-up" class="about mt-2">
             <div class="container">
                 <h1>Blogs</h1>
             </div>
@@ -9,14 +9,14 @@
     </div>
     <div class="container-xxl py-5 category">
         <div class="container mt-3">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+            <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-5">Blogs</h5>
                 {{-- <h1 class="mb-5">Recent Blogs</h1> --}}
             </div>
             @foreach ($blogs as $blog )
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog__item">
+                <div data-aos="fade-up" class="blog__item">
                     <div class="blog__item__pic">
                         <img src="{{ $blog->image}}"
                             alt="">
@@ -27,11 +27,7 @@
                         </ul>
                         <h5><a href="#">{{$blog->title}}</a></h5>
                         <p>{{request()->language=='en' ? Str::limit($blog->title_en,20,'..') : Str::limit($blog->title,10,'..')}} </p>
-                        <a href="{{ route('blog.blogDetail', [$blog,'language'=>$language])}}" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
-                        {{-- <a href="{{ route('blog.blogDetail',[$blog,'language'=>$language]) }}"
-                            class="btn btn-outline-primary btn-xs">
-                             {{__('View More')}}
-                         </a> --}}
+                        <a href="{{ route('blog.blogDetail', [$blog,'language'=>$language])}}" class="blog__btn">vIEW MORE <span class="arrow_right"></span></a>
                     </div>
                 </div>
             </div>

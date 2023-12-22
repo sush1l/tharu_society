@@ -1,15 +1,15 @@
 @extends('layouts.master')
 @section('content')
     <div id="body">
-        <div class="about mt-4">
-            <div class="container">
+        <div data-aos="fade-up" class="about mt-2">
+            <div data-aos="fade-up" class="container">
                 <h1>Job Details</h1>
             </div>
         </div>
     </div>
     <div class="container-xxl py-5 category">
         <div class="container mt-3">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+            <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-5">job Details</h5>
             </div>
@@ -18,28 +18,28 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="jobdetail_card">
+                <div data-aos="fade-up" class="jobdetail_card">
                     <img src="{{ $job->image }}" alt="" style="height: 350px; width:450px">
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="jobDetail_section">
-                    <h2 class="headerjob">{{ $job->title }}</h2>
-                    <div class="jobDate">
+                <div data-aos="fade-up" class="jobDetail_section">
+                    <h2 data-aos="fade-up" class="headerjob">{{ $job->title }}</h2>
+                    <div data-aos="fade-up" class="jobDate">
                         <i class="fa fa-location-dot"></i> {{ $job->address }},{{ $job->addCity->title }}<br>
                         <i class="fa-solid fa-dollar-sign"></i> {{$job->salary}} per/Hrs <br>
                         <i class="fa fa-calendar"></i> LastDate: {{ $job->end_date }}
                     </div>
                 </div>
-                <div class="jobDetail_desc">
-                    <p class="des">{{ strip_tags($job->description) }}</p>
+                <div data-aos="fade-up" class="jobDetail_desc">
+                    <p data-aos="fade-up" class="des">{{ strip_tags($job->description) }}</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="container-xxl py-5 category">
         <div class="container mt-3">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+            <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-5">Related Jobs</h5>
             </div>
@@ -53,11 +53,11 @@
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <a href="{{ route('jobDetail', $relatedJob) }}">
                         <div class="blog__item">
-                            <div class="blog__item__pic">
+                            <div data-aos="fade-up" class="blog__item__pic">
                                 <img src="{{ $relatedJob->image }}" alt="" style="height: 200px; width:150px;">
                             </div>
-                            <div class="blog__item__text">
-                                <h5><a href="#">{{ $relatedJob->title }}</a></h5>
+                            <div data-aos="fade-up" class="blog__item__text">
+                                <h5 data-aos="fade-up"><a href="#">{{ $relatedJob->title }}</a></h5>
                                 {{ request()->language == 'en' ? Str::limit(strip_tags($relatedJob->description), 100, '..') : Str::limit(strip_tags($relatedJob->description), 100, '..') }}
                                 <br>
                                 <i class="fa-solid fa-dollar-sign"></i> {{$relatedJob->salary}} per/hrs<br>

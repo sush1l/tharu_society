@@ -2,7 +2,7 @@
 @section('subDivisionContent')
     <div class="container-fluid mt-2">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
+            <ol data-aos="fade-up" class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('welcome')}}"><i class="fa fa-home"></i></a></li>
                 <li class="breadcrumb-item active" aria-current="page"> @if(request()->language=='en') {{$subDivision->title_en}} @else  {{$subDivision->title}} @endif</li>
                 <li class="breadcrumb-item active" aria-current="page"> @if(request()->language=='en'){{$smuggling->title_en}} @else {{$smuggling->title}} @endif Photos</li>
@@ -11,22 +11,22 @@
     </div>
     <section class="single-category-section">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="textbox">
+            <div data-aos="fade-up" class="row">
+                <div data-aos="fade-up" class="col-lg-8">
+                    <div data-aos="fade-up" class="textbox">
                         @if(request()->language=='en' )
                         <h4 class="title-dark">{{$smuggling->title_en}}</h4>
                         @else
                             <h4 class="title-dark">{{$smuggling->title}}</h4>
                         @endif
                     </div>
-                    <div class="news-iframe">
+                    <div data-aos="fade-up" class="news-iframe">
                         @foreach($smuggling->files as $file)
                             <img src="{{ asset('storage/'.$file->url) }}" alt="{{$file->original_name}}"
                                  style="width: 100%;height: auto">
                         @endforeach
                     </div>
-                    <div class="p-1">
+                    <div data-aos="fade-up" class="p-1">
                         @if(request()->language=='en')
                         <p> {!! $smuggling->description_en !!}</p>
                         @else
@@ -35,9 +35,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4 mt-lg-0">
-                    <div class="box">
-                        <h4 class="title mb-3">{{__('Related')}} Smuggling</h4>
-                        <div class="tab-pane fade show">
+                    <div data-aos="fade-up" class="box">
+                        <h4 data-aos="fade-up" class="title mb-3">{{__('Related')}} Smuggling</h4>
+                        <div data-aos="fade-up" class="tab-pane fade show">
                             @forelse($relatedSmugglings as $relatedSmuggling)
                                 <a  href="{{route('subDivision.smugglingDetail',[$subDivision->slug,$relatedSmuggling,'language'=>$language])}}"
                                     class="card-01 mb-2" >

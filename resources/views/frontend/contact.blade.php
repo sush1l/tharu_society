@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
-    <div id="body">
-        <div class="about mt-4">
+    <div data-aos="fade-up" id="body">
+        <div data-aos="fade-up" class="about mt-4">
             <div class="container">
                 <h1>{{__('Contact')}}</h1>
             </div>
@@ -9,13 +9,13 @@
     </div>
     <div class="container-xxl py-5 category">
         <div class="container mt-3">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+            <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-5">{{__('Get In Touch')}}</h5>
             </div>
             <div class="row g-3">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div data-aos="fade-up" class="col-md-7">
                         @if(Session::has('message'))
                             <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
                         @endif
@@ -83,8 +83,8 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-md-5">
-                        <div class="card-02">
+                    <div data-aos="fade-up" class="col-lg-5 col-md-5">
+                        <div data-aos="fade-up" class="card-02">
                             <h5 class="text-center fw-bold text-white">{{__('Address')}}</h5>
                         </div>
                         <div class="address">
@@ -94,7 +94,7 @@
                             <p><b>Email :-</b> {{$header->office_email}}</p>
                             <h6><b>Website :-</b> https://readcc.com.np</h6>
                         </div>
-                        <div class="card-02 mt-5">
+                        <div data-aos="fade-up" class="card-02 mt-5">
                             <h5 class="text-center fw-bold text-white">{{__('Location')}}</h5>
                         </div>
                         <div class="map mt-3">

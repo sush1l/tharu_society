@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
     <div id="body">
-        <div class="about mt-4">
-            <div class="container">
+        <div data-aos="fade-up" class="about mt-2">
+            <div data-aos="fade-up" class="container">
                 <h1>{{ __('Membership Join Form') }}</h1>
             </div>
         </div>
@@ -12,12 +12,12 @@
             <div class="container">
                 <div class="bg-light">
                     <div class="row">
-                        <div class="col-lg-8 col-md-12 p-5 bg-white rounded-3">
+                        <div data-aos="fade-up" class="col-lg-8 col-md-12 p-5 bg-white rounded-3">
                             @if (Session::has('message'))
                                 <p class="alert {{ Session::get('alert-class', 'alert-info') }}">
                                     {{ Session::get('message') }}</p>
                             @endif
-                            <form class="row mb-3" method="post" action="{{ route('membership.store') }}">
+                            <form  data-aos="fade-up"class="row mb-3" method="post" action="{{ route('membership.store') }}">
                                 @csrf
                                 <div class="col-md-6 p-3">
                                     <label for="full_name" class="form-label">Full Name<span
@@ -116,7 +116,7 @@
                             </form>
                         </div>
                         <div class="col-lg-4 col-md-12 text-white aside px-4 py-5">
-                            <div class="mb-5">
+                            <div data-aos="fade-up" class="mb-5">
                                 <h1 class="text-white h3">Contact Information</h1>
                                 <p class="opacity-50">
                                     <small>
@@ -124,7 +124,7 @@
                                     </small>
                                 </p>
                             </div>
-                            <div class="d-flex flex-column px-0">
+                            <div data-aos="fade-up" class="d-flex flex-column px-0">
                                 <ul class="m-0 p-0">
                                     <li class="d-flex justify-content-start align-items-center mb-4">
                                         <span class="opacity-50 d-flex align-items-center me-3 fs-2">

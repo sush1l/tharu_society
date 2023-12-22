@@ -1,6 +1,6 @@
 @extends('frontend.sub-division.index')
 @section('subDivisionContent')
-    <div class="container-fluid mt-2">
+    <div data-aos="fade-up" class="container-fluid mt-2">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('welcome')}}"><i class="fa fa-home"></i></a></li>
@@ -15,10 +15,10 @@
         </nav>
     </div>
     <section class="single-category-section">
-        <div class="container-fluid">
+        <div  data-aos="fade-up" class="container-fluid">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="textbox">
+                    <div data-aos="fade-up" class="textbox">
                         <h4 class="title-dark">
                             @if(request()->language=='en')
                             {{$subDivisionDocument->title_en}}
@@ -28,7 +28,7 @@
                         </h4>
                         <div class="mt-2 text">{{$subDivisionDocument->date}} | @if(request()->language=='en'){{$subDivisionDocument->publisher_en}}@else{{$subDivisionDocument->publisher}} @endif</div>
                     </div>
-                    <div class="news-iframe">
+                    <div data-aos="fade-up" class="news-iframe">
                         @foreach($subDivisionDocument->files as $file)
                             @if(in_array($file->extension,['jpg','jpeg','png']))
                                 <img src="{{ asset('storage/'.$file->url) }}" alt="{{$file->original_name}}"
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4 mt-lg-0">
-                    <div class="box">
+                    <div data-aos="fade-up" class="box">
                         <h4 class="title mb-3">{{__('Related Information')}}</h4>
                         <div class="tab-pane fade show">
                             @foreach($subDivisionDocuments as $document)

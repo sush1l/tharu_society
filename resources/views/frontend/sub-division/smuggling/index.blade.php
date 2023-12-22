@@ -1,14 +1,14 @@
 @extends('frontend.sub-division.index')
 @section('subDivisionContent')
     <div class="container-fluid mt-2">
-        <div class="well-heading" style="border-left: 10px solid #b31b1b; position: relative;">
+        <div data-aos="fade-up" class="well-heading" style="border-left: 10px solid #b31b1b; position: relative;">
             <i class="fa fa-newspaper-o"></i> {{__('Smuggling')}}
         </div>
         <div class="container-fluid mt-2">
             <div class="row mt-3">
                 @foreach($subDivision->smugglings as $smuggling)
-                <div class="col-md-4">
-                    <div class="card">
+                <div data-aos="fade-up" class="col-md-4">
+                    <div data-aos="fade-up" class="card">
                         <img src="{{asset('storage/'.$smuggling->files->first()->url)}}" class="card-img-top" alt="{{$smuggling->title}}">
                         <div class="card-body">
                             @if(request()->language=='en')

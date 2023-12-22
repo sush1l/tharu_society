@@ -1,21 +1,21 @@
 @extends('layouts.master')
 @section('content')
     <div id="body">
-        <div class="about mt-4">
-            <div class="container">
+        <div data-aos="fade-up" class="about mt-2">
+            <div data-aos="fade-up" class="container">
                 <h1>Blog</h1>
             </div>
         </div>
     </div>
     <div class="container-xxl py-5 category">
         <div class="container mt-2">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+            <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h1 class="fw-bold mb-1">{{request()->language=='en' ? $blog->title_en : $blog->title}}</h1>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="singlepost">
+                    <div data-aos="fade-up" class="singlepost">
                         <div class="featured">
                             <img src="{{ $blog->image }}" alt="" height="650">
                             <h1>{{request()->language=='en' ? $blog->title_en : $blog->title}}</h1>

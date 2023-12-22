@@ -1,12 +1,12 @@
 <section class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div data-aos="fade-up" class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav">
+            <div data-aos="fade-up" class="collapse navbar-collapse" id="navbarScroll">
+                <ul data-aos="fade-up" class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('subDivisionDetail',[$subDivision->slug,'language'=>$language])}}"><i
                                 class="fa fa-home"></i></a>

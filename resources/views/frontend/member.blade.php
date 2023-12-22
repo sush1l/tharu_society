@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
-    <div id="body">
-        <div class="about mt-1">
+    <div data-aos="fade-up" id="body">
+        <div data-aos="fade-up" class="about mt-1">
             <div class="container">
                 <h1>{{ __('Members') }}</h1>
             </div>
@@ -11,8 +11,8 @@
         <div class="row">
             @if (!empty($members))
             <div class="row">
-                <div class="col-md-12">
-                    <div id="team_card" class="card-container">
+                <div data-aos="fade-up" class="col-md-12">
+                    <div data-aos="fade-up" id="team_card" class="card-container">
                         <img class="rounded" src="{{$members->first()->photo ?? ''}}" height="150" weight="150"
                              alt="{{$members->first()->name ?? ''}}">
 
@@ -23,7 +23,7 @@
             </div>
             <div class="row">
                 @foreach($members->skip(1) as $member)
-                <div class="col-md-3">
+                <div data-aos="fade-up" class="col-md-3">
                     <div class="card-container">
                         <img class="rounded" src="{{$member->photo}}" height="150" width="150"
                              alt="{{$member->name ?? ''}}">

@@ -2,7 +2,7 @@
 @section('subDivisionContent')
 <div class="row">
     <div class="col-md-8">
-        <div class="card-01 h-100">
+        <div data-aos="fade-up" class="card-01 h-100">
             <p class="text-withlink">
                 @if(request()->language=='en')
                 {{$subDivision->introduction_en}}
@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="card-01 text-center">
+        <div data-aos="fade-up" class="card-01 text-center">
             <img src="{{$subDivisionChief->photo ?? ''}}" height="100" width="100" class="rounded-circle mb-3">
             @if(request()->language=='en')
             <h5 class="mb-0">{{$subDivisionChief->name_en ?? ''}}</h5>
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="col-md-6 mt-4">
-        <div class="card-01">
+        <div data-aos="fade-up" class="card-01">
             <div style="width: 100%">
                 <iframe scrolling="no" marginheight="0" marginwidth="0"
                         src="{{$subDivision->map}}"
@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="col-md-6 mt-4">
-        <div class="card-01">
+        <div data-aos="fade-up" class="card-01">
             <iframe scrolling="no" marginheight="0px" marginwidth="0px" allowfullscreen=""
                     style="border: 0px #ffffff none;"
                     src="{{$subDivision->facebook}}"

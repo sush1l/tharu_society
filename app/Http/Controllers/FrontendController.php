@@ -121,6 +121,7 @@ class FrontendController extends BaseController
         if (empty($keyword)) {
             return back();
         }
+        
         $jobs = Job::search($keyword)->paginate(20);
 
         return view('frontend.search.search_res', compact('keyword', 'jobs'));

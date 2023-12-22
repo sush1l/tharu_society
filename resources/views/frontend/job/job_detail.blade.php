@@ -48,27 +48,29 @@
     <div class="container">
         <div class="row">
             @foreach ($addCities as $addCity)
-                @foreach ($addCity->jobs as $job)
+                @foreach ($addCity->jobs as $relatedJob)
+                @if($relatedJob->id !== $job->id)
                     <div class="col-lg-3 col-md-3 col-sm-6">
-                        <a href="{{ route('jobDetail', $job) }}">
+                        <a href="{{ route('jobDetail', $relatedJob) }}">
                         <div class="blog__item">
                             <div class="blog__item__pic">
-                                <img src="{{ $job->image }}" alt="" style="height: 200px; width:150px;">
+                                <img src="{{ $relatedJob->image }}" alt="" style="height: 200px; width:150px;">
                             </div>
                             <div class="blog__item__text">
-                                <h5><a href="#">{{ $job->title }}</a></h5>
-                                {{ request()->language == 'en' ? Str::limit(strip_tags($job->description), 100, '..') : Str::limit(strip_tags($job->description), 100, '..') }}
+                                <h5><a href="#">{{ $relatedJob->title }}</a></h5>
+                                {{ request()->language == 'en' ? Str::limit(strip_tags($relatedJob->description), 100, '..') : Str::limit(strip_tags($relatedJob->description), 100, '..') }}
                                 <br>
-                                <i class="fa-solid fa-dollar-sign"></i> {{$job->salary}} per/hrs<br>
-                                    <i class="fa fa-location-dot"></i>{{ $job->address }}
+                                <i class="fa-solid fa-dollar-sign"></i> {{$relatedJob->salary}} per/hrs<br>
+                                    <i class="fa fa-location-dot"></i>{{ $relatedJob->address }}
                                 <ul>
-                                    <li><i class="fa fa-calendar"></i> StartDate: {{ $job->date }}</li>
-                                    <li><i class="fa fa-calendar"></i> EndDate: {{ $job->end_date }}</li>
+                                    <li><i class="fa fa-calendar"></i> StartDate: {{ $relatedJob->date }}</li>
+                                    <li><i class="fa fa-calendar"></i> EndDate: {{ $relatedJob->end_date }}</li>
                                 </ul>
                             </div>
                         </div>
                     </a>
                     </div>
+                    @endif
                 @endforeach
             @endforeach
         </div>

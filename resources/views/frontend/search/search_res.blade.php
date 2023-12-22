@@ -24,28 +24,27 @@
     <div class="text-center py-3">{{ $jobs->count() }} Matching results for {{ $keyword }}</div>
     <div class="container">
         <div class="row">
-            @foreach ($jobs as $job)
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <a href="{{ route('jobDetail', $job) }}">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="{{ $job->image }}" alt="" style="height: 200px; width:150px;">
+            @if ($jobs->isEmpty())
+                <p class="text-center" style="font-size: 18px;">No results found for "<span class="text-danger">{{ $keyword }}</span>".</p>
+            @else
+                @foreach ($jobs as $job)
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <a href="{{ route('jobDetail', $job) }}">
+                            <div class="blog__item">
+                                <div class="blog__item__pic">
+                                    <img src="{{ $job->image }}" alt="" style="height: 200px; width:150px;">
+                                </div>
+                                <div class="blog__item__text">
+                                    <h5><a href="#">{{ $job->title }}</a></h5>
+                                    <i class="fa-solid fa-dollar-sign"></i> {{ $job->salary }}per/hrs<br>
+                                    <i class="fa fa-location-dot"></i>{{ $job->address }}
+                                </div>
                             </div>
-                            <div class="blog__item__text">
-                                <h5><a href="#">{{ $job->title }}</a></h5>
-                                {{ request()->language == 'en' ? Str::limit(strip_tags($job->description), 100, '..') : Str::limit(strip_tags($job->description), 100, '..') }}
-                                <br>
-                                <i class="fa-solid fa-dollar-sign"></i> {{ $job->salary }} per/hrs<br>
-                                <i class="fa fa-location-dot"></i>{{ $job->address }}
-                                <ul>
-                                    <li><i class="fa fa-calendar"></i> StartDate: {{ $job->date }}</li>
-                                    <li><i class="fa fa-calendar"></i> EndDate: {{ $job->end_date }}</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            @endforeach
+                        </a>
+                    </div>
+                @endforeach
+                {{ $jobs->links() }}
+            @endif
         </div>
     </div>
 @endsection

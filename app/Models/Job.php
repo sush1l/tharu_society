@@ -32,6 +32,15 @@ class Job extends Model
         'position'
     ];
 
+    public function toSearchableArray()
+    {
+        return [
+            'title' => $this->title,
+            'address' => $this->address,
+            'salary' => $this->salary,
+            
+        ];
+    }
     public function addCity(): BelongsTo
     {
         return $this->belongsTo(AddCity::class);

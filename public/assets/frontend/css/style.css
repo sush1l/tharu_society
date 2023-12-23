@@ -2133,3 +2133,52 @@ text-align: justify;
   padding-right: 0 ! important;
   padding-left:0.5rem;
 }
+
+/* Default styles for larger screens */
+.footer_section {
+  text-align: left;
+}
+
+.footer_logo_text {
+  margin-top: 5rem;
+}
+
+.footer_contact_info ul,
+.footer_links_container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer_social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.footer_social li {
+  margin-right: 10px;
+}
+
+/* Media query for screens smaller than 576px (e.g., mobile devices) */
+@media (max-width: 575.98px) {
+  .footer_section {
+      text-align: center;
+  }
+
+  .footer_logo_text {
+      margin-top: 1rem;
+  }
+
+  .footer_contact_info ul,
+  .footer_links_container ul {
+      text-align: center;
+  }
+
+  .footer_social ul {
+      justify-content: center;
+  }
+
+  .footer_social li {
+      margin: 0 5px;
+  }
+}

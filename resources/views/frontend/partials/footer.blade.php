@@ -9,7 +9,7 @@
                                 <div class="footer_section footer_about">
                                     <div class="footer_logo_container">
                                         <a href="#">
-                                            <div class="footer_logo_text mt-5">
+                                            <div class="footer_logo_text mt-4">
                                                 {{ request()->language == 'en' ? $header->office_name_en : $header->office_name }}
                                             </div>
                                         </a>
@@ -33,10 +33,9 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 footer_col">
-
                                 <div class="footer_section footer_contact">
-                                    <div class="footer_title mt-5">{{ __('Contact') }}</div>
-                                    <div class="footer_contact_info">
+                                    <div class="footer_title mt-3 text-center">{{ __('Contact') }}</div>
+                                    <div class="footer_links_container text-white">
                                         <ul>
                                             <li>{{ __('Email') }}: {{ $header->office_email }}</li>
                                             <li>{{ __('Phone') }}: {{ $header->office_phone }}</li>
@@ -48,7 +47,7 @@
                             </div>
                             <div class="col-lg-4 footer_col">
                                 <div class="footer_section footer_links">
-                                    <div class="footer_title mt-5">{{ __('Quick Links') }}</div>
+                                    <div class="footer_title mt-4">{{ __('Quick Links') }}</div>
                                     <div class="footer_links_container">
                                         <ul>
                                             <li><a href="{{ route('welcome') }}">{{ __('Home') }}</a></li>

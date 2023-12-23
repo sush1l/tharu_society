@@ -49,7 +49,7 @@
                             <option value="">Select</option>
                             @foreach ($membershipCategories as $membershipCategory)
                                 <option value="{{ $membershipCategory->id }}"
-                                    {{ old('membership_category_id', $membership->membership_category_id) == $membershipCategory->id ? 'selected' : '' }}>
+                                    {{ old('membership_category_id', $membershipCategory->membership_category_id) == $membershipCategory->id ? 'selected' : '' }}>
                                     {{ $membershipCategory->title }}</option>
                             @endforeach
                         </select>

@@ -310,14 +310,14 @@
 
 
     <div class="container-fluid my-5">
-        <div data-aos="fade-up" class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
             <h5 class="section bg-intro text-center text-color px-3 mb-3">Contact</h5>
             {{-- <h1 class="mb-3">{{ __('') }}</h1> --}}
         </div>
         <div class="row">
             <div class="parallax"></div>
             <div style="background-color:rgb(252, 250, 250);font-size:36px">
-                <div data-aos="fade-up" class="contact text-center">
+                <div  class="contact text-center">
                     <h2 class="text-white fw-bold">Tharu Society Australia</h2>
                     <a href="{{ route('contact') }}">
                         <button class="btn text-black ">Connect with us</button>

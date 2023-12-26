@@ -209,10 +209,9 @@
     <section  class="testimonial showcase text-center">
         <div class="overlay">
             <div class="container-fluid">
-                <div data-aos="fade-up" id="testimonial4"
+                <div id="testimonial4"
                     class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"
                     data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
-
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <div class="testimonial4_slide">
@@ -245,7 +244,7 @@
                                     Dip Narayan Chaudhary </h4>
                             </div>
                         </div>
-                        <div data-aos="fade-up" class="carousel-item">
+                        <div class="carousel-item">
                             <div class="testimonial4_slide">
                                 <img src="{{ asset('assets/frontend/images/arun.jpeg') }}"
                                     class="img-circle img-responsive" />
@@ -270,7 +269,7 @@
                                 <h4>Public Relation officer<br>Arun Aaryan Chaudhary</h4>
                             </div>
                         </div>
-                        <div data-aos="fade-up" class="carousel-item">
+                        <div class="carousel-item">
                             <div class="testimonial4_slide">
                                 <div class="d-flex">
                                     <img src="{{ asset('assets/frontend/images/pooja.jpeg') }}"

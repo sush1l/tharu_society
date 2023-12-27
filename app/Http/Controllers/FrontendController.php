@@ -13,6 +13,7 @@ use App\Models\ContactMessage;
 use App\Models\Document;
 use App\Models\DocumentCategory;
 use App\Models\Employee;
+use App\Models\EventDetail;
 use App\Models\Events;
 use App\Models\ExEmployee;
 use App\Models\Faq;
@@ -121,7 +122,7 @@ class FrontendController extends BaseController
         if (empty($keyword)) {
             return back();
         }
-        
+
         $jobs = Job::search($keyword)->paginate(20);
 
         return view('frontend.search.search_res', compact('keyword', 'jobs'));
@@ -257,6 +258,12 @@ class FrontendController extends BaseController
     {
         $links = link::latest()->get();
         return view('frontend.pages.useful_links', compact('links'));
+    }
+
+    public function eventIntro()
+    {
+        $eventDetails = EventDetail::get();
+        return view('frontend.eventDetail', compact('eventDetails'));
     }
 
 

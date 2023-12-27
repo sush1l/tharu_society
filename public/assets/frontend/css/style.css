@@ -1455,8 +1455,8 @@ p {
   font-family: "Cairo", sans-serif;
   font-weight: 400;
   line-height: 26px;
-  margin: 0 0 15px 0;
-  margin-bottom: 15px;
+  margin:15px;
+  text-align: justify;
 }
 
 .blog__item__text .blog__btn {

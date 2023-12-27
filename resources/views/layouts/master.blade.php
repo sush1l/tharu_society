@@ -30,13 +30,13 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="sub-header-dt-card">
-                        <i class="fa fa-envelope"> tharucommunity@gmail.com</i>
+                        <i class="fa fa-envelope"> {{ $header->office_email }}</i>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex justify-content-center">
                         <div class="phone text-white mx-2">
-                            <i class="fa fa-phone fw-bold"> 081-403102</i>
+                            <i class="fa fa-phone fw-bold"> {{ $header->office_phone }}</i>
                         </div>
                         <div class="header-navbar-language">
                             <ul>

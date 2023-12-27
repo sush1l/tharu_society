@@ -1175,6 +1175,13 @@ h1,
   text-transform: uppercase;
 }
 
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
 /* .singlepost .featured span {
   color: #7A6666;
   font-family: Arial;

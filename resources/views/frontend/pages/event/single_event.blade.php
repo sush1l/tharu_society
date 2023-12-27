@@ -14,11 +14,11 @@
                 <h1 class="mb-5"> {{ __('Events') }}</h1>
             </div>
             <div class="row">
-                <div class="col-md-8">
-                    <div class="singlepost">
+                <div class="col-md-12">
+                    <div class="post">
                         <div class="featured">
                             @if (!empty($events->image))
-                                <img src="{{ $events->image }}" alt="">
+                                <img src="{{ $events->image }}" alt="" height="500" class="center">
                             @else
                                 <iframe width="100%" height="500" src="{{ $events->videoGalleries->url }}"
                                     title="Online Video" frameborder="0"

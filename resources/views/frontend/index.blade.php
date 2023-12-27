@@ -38,23 +38,30 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <div class="col-sm-6 col-lg-12 mt-3">
+                <div class="col-sm-12 col-lg-12 mt-3">
                     <h5 class="section bg-intro text-center text-color px-3 mb-0">About Us</h5>
                     <h1 class="mb-3"></h1>
-                    <div class="card-01 h-100">
-
-                        <p class="text-withlink">
-                            @if (request()->language == 'en')
-                                {!! Str::words(strip_tags($officeDetail->description_en ?? ''), 100, '...') !!}
-                            @else
-                                {!! Str::words(strip_tags($officeDetail->description ?? ''), 100, '...') !!}
-                            @endif
-                            <a class="intro-title"
-                                href="{{ route('officeDetail', [$officeDetail->slug ?? '', 'language' => $language]) }}">
-                                {{ __('View More') }}
-                            </a>
+                 <div class="row">
+                    <div class="col-md-6">
+                        <div class="h-100">
+                            <p class="text-withlink">
+                                @if (request()->language == 'en')
+                                    {!! Str::words(strip_tags($officeDetail->description_en ?? ''), 200, '...') !!}
+                                @else
+                                    {!! Str::words(strip_tags($officeDetail->description ?? ''), 200, '...') !!}
+                                @endif
+                                <a class="intro-title"
+                                    href="{{ route('officeDetail', [$officeDetail->slug ?? '', 'language' => $language]) }}">
+                                    {{ __('View More......') }}
+                                </a>
+                        </div>
                     </div>
+                    <div class="col-md-6">
+                        <img src="{{ asset('assets/frontend/images/team.jpg') }}" </div>
+                    </div>
+                 </div>
                 </div>
+
 
             </div>
         </div>

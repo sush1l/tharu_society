@@ -52,7 +52,7 @@
                                         <ul>
                                             <li><a href="{{ route('welcome') }}">{{ __('Home') }}</a></li>
                                             <li><a href="{{ route('about-us') }}">{{ __('About Us') }}</a></li>
-                                            <li><a href="#">{{ __('Gallery') }}</a></li>
+                                            <li><a href="{{route('photo')}}">{{ __('Gallery') }}</a></li>
                                             <li><a href="{{ route('contact') }}">{{ __('Contact') }}</a></li>
                                         </ul>
                                     </div>

@@ -22,11 +22,13 @@
                 </div>
             @endforeach
         </div>
-        <button data-aos="fade-up" class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+        <button data-aos="fade-up" class="carousel-control-prev" type="button" data-bs-target="#slider"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button data-aos="fade-up" class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+        <button data-aos="fade-up" class="carousel-control-next" type="button" data-bs-target="#slider"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -108,11 +110,12 @@
 
     <div class="container-xxl py-5 category  wow fadeInUp" data-wow-delay="0.1s"">
         <div data-aos="fade-up" class="container">
-            <div  data-aos="fade-up"class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+            <div data-aos="fade-up"class="text-center"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <h5 class="section bg-intro text-center text-color px-3 mb-0">Gallery</h5>
                 <h1 class="mb-3">{{ __('Photos') }}</h1>
             </div>
-            <div  class="row g-3">
+            <div class="row g-3">
                 <div data-aos="fade-up" class="col-lg-7 col-md-6">
                     <div class="row g-3">
                         <div data-aos="fade-up" class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s"
@@ -134,7 +137,8 @@
                                 <div data-aos="fade-up" class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s"
                                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
                                     <a class="position-relative d-block overflow-hidden" href="">
-                                        <img class="img" src="{{ asset('storage/' . $data->photos->random()->images) }}"
+                                        <img class="img"
+                                            src="{{ asset('storage/' . $data->photos->random()->images) }}"
                                             alt="">
                                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                             style="margin: 1px;">
@@ -206,7 +210,7 @@
 
 
 
-    <section  class="testimonial showcase text-center">
+    <section class="testimonial showcase text-center">
         <div class="overlay">
             <div class="container-fluid">
                 <div id="testimonial4"
@@ -317,7 +321,7 @@
         <div class="row">
             <div class="parallax"></div>
             <div style="background-color:rgb(252, 250, 250);font-size:36px">
-                <div  class="contact text-center">
+                <div class="contact text-center">
                     <h2 class="text-white fw-bold">Tharu Society Australia</h2>
                     <a href="{{ route('contact') }}">
                         <button class="btn text-black ">Connect with us</button>
@@ -329,13 +333,14 @@
 
 
     <div class="container-fluid my-5">
-        <div data-aos="fade-up" class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <div data-aos="fade-up" class="text-center"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
             <h5 class="section bg-intro text-center text-color px-3 mb-0">Map</h5>
             <h1 class="mb-3">Our Location</h1>
         </div>
         <div data-aos="fade-up" class="row">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13247.484232735826!2d151.23997049929355!3d-33.89297450975691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12adf16a020b77%3A0x5017d681632ad90!2sBondi%20Junction%20NSW%202022%2C%20Australia!5e0!3m2!1sen!2snp!4v1702547342089!5m2!1sen!2snp"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.539536673913!2d151.09382087508942!3d-33.87575591941801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bad8d4c50f79%3A0xb370a391d5e78b91!2sUnit%209%2F11%20Russell%20St%2C%20Strathfield%20NSW%202135%2C%20Australia!5e0!3m2!1sen!2snp!4v1703665166180!5m2!1sen!2snp"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>

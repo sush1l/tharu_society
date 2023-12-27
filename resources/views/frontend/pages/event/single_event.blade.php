@@ -18,7 +18,7 @@
                     <div class="singlepost">
                         <div class="featured">
                             @if (!empty($events->image))
-                                <img src="{{ $event->image }}" alt="">
+                                <img src="{{ $events->image }}" alt="">
                             @else
                                 <iframe width="100%" height="500" src="{{ $events->videoGalleries->url }}"
                                     title="Online Video" frameborder="0"

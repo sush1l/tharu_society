@@ -20,11 +20,10 @@ class Blog extends Model
 
     protected $fillable=[
         'title',
-        'title_en',
         'image',
         'date',
+        'publish',
         'description',
-        'description_en'
     ];
 
     protected function image(): Attribute

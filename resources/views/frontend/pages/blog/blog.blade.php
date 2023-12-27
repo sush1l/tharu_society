@@ -26,7 +26,7 @@
                             <li><i class="fa fa-calendar"></i> {{$blog->date}}</li>
                         </ul>
                         <h5><a href="#">{{$blog->title}}</a></h5>
-                        <p>{{request()->language=='en' ? Str::limit($blog->title_en,20,'..') : Str::limit($blog->title,10,'..')}} </p>
+                        <p>{{ Str::limit($blog->title,50,'..')}} </p>
                         <a href="{{ route('blog.blogDetail', [$blog,'language'=>$language])}}" class="blog__btn">vIEW MORE <span class="arrow_right"></span></a>
                     </div>
                 </div>

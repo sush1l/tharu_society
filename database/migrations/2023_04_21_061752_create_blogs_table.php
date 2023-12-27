@@ -11,11 +11,10 @@ return new class extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('title_en');
             $table->string('image');
             $table->string('date');
+            $table->string('publish');
             $table->longText('description')->nullable();
-            $table->longText('description_en')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

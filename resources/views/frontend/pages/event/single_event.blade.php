@@ -11,7 +11,7 @@
         <div class="container mt-3">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <h1 class="mb-5"> {{ __('Events') }}</h1>
+                <h1 class="mb-5">{{ $events->title}}</h1>
             </div>
             <div class="row">
                 <div class="col-md-12">

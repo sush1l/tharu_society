@@ -17,10 +17,10 @@
                 <div class="col-md-12">
                     <div data-aos="fade-up" class="singlepost">
                         <div class="featured">
-                            <img src="{{ $blog->image }}" alt="" height="650">
-                            <h1>{{request()->language=='en' ? $blog->title_en : $blog->title}}</h1>
-                            <span>By Admin on {{$blog->date}}</span>
-                           <p>{!! request()->language=='en' ? $blog->description_en : $blog->description !!}</p>
+                            <img src="{{ $blog->image }}" alt="" height="450">
+                            <h1 class="my-2">{{request()->language=='en' ? $blog->title_en : $blog->title}}</h1>
+                            <span class="mx-4">By Admin on {{$blog->date}}</span>
+                           <p>{!! request()->language=='en' ? $blog->description : $blog->description_en !!}</p>
                            <a href="{{ route('blogs') }}" class="more">Back To Blog</a>
                         </div>
                     </div>

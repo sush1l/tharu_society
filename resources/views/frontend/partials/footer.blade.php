@@ -39,7 +39,7 @@
                                         <ul>
                                             <li>{{ __('Email') }}: {{ $header->office_email }}</li>
                                             <li>{{ __('Phone') }}: {{ $header->office_phone }}</li>
-                                            <li>{{ request()->language == 'en' ? $header->office_address_en : $header->office_address }}
+                                            {{-- <li>{{ request()->language == 'en' ? $header->office_address_en : $header->office_address }} --}}
                                             </li>
                                         </ul>
                                     </div>
@@ -48,7 +48,7 @@
                             <div class="col-lg-4 footer_col">
                                 <div class="footer_section footer_links">
                                     <div class="footer_title mt-4">{{ __('Quick Links') }}</div>
-                                    <div class="footer_links_container">
+                                    <div class="footer_link_container">
                                         <ul>
                                             <li><a href="{{ route('welcome') }}">{{ __('Home') }}</a></li>
                                             <li><a href="{{ route('about-us') }}">{{ __('About Us') }}</a></li>

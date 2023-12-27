@@ -43,9 +43,9 @@
 
                         <p class="text-withlink">
                             @if (request()->language == 'en')
-                                {!! Str::words(strip_tags($officeDetail->description_en ?? ''), 50, '...') !!}
+                                {!! Str::words(strip_tags($officeDetail->description_en ?? ''), 100, '...') !!}
                             @else
-                                {!! Str::words(strip_tags($officeDetail->description ?? ''), 50, '...') !!}
+                                {!! Str::words(strip_tags($officeDetail->description ?? ''), 100, '...') !!}
                             @endif
                             <a class="intro-title"
                                 href="{{ route('officeDetail', [$officeDetail->slug ?? '', 'language' => $language]) }}">

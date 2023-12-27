@@ -21,7 +21,7 @@
                                 <img src="{{ $blog->image }}" alt="" height="450">
                                 <h1 class="my-2">{{$blog->title}}</h1>
                                 <span class="mx-4">By {{$blog->publish}} on {{$blog->date}}</span>
-                               <p>{{ $blog->descriptio }}</p>
+                               <p>{{ $blog->description }}</p>
                                <a href="{{ route('blogs') }}" class="more">Back To Blog</a>
                             </div>
                         </div>

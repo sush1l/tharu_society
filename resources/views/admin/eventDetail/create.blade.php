@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2>Blog</h2>
+                    <h2>Event Detail</h2>
                 </div>
             </div>
             <!-- end col -->
@@ -16,7 +16,7 @@
                                 <a href="{{ route('admin.dashboard') }}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <a href="{{ route('admin.blog.index') }}">Blog</a>
+                                <a href="{{ route('admin.eventDetail.index') }}">EventDetail</a>
                             </li>
                         </ol>
                     </nav>
@@ -27,13 +27,13 @@
         <!-- end row -->
     </div>
     <div class="card-style mb-30">
-        <form action="{{ route('admin.blog.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.eventDetail.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-style-1">
                         <label for="title">Title</label>
-                        <input type="text" id="title" name="title" placeholder="शीर्षक"
+                        <input type="text" id="title" name="title" placeholder="Title"
                             value="{{ old('title') }}">
                         @error('title')
                             <p class="text-danger">{{ $message }}</p>
@@ -43,41 +43,20 @@
 
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="image">Photo</label>
-                        <input type="file" id="photo" name="image">
-                        @error('image')
-                            <p class="text-danger">{{ $message }}</p>
+                        <label for="photo">feature Photo</label>
+                        <input type="file" id="photo" name="photo">
+                        @error('photo')
+                        <p class="text-danger">{{$message}}</p>
                         @enderror
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="input-style-1">
-                        <label for="publish">Blog By</label>
-                        <input type="text" id="publish" name="publish" placeholder="publisher"
-                            value="{{ old('publish') }}">
-                        @error('publish')
-                            <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="input-style-1">
-                        <label for="date">Date</label>
-                        <input type="date" id="date" name="date" placeholder="date"
-                            value="{{ old('date') }}">
-                        @error('date')
-                            <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                    </div>
-                </div>
                 <div class="col-md-12">
                     <div class="input-style-1">
-                        <label for="description">Description</label>
-                        <textarea name="description" id="description" cols="30" rows="10" class="summernote"></textarea>
-                        @error('description')
-                            <p class="text-danger">{{ $message }}</p>
+                        <label for="desc">Description</label>
+                        <textarea name="desc" id="desc" cols="30" rows="10" class="summernote"></textarea>
+                        @error('desc')
+                        <p class="text-danger">{{$message}}</p>
                         @enderror
                     </div>
                 </div>

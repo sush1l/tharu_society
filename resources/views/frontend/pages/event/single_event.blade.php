@@ -11,14 +11,14 @@
         <div class="container mt-3">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <h1 class="mb-5"> {{ __('Events') }}</h1>
+                <h1 class="mb-3">{{ $events->title}}</h1>
             </div>
             <div class="row">
-                <div class="col-md-8">
-                    <div class="singlepost">
+                <div class="col-md-12">
+                    <div class="post">
                         <div class="featured">
                             @if (!empty($events->image))
-                                <img src="{{ $event->image }}" alt="">
+                                <img src="{{ $events->image }}" alt="" height="500" class="center">
                             @else
                                 <iframe width="100%" height="500" src="{{ $events->videoGalleries->url }}"
                                     title="Online Video" frameborder="0"

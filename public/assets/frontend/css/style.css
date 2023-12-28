@@ -249,11 +249,32 @@ ul {
 
 }
 
-.footer_links_container ul {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-}
+
+.footer_link_container ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+
+
+  .footer_link_container ul li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .footer_link_container {
+    margin-top: 33px;
+    margin-left: -30px;
+  }
+
+  .footer_link_container ul li a {
+
+    font-size: 16px;
+    font-weight: 400;
+    color: #f3f4f7;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
 
 .footer_links_container ul li:not(:last-child) {
   margin-bottom: 15px;
@@ -1071,7 +1092,7 @@ h1,
   }
   .img{
     width: 100%;
-    height: 300px;
+    height: 350px;
   }
   .img:hover {
     -ms-transform: scale(1.5); /* IE 9 */
@@ -1137,7 +1158,6 @@ h1,
 }
 
 .singlepost .featured img {
-  display: block;
   margin: 0;
   padding: 1px 0 0 30px;
   width: 100%;
@@ -1148,38 +1168,42 @@ h1,
   font-family: lato-regular-webfont;
   font-size: 24px;
   font-weight: normal;
-  line-height: 24px;
+  line-height: 30px;
   margin: 0;
   padding: 40px 0 4px 30px;
   text-align: left;
   text-transform: uppercase;
 }
 
-.singlepost .featured span {
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+/* .singlepost .featured span {
   color: #7A6666;
-  display: block;
   font-family: Arial;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: normal;
-  line-height: 24px;
+  line-height: 30px;
   margin: 0;
-  padding: 0 0 23px 30px;
   text-align: left;
   text-transform: none;
-}
+} */
 
-.singlepost .featured p {
-  /* color: #7A6666; */
+/* .singlepost .featured p {
+  color: #7A6666;
   display: block;
   font-family: Arial;
   font-size: 16px;
   font-weight: normal;
   line-height: 24px;
   margin: 0;
-  padding: 0 0 23px 30px;
   text-align: justify;
   text-transform: none;
-}
+} */
 
 .sidebar img {
   display: block;
@@ -1438,8 +1462,8 @@ p {
   font-family: "Cairo", sans-serif;
   font-weight: 400;
   line-height: 26px;
-  margin: 0 0 15px 0;
-  margin-bottom: 15px;
+  margin:15px;
+  text-align: justify;
 }
 
 .blog__item__text .blog__btn {
@@ -1574,9 +1598,9 @@ textarea {
 }
 
 .testimonial {
-  min-height: 375px;
+  min-height: 600px;
   position: relative;
-  background: url('../images/maghi\ 6.jpg');
+  background: url('../images/team.jpg');
   padding-top: 50px;
   padding-bottom: 50px;
   background-position: center;
@@ -1612,6 +1636,7 @@ textarea {
   text-align: center;
   white-space: nowrap;
 }
+
 
 .testimonial4_indicators .carousel-indicators li {
   padding: 0;
@@ -1717,7 +1742,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding: 20px;
   position: relative;
@@ -1746,10 +1771,12 @@ textarea {
 
 .testimonial4_slide p {
   color: #ffffff;
-  line-height: 1.4;
+  line-height: 1.6;
   margin: 15px;
   text-align: justify;
-  font-family: Georgia, serif;
+  font-family: Poppins,sans-serif;
+  font-size: 18px;
+  font-weight: 600px;
 }
 
 .testimonial4_slide h4 {
@@ -1858,7 +1885,7 @@ body {
 
 .showcase .overlay {
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-color: rgba(0, 1, 2, 0.7);
   position: absolute;
   top: 0;
@@ -1978,7 +2005,6 @@ body {
 
   .img-fill img {
     height: 100%;
-    min-width: 100%;
     position: relative;
     display: inline-block;
     max-width: none

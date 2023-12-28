@@ -16,11 +16,10 @@ class UpdateBlogRequest extends FormRequest
     {
         return [
             'title' => ['required','string','max:255'],
-            'title_en' => ['required','string','max:255'],
             'image' => ['nullable','image'],
             'date' => ['required'],
+            'publish' => ['required'],
             'description' => ['nullable'],
-            'description_en' => ['nullable'],
         ];
     }
 }

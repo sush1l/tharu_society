@@ -10,11 +10,9 @@ return new class extends Migration
     {
         Schema::create('memberships', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('membership_category_id')->constrained();
             $table->string('title');
             $table->longText('desc');
             $table->string('photo');
-            $table->integer('position');
             $table->softDeletes();
             $table->timestamps();
         });

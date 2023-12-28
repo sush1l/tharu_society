@@ -13,7 +13,7 @@ class MembershipController extends Controller
 {
     public function index()
  {
-    $memberships = Membership::with('MembershipCategory')->get();
+    $memberships = Membership::latest()->get();
     return view('admin.membership.index', compact('memberships'));
  }
 

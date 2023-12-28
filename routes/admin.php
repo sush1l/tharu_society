@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\{AddCityController, AnnouncementController, Audio
     DocumentController,
     EmployeeController,
     EventController,
+    EventDetailController,
     ExEmployeeController,
     FileController,
     FileUploadController,
@@ -135,7 +136,13 @@ Route::resource('contactMessage', ContactMessageController::class)->only('index'
 Route::resource('color', ColorController::class);
 Route::resource('officeSettingHeader', OfficeSettingHeaderController::class);
 Route::resource('blog', BlogController::class);
-Route::resource('event', EventController::class);
+
+
+
+Route::prefix('events')->group( function (){
+    Route::resource('event', EventController::class);
+    Route::resource('eventDetail', EventDetailController::class);
+});
 
 
 Route::resource('popup',PopupController::class);

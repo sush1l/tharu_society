@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 
-class Blog extends Model
+class EventDetail extends Model
 {
     use HasFactory,SoftDeletes;
 
@@ -20,17 +20,16 @@ class Blog extends Model
 
     protected $fillable=[
         'title',
-        'image',
-        'date',
-        'publish',
-        'description',
+        'photo',
+        'desc'
     ];
 
-    protected function image(): Attribute
+
+    public function Photo():Attribute
     {
         return Attribute::make(
-            get:static fn ($value) => !empty($value) ? Storage::disk('public')->url($value): '',
-            set:static fn ($value) => (!empty($value) && !is_string($value)) ? $value->store('blog','public'): null,
+            get: fn ($value) => $value ? Storage::disk('public')->url($value) : '',
+            set: fn ($value) => (!empty($value) && !is_string($value)) ? $value->store('eventDetail', 'public') : null
         );
     }
 }

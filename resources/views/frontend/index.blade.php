@@ -88,23 +88,30 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <div class="col-sm-6 col-lg-12 mt-3">
+                <div class="col-sm-12 col-lg-12 mt-3">
                     <h5 class="section bg-intro text-center text-color px-3 mb-0">About Us</h5>
                     <h1 class="mb-3"></h1>
-                    <div class="card-01 h-100">
-
-                        <p class="text-withlink">
-                            @if (request()->language == 'en')
-                                {!! Str::words(strip_tags($officeDetail->description_en ?? ''), 50, '...') !!}
-                            @else
-                                {!! Str::words(strip_tags($officeDetail->description ?? ''), 50, '...') !!}
-                            @endif
-                            <a class="intro-title"
-                                href="{{ route('officeDetail', [$officeDetail->slug ?? '', 'language' => $language]) }}">
-                                {{ __('View More') }}
-                            </a>
+                 <div class="row">
+                    <div class="col-md-6">
+                        <div class="h-100">
+                            <p class="text-withlink">
+                                @if (request()->language == 'en')
+                                    {!! Str::words(strip_tags($officeDetail->description_en ?? ''), 200, '...') !!}
+                                @else
+                                    {!! Str::words(strip_tags($officeDetail->description ?? ''), 200, '...') !!}
+                                @endif
+                                <a class="intro-title"
+                                    href="{{ route('officeDetail', [$officeDetail->slug ?? '', 'language' => $language]) }}">
+                                    {{ __('View More......') }}
+                                </a>
+                        </div>
                     </div>
+                    <div class="col-md-6">
+                        <img src="{{ asset('assets/frontend/images/team.jpg') }}" </div>
+                    </div>
+                 </div>
                 </div>
+
 
             </div>
         </div>
@@ -277,8 +284,8 @@
                                     strives
                                     to preserve and promote our rich Tharu culture, traditions, and values, while also
                                     providing a platform for social, educational, and economic development within our
-                                    community.<br>
-                                    I am proud to witness the positive impact we have made in the lives of our members,
+                                    community.</p>
+                                       <p> I am proud to witness the positive impact we have made in the lives of our members,
                                     fostering a sense of belonging and solidarity. Through various events, programs, and
                                     initiatives, we have strengthened the bonds among Tharu individuals and families,
                                     creating a strong support network that extends beyond geographical borders.
@@ -294,7 +301,7 @@
                                     incredible journey. Together, we can continue to make a difference and build a
                                     brighter
                                     future for the Nepalese Tharu community in Australia. </p>
-                                <h4>President<br>
+                                <h4 class="mt-2">President<br>
                                     Dip Narayan Chaudhary </h4>
                             </div>
                         </div>
@@ -320,7 +327,7 @@
                                     strengthen our community bonds, celebrate our rich heritage, and make a positive
                                     impact
                                     on society. </p>
-                                <h4>Public Relation officer<br>Arun Aaryan Chaudhary</h4>
+                                <h4 class="mt-2">Public Relation officer<br>Arun Aaryan Chaudhary</h4>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -351,7 +358,7 @@
                                     embodies
                                     the spirit of unity, culture, and progress. We are grateful to be a part of this
                                     incredible organization. </p>
-                                <h4>Cultural secretary and IT co-ordinator</h4>
+                                <h4 class="mt-2">Cultural secretary and IT co-ordinator</h4>
                             </div>
                         </div>
                     </div>
@@ -388,9 +395,9 @@
             <h5 class="section bg-intro text-center text-color px-3 mb-0">Map</h5>
             <h1 class="mb-3">Our Location</h1>
         </div>
-        <div data-aos="fade-up" class="row">
+        <div class="row">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13247.484232735826!2d151.23997049929355!3d-33.89297450975691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12adf16a020b77%3A0x5017d681632ad90!2sBondi%20Junction%20NSW%202022%2C%20Australia!5e0!3m2!1sen!2snp!4v1702547342089!5m2!1sen!2snp"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.539536673913!2d151.09382087508942!3d-33.87575591941801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bad8d4c50f79%3A0xb370a391d5e78b91!2sUnit%209%2F11%20Russell%20St%2C%20Strathfield%20NSW%202135%2C%20Australia!5e0!3m2!1sen!2snp!4v1703665166180!5m2!1sen!2snp"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>

@@ -20,7 +20,7 @@
                         <div class="card" style="height:60%">
                             <img data-aos="fade-up" class="card-img-top"
                                  src="{{ asset('storage/'.$photoAlbum->photos->random()->images) }}"
-                                 alt="Card image cap" width="100%" height="250">
+                                 alt="Card image cap" width="100%" height="300">
                             <div  class="card-body">
                                 <h6 data-aos="fade-up" class="card-text my-2">
                                     {{request()->language=='en' ? $photoAlbum->title_en : $photoAlbum->title}}

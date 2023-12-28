@@ -60,13 +60,30 @@
                 </li>
             @endcan --}}
 
-            <li class="nav-item">
-                <a href="{{route('admin.event.index','event')}}">
-            <span class="icon">
-                <i class="mdi mdi-message-text"></i>
-            </span>
+            <li class="nav-item nav-item-has-children">
+                <a
+                    href="#"
+                    class="{{request()->is('admin/events/*') ? '' : 'collapsed'}}"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#event"
+                    aria-controls="Report"
+                    aria-expanded="{{request()->is('admin/events/*')}}"
+                    aria-label="Toggle navigation"
+                >
+          <span class="icon">
+           <i class="mdi mdi-wallet-membership"></i>
+          </span>
                     <span class="text">Events</span>
                 </a>
+                <ul id="event"
+                    class="collapse dropdown-nav {{request()->is('admin/events/*') ? 'show' : ''}}">
+                    <li>
+                        <a class="{{request()->is('admin/events/eventDetail') ? 'active' : ''}}"
+                            href="{{route('admin.eventDetail.index')}}"> Event Detail </a>
+                        <a class="{{request()->is('admin/events/event') ? 'active' : ''}}"
+                           href="{{route('admin.event.index')}}"> Events </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a href="{{route('admin.blog.index','blog')}}">

@@ -53,7 +53,7 @@
                                     {{$membership->title}}
                                 </td>
                                 <td class="min-width">
-                                    <img src="{{ $membership->image }}" alt="{{ $membership->title }}" width="100">
+                                    <img src="{{ $membership->photo }}" alt="{{ $membership->title }}" width="100">
                                 </td>
                                 <td>
                                     <div class="action">

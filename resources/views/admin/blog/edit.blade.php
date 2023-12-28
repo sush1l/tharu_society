@@ -41,23 +41,23 @@
                         @enderror
                     </div>
                 </div>
-                @if (config('default.dual_language'))
-                    <div class="col-md-6">
-                        <div class="input-style-1">
-                            <label for="title_en">शीर्षक English</label>
-                            <input type="text" id="title_en" name="title_en" placeholder="शीर्षक English"
-                                value="{{  old('title_en', $blog->title_en) }}">
-                            @error('title_en')
-                                <p class="text-danger">{{ $message }}</p>
-                            @enderror
-                        </div>
-                    </div>
-                @endif
+
                 <div class="col-md-6">
                     <div class="input-style-1">
                         <label for="image">Photo</label>
                         <input type="file" id="photo" name="image">
                         @error('image')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-style-1">
+                        <label for="publish">Blog By</label>
+                        <input type="text" id="publish" name="publish" placeholder="publisher"
+                            value="{{ old('publish', $blog->publish) }}">
+                        @error('publish')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
                     </div>
@@ -72,6 +72,7 @@
                         @enderror
                     </div>
                 </div>
+
                 <div class="col-md-12">
                     <div class="input-style-1">
                         <label for="description">Description</label>
@@ -81,17 +82,7 @@
                         @enderror
                     </div>
                 </div>
-                @if (config('default.dual_language'))
-                    <div class="col-md-12">
-                        <div class="input-style-1">
-                            <label for="description_en">Description English</label>
-                            <textarea name="description_en" id="description_en" cols="30" rows="10" class="summernote">{{ old('description_en', $blog->description_en) }}</textarea>
-                            @error('description_en')
-                                <p class="text-danger">{{ $message }}</p>
-                            @enderror
-                        </div>
-                    </div>
-                @endif
+
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-sm btn-primary">
                         Submit

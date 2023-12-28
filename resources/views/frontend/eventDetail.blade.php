@@ -9,12 +9,12 @@
     </div>
     <div class="container my-3">
         <section data-aos="fade-up" class="light-bg inner">
-            @foreach ($memberships as $membership)
+            @foreach ($eventDetails as $eventDetail)
                 <div data-aos="fade-up" class="about-inner">
                     <div class="content_image">
-                        <img class="img-responsive" src="{{ $membership->photo }}" alt="About" align="">
+                        <img class="img-responsive" src="{{ $eventDetail->photo }}" alt="About" align="">
                         <p style="text-align: justify;">
-                            {!! $membership->desc !!}
+                            {!! $eventDetail->desc !!}
                         </p>
                     </div>
                 </div>

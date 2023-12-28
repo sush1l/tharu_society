@@ -1,5 +1,57 @@
 @extends('layouts.master')
 @section('content')
+
+
+    <!-- Modal popup notice -->
+    @if ($popups->count() > 0)
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog  modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Upcoming Events</h5>
+                        <button type="button" id="closeModalButton" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                @foreach ($popups as $key => $popup)
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}"
+                                        class="{{ $key == 0 ? 'active' : '' }}"></li>
+                                @endforeach
+                            </ol>
+                            <div class="carousel-inner">
+                                @foreach ($popups as $key => $popup)
+                                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                        <img class="d-block w-100" src="{{ $popup->image }}" alt="Slide {{ $key + 1 }}"
+                                            style="height: 500px; width: 700px;">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5><b>{{ $popup->title }}</b></h5>
+                                            <p>{{ $popup->date }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
+
     <div data-aos="fade-up" id="slider" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             @foreach ($sliders as $sliderButton)
@@ -11,27 +63,25 @@
         <div class="carousel-inner">
             @foreach ($sliders as $slider)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                    <img src="{{ $slider->photo }}" class="d-block w-100 height-455" alt="{{ $slider->title }}">
-                    <div class="carousel-caption d-none d-md-block">
-                        @if (request()->language == 'en')
-                            <p>{{ $slider->title_en }}</p>
-                        @else
-                            <p>{{ $slider->title }}</p>
-                        @endif
-                    </div>
-                </div>
-            @endforeach
+                    <img src="{{ $slider->photo }}" class="d-block w-100 height-455" ">
+                        <div class="carousel-caption d-none d-md-block">
+                      @if (request()->language == 'en')
+                    <p>{{ $slider->title_en }}</p>
+                @else
+                    <p>{{ $slider->title }}</p>
+            @endif
         </div>
-        <button data-aos="fade-up" class="carousel-control-prev" type="button" data-bs-target="#slider"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button data-aos="fade-up" class="carousel-control-next" type="button" data-bs-target="#slider"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    </div>
+    @endforeach
+    </div>
+    <button data-aos="fade-up" class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button data-aos="fade-up" class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
     </div>
 
     <section data-aos="fade-up" id="services" class="services mt-5">

@@ -2210,3 +2210,47 @@ text-align: justify;
 }
 
 
+
+
+/* Add this to your CSS file */
+
+/* Mobile Styles */
+@media only screen and (max-width: 767px) {
+  .container-xxl {
+      padding: 20px; /* Add some padding for better spacing on small screens */
+  }
+
+  .about h1 {
+      font-size: 24px; /* Adjust font size for better readability on small screens */
+  }
+
+  .section {
+      font-size: 18px; /* Adjust font size for better readability on small screens */
+  }
+
+  .city {
+      margin-bottom: 10px; /* Adjust margin for better spacing on small screens */
+  }
+}
+
+
+
+/* Default styles for larger screens */
+.jobDetail_section {
+  margin-top: 2rem;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .jobDetail_section {
+      margin-top: 1rem;
+  }
+
+  .jobDetail_section h2 {
+      font-size: 1.5rem; /* Adjust the font size as needed */
+  }
+
+  .jobDetail_section .jobDate {
+      font-size: 0.9rem; /* Adjust the font size as needed */
+  }
+}

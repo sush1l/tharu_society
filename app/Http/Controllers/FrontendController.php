@@ -25,6 +25,7 @@ use App\Models\MembershipJoin;
 use App\Models\News;
 use App\Models\OfficeDetail;
 use App\Models\PhotoGallery;
+use App\Models\Popup;
 use App\Models\Report;
 use App\Models\ReportCategory;
 use App\Models\Slider;
@@ -75,7 +76,8 @@ class FrontendController extends BaseController
         $works = work::limit(8)->get();
         $sliders = Slider::latest()->get();
         $members= Member::orderby('position')->get();
-        return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups','sliders'));
+        $popups= Popup::whereShowOnIndex(1)->get();
+        return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups','sliders','popups'));
 
     }
     public function languageChange($lang)
@@ -317,3 +319,4 @@ class FrontendController extends BaseController
     }
 
 }
+

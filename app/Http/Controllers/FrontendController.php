@@ -233,7 +233,7 @@ class FrontendController extends BaseController
     }
     public function join()
     {
-        return view('frontend.joinForm');
+        return view('frontend.joinform');
     }
 
     public function workDetail(work $work)

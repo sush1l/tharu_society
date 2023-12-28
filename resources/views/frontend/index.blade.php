@@ -345,7 +345,7 @@
             <h5 class="section bg-intro text-center text-color px-3 mb-0">Map</h5>
             <h1 class="mb-3">Our Location</h1>
         </div>
-        <div data-aos="fade-up" class="row">
+        <div class="row">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.539536673913!2d151.09382087508942!3d-33.87575591941801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bad8d4c50f79%3A0xb370a391d5e78b91!2sUnit%209%2F11%20Russell%20St%2C%20Strathfield%20NSW%202135%2C%20Australia!5e0!3m2!1sen!2snp!4v1703665166180!5m2!1sen!2snp"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"

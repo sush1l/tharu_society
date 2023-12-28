@@ -231,6 +231,7 @@ class FrontendController extends BaseController
 
     public function contact()
     {
+        
         return view('frontend.contact');
     }
     public function join()

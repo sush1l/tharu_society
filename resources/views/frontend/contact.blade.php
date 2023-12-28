@@ -89,10 +89,10 @@
                         </div>
                         <div class="address">
                             <h6 class="fw-bold">{{request()->language=='en' ? $header->office_address_en : $header->office_address}}</h6>
-                            <p><b>P.O. Box:-</b> 005 Bharatpur, Chitwan, Neapl</p>
+                            <p><b>P.O. Box:-</b>  8/9-11 Russell Street Strathfield, NSW, 2135</p>
                             <p><b>Telephone :- </b> {{$header->office_phone}}</p>
                             <p><b>Email :-</b> {{$header->office_email}}</p>
-                            <h6><b>Website :-</b> https://readcc.com.np</h6>
+                            <h6><b>Website :-</b> https://tharusociety.techworkcompany.com</h6>
                         </div>
                         <div data-aos="fade-up" class="card-02 mt-5">
                             <h5 class="text-center fw-bold text-white">{{__('Location')}}</h5>

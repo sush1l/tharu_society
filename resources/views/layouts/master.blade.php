@@ -133,18 +133,20 @@
         }
     </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
-
-{{-- <script>
+<script>
     $(document).ready(function () {
         $('#exampleModal').modal('show');
 
         $('#carouselExampleIndicators').on('slid.bs.carousel', function () {
             var activeIndex = $('#carouselExampleIndicators .carousel-item.active').index();
-            var nextIndex = (activeIndex + 1) % {{ $popups->count() }};
-            var title = $('#carouselExampleIndicators .carousel-item').eq(nextIndex).find('img').attr('data-title');
-            $('#modalTitle').text(title);
+
+            // Check if $popups is defined and not empty
+            @if(isset($popups) && $popups->count() > 0)
+                var nextIndex = (activeIndex + 1) % {{ $popups->count() }};
+                var title = $('#carouselExampleIndicators .carousel-item').eq(nextIndex).find('img').attr('data-title');
+                $('#modalTitle').text(title);
+            @endif
         });
 
         // Close the modal when the "Close" button is clicked
@@ -152,7 +154,8 @@
             $('#exampleModal').modal('hide');
         });
     });
-</script> --}}
+</script>
+
 
 
 

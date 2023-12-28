@@ -26,24 +26,14 @@
                                 @foreach ($popups as $key => $popup)
                                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                                         <img class="d-block w-100" src="{{ $popup->image }}" alt="Slide {{ $key + 1 }}"
-                                            style="height: 500px; width: 700px;">
-                                        <div class="carousel-caption d-none d-md-block">
+                                            style="height: 600px; width: 100%;">
+                                        {{-- <div class="carousel-caption d-none d-md-block">
                                             <h5><b >{{ $popup->title }}</b></h5>
-                                            <p class="text-center">{{ $popup->date }}</p>
-                                        </div>
+                                            <p class="text-center bg-success">{{ $popup->date }}</p>
+                                        </div> --}}
                                     </div>
                                 @endforeach
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                                data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                                data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
                         </div>
                     </div>
                 </div>

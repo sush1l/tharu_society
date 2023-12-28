@@ -135,39 +135,31 @@
 
 
 
-<script>
 
 <script>
-    $(document).ready(function () {
-
-        $('#exampleModal').modal('show');
-
-        $('#carouselExampleIndicators').on('slid.bs.carousel', function () {
-
-            var activeIndex = $('#carouselExampleIndicators .carousel-item.active').index();
-            var popupCount = $('#carouselExampleIndicators').data('popup-count');
-            var nextIndex = (activeIndex + 1) % popupCount;
-
-            var title = $('#carouselExampleIndicators .carousel-item').eq(nextIndex).find('img').attr('data-title');
-
-            $('#modalTitle').text(title);
-
-
-            // Check if $popups is defined and not empty
-            @if(isset($popups) && $popups->count() > 0)
-                var nextIndex = (activeIndex + 1) % {{ $popups->count() }};
-                var title = $('#carouselExampleIndicators .carousel-item').eq(nextIndex).find('img').attr('data-title');
+        $(document).ready(function() {
+            $('#exampleModal').modal('show');
+            $('#carouselExampleIndicators').on('slid.bs.carousel', function() {
+                var activeIndex = $('#carouselExampleIndicators .carousel-item.active').index();
+                var popupCount = $('#carouselExampleIndicators').data('popup-count');
+                var nextIndex = (activeIndex + 1) % popupCount;
+                var title = $('#carouselExampleIndicators .carousel-item').eq(nextIndex).find('img').attr(
+                    'data-title');
                 $('#modalTitle').text(title);
-            @endif
+                // Check if $popups is defined and not empty
+                @if (isset($popups) && $popups->count() > 0)
+                    var nextIndex = (activeIndex + 1) % {{ $popups->count() }};
+                    var title = $('#carouselExampleIndicators .carousel-item').eq(nextIndex).find('img')
+                        .attr('data-title');
+                    $('#modalTitle').text(title);
+                @endif
+            });
+            // Close the modal when the "Close" button is clicked
+            $('#closeModalButton').on('click', function() {
+                $('#exampleModal').modal('hide');
+            });
         });
-
-        // Close the modal when the "Close" button is clicked
-        $('#closeModalButton').on('click', function () {
-            $('#exampleModal').modal('hide');
-        });
-
-    });
-</script>
+    </script>
 
 
 

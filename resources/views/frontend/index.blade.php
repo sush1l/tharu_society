@@ -28,7 +28,7 @@
                                         <img class="d-block w-100" src="{{ $popup->image }}" alt="Slide {{ $key + 1 }}"
                                             style="height: 500px; width: 700px;">
                                         <div class="carousel-caption d-none d-md-block">
-                                            <h5><b>{{ $popup->title }}</b></h5>
+                                            <h5><b >{{ $popup->title }}</b></h5>
                                             <p class="text-center">{{ $popup->date }}</p>
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@
                                     </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div data-aos="zoom-in" class="col-md-6">
                             <img src="{{ asset('assets/frontend/images/team.jpg') }}" </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div data-aos="zoom-in" class="col-md-5">
                             <img src="{{ asset('assets/frontend/images/eventdetail.jpg') }}" height="220"
                                 width="100%"> &nbsp;
                             <img src="{{ asset('assets/frontend/images/eventdetail2.jpg') }}" height="220"
@@ -195,7 +195,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div data-aos="zoom-in" class="col-md-5">
                             <img src="{{ asset('assets/frontend/images/img.jpg') }}" height="220" width="100%">
                             &nbsp;
                             <img src="{{ asset('assets/frontend/images/image.jpg') }}" height="220" width="100%">

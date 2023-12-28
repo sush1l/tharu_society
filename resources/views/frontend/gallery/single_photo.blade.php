@@ -17,11 +17,11 @@
             <div data-aos="fade-up" class="row my-4 mb-4">
                 @foreach($photoGallery->photos as $photo)
                     <div class="col-md-4">
-                        <div data-aos="fade-up" class="card" style="height:50%">
+                        <div data-aos="fade-up" class="card mt-2" style="height:50%">
                             <a href="{{ asset('storage/'.$photo->images) }}">
                                 <img class="card-img-top"
                                      src="{{ asset('storage/'.$photo->images) }}"
-                                     alt="Card image cap" width="100%" height="250">
+                                     alt="Card image cap" width="100%" height="350">
                             </a>
                         </div>
                     </div>

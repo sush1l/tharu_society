@@ -234,8 +234,8 @@
                                     strives
                                     to preserve and promote our rich Tharu culture, traditions, and values, while also
                                     providing a platform for social, educational, and economic development within our
-                                    community.<br>
-                                    I am proud to witness the positive impact we have made in the lives of our members,
+                                    community.</p>
+                                       <p> I am proud to witness the positive impact we have made in the lives of our members,
                                     fostering a sense of belonging and solidarity. Through various events, programs, and
                                     initiatives, we have strengthened the bonds among Tharu individuals and families,
                                     creating a strong support network that extends beyond geographical borders.
@@ -251,7 +251,7 @@
                                     incredible journey. Together, we can continue to make a difference and build a
                                     brighter
                                     future for the Nepalese Tharu community in Australia. </p>
-                                <h4>President<br>
+                                <h4 class="mt-2">President<br>
                                     Dip Narayan Chaudhary </h4>
                             </div>
                         </div>
@@ -277,7 +277,7 @@
                                     strengthen our community bonds, celebrate our rich heritage, and make a positive
                                     impact
                                     on society. </p>
-                                <h4>Public Relation officer<br>Arun Aaryan Chaudhary</h4>
+                                <h4 class="mt-2">Public Relation officer<br>Arun Aaryan Chaudhary</h4>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -308,7 +308,7 @@
                                     embodies
                                     the spirit of unity, culture, and progress. We are grateful to be a part of this
                                     incredible organization. </p>
-                                <h4>Cultural secretary and IT co-ordinator</h4>
+                                <h4 class="mt-2">Cultural secretary and IT co-ordinator</h4>
                             </div>
                         </div>
                     </div>

@@ -76,6 +76,14 @@
                     <span class="text">Blogs</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('admin.popup.index')}}">
+            <span class="icon">
+                <i class="mdi mdi-message-text"></i>
+            </span>
+                    <span class="text">Popup Notification</span>
+                </a>
+            </li>
 
 
 {{--            @can('employee_access')--}}

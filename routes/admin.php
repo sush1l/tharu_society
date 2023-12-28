@@ -37,6 +37,7 @@ use App\Http\Controllers\Admin\{AddCityController, AnnouncementController, Audio
     UserManagement\RoleController,
     UserManagement\UserController,
     VideoGalleryController, WorkCategoryController, WorkController};
+use App\Http\Controllers\Admin\PopupController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', DashboardController::class)->name('dashboard');
@@ -135,3 +136,8 @@ Route::resource('color', ColorController::class);
 Route::resource('officeSettingHeader', OfficeSettingHeaderController::class);
 Route::resource('blog', BlogController::class);
 Route::resource('event', EventController::class);
+
+
+Route::resource('popup',PopupController::class);
+Route::put('popup/{popup}/showOnIndex', [PopupController::class, 'showOnIndex'])->name('popup.showOnIndex');
+Route::get('popup/{popup}/showOnIndex', [PopupController::class, 'showOnIndex'])->name('popup.showOnIndex');

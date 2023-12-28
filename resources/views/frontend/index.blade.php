@@ -29,7 +29,7 @@
                                             style="height: 500px; width: 700px;">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h5><b>{{ $popup->title }}</b></h5>
-                                            <p>{{ $popup->date }}</p>
+                                            <p class="text-center">{{ $popup->date }}</p>
                                         </div>
                                     </div>
                                 @endforeach
@@ -64,8 +64,8 @@
             @foreach ($sliders as $slider)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                     <img src="{{ $slider->photo }}" class="d-block w-100 height-455" ">
-                        <div class="carousel-caption d-none d-md-block">
-                      @if (request()->language == 'en')
+                                    <div class="carousel-caption d-none d-md-block">
+                                     @if (request()->language == 'en')
                     <p>{{ $slider->title_en }}</p>
                 @else
                     <p>{{ $slider->title }}</p>
@@ -91,25 +91,116 @@
                 <div class="col-sm-12 col-lg-12 mt-3">
                     <h5 class="section bg-intro text-center text-color px-3 mb-0">About Us</h5>
                     <h1 class="mb-3"></h1>
-                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="h-100">
-                            <p class="text-withlink">
-                                @if (request()->language == 'en')
-                                    {!! Str::words(strip_tags($officeDetail->description_en ?? ''), 200, '...') !!}
-                                @else
-                                    {!! Str::words(strip_tags($officeDetail->description ?? ''), 200, '...') !!}
-                                @endif
-                                <a class="intro-title"
-                                    href="{{ route('officeDetail', [$officeDetail->slug ?? '', 'language' => $language]) }}">
-                                    {{ __('View More......') }}
-                                </a>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="h-100">
+                                <p class="text-withlink">
+                                    @if (request()->language == 'en')
+                                        {!! Str::words(strip_tags($officeDetail->description_en ?? ''), 200, '...') !!}
+                                    @else
+                                        {!! Str::words(strip_tags($officeDetail->description ?? ''), 200, '...') !!}
+                                    @endif
+                                    <a class="intro-title"
+                                        href="{{ route('officeDetail', [$officeDetail->slug ?? '', 'language' => $language]) }}">
+                                        {{ __('View More......') }}
+                                    </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{{ asset('assets/frontend/images/team.jpg') }}" </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <img src="{{ asset('assets/frontend/images/team.jpg') }}" </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section data-aos="fade-up" id="services" class="services mt-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <div class="col-sm-12 col-lg-12 mt-3">
+                    <h5 class="section bg-intro text-center text-color px-3 mb-0">Events Detail</h5>
+                    <h1 class="mb-3"></h1>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="h-100">
+                                <p class="text-withlink">
+                                    <b>Tharu Events in Australia :</b><br>
+                                    &emsp;&emsp;&emsp;&emsp;TSSA is organizing an event for celebrating Tharu Maghi festival
+                                    in Sydney,Australia on
+                                    January 15, 2024. The festival will be held at Gough Whitlam Park, located at Bayview
+                                    Avenue, Earlwood, 2206.
+                                    Tharu Maghi festival is an important cultural event for the Tharu community. It marks
+                                    the beginning of the Magh month in the Nepali calendar and is observed with great
+                                    enthusiasm and joy. This festival is an occasion for Tharu people to come together,
+                                    honor their cultural heritage, and showcase their traditional customs and
+                                    practices.During the celebration, you can expect to witness various cultural
+                                    performances, including Tharu music and dance. The event will also feature traditional
+                                    Tharu food stalls, where you can indulge in authentic Tharu cuisine. Attending this
+                                    Tharu Maghi festival in Sydney,Australia offers a unique opportunity to experience the
+                                    vibrant culture and hospitality of the Tharu community. It allows you to immerse
+                                    yourself in their rich traditions and learn more about their cultural significance. For
+                                    any specific details or updates regarding the event, reaching out to the Tharu Society
+                                    Sydney Australia, as they will have the most accurate information closer to the date
+                                    of the festival.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="{{ asset('assets/frontend/images/eventdetail.jpg') }}" height="220"
+                                width="100%"> &nbsp;
+                            <img src="{{ asset('assets/frontend/images/eventdetail2.jpg') }}" height="220"
+                                width="100%">
+                        </div>
                     </div>
-                 </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section data-aos="fade-up" id="services" class="services mt-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <div class="col-sm-12 col-lg-12 mt-3">
+                    <h5 class="section bg-intro text-center text-color px-3 mb-0">Join Tharu Society</h5>
+                    <h1 class="mb-3"></h1>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="h-100">
+                                <p class="text-withlink">
+                                    <b>Join Tharu Society:</b><br>
+                                    &emsp;&emsp;&emsp;&emsp;
+                                    Joining the Tharu Society Sydney offers individuals an opportunity to become part of a
+                                    community that celebrates and promotes Tharu culture and traditions. By becoming a
+                                    member of the Tharu Society Sydney Australia, you gain access to various benefits.
+                                    Firstly, you can actively participate in the events and festivals organized by the
+                                    society, including the Tharu Maghi festival and other cultural gatherings. These events
+                                    provide a platform to showcase Tharu heritage, connect with fellow Tharu community
+                                    members, and foster a sense of belonging.Membership also grants you the chance to
+                                    contribute to the preservation and promotion of Tharu culture. Through your involvement,
+                                    you can help organize cultural events, support community initiatives, and play a role in
+                                    raising awareness about Tharu traditions, rituals, and art forms.
+                                    Being a member of the Tharu Society Sydney Australia allows you to engage with
+                                    like-minded individuals who share a passion for Tharu culture. You can build meaningful
+                                    connections, exchange knowledge, and create a sense of unity within the Tharu
+                                    community.Furthermore, your membership can have a positive impact on the wider
+                                    community. By joining the society, you contribute to the collective efforts of
+                                    preserving and promoting Tharu culture in Australia. Your involvement can help raise
+                                    awareness about the Tharu community, foster cultural diversity, and promote
+                                    intercultural understanding.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="{{ asset('assets/frontend/images/img.jpg') }}" height="220" width="100%">
+                            &nbsp;
+                            <img src="{{ asset('assets/frontend/images/image.jpg') }}" height="220" width="100%">
+                        </div>
+                    </div>
                 </div>
 
 
@@ -285,7 +376,7 @@
                                     to preserve and promote our rich Tharu culture, traditions, and values, while also
                                     providing a platform for social, educational, and economic development within our
                                     community.</p>
-                                       <p> I am proud to witness the positive impact we have made in the lives of our members,
+                                <p> I am proud to witness the positive impact we have made in the lives of our members,
                                     fostering a sense of belonging and solidarity. Through various events, programs, and
                                     initiatives, we have strengthened the bonds among Tharu individuals and families,
                                     creating a strong support network that extends beyond geographical borders.

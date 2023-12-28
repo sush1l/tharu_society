@@ -318,8 +318,6 @@
     </section>
 
 
-
-
     <div class="container-fluid my-5">
         <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
             <h5 class="section bg-intro text-center text-color px-3 mb-3">Contact</h5>

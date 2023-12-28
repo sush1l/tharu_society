@@ -137,22 +137,32 @@
 
 
 <script>
+
     $(document).ready(function () {
+
         $('#exampleModal').modal('show');
 
         $('#carouselExampleIndicators').on('slid.bs.carousel', function () {
+
             var activeIndex = $('#carouselExampleIndicators .carousel-item.active').index();
-            var nextIndex = (activeIndex + 1) % {{ $popups->count() }};
+            var popupCount = $('#carouselExampleIndicators').data('popup-count');
+            var nextIndex = (activeIndex + 1) % popupCount;
+
             var title = $('#carouselExampleIndicators .carousel-item').eq(nextIndex).find('img').attr('data-title');
+
             $('#modalTitle').text(title);
+
         });
 
         // Close the modal when the "Close" button is clicked
         $('#closeModalButton').on('click', function () {
             $('#exampleModal').modal('hide');
         });
+
     });
+
 </script>
+
 
 
 

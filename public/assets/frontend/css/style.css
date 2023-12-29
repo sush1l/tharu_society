@@ -1899,9 +1899,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   border: 1px solid #b2b2b2;
-  padding: 14px 20px 12px;
+  padding: 15px 30px 12px; /* Adjust the padding, specifically the left and right values, to increase the width */
   border-radius: 25px;
+  
 }
+
 
 .city a:hover {
   background-color: rgb(12, 49, 214);

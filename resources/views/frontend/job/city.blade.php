@@ -11,13 +11,13 @@
         <div class="container">
             <div data-aos="fade-up"  class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <h5 class="section bg-intro text-center text-color px-3 mb-3">{{ __('Cities') }}</h5>
+                <h5 class="section bg-intro text-center text-color px-3 mb-3">{{ __('States/Territory') }}</h5>
 
             </div>
             
             <div class="row my-4 mb-4">
                 @foreach ($addCities as $addCity)
-                    <div class="col-md-1 mb-2">
+                    <div class="col-md-3 mb-2">
                         <div data-aos="fade-up" class="city">
                             <a  href="{{ route('city', $addCity) }}" class="blog__btn">{{ $addCity->title }} <span
                                     class="arrow_right"></span></a>

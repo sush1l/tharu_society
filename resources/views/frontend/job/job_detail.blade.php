@@ -23,16 +23,16 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div data-aos="fade-up" class="jobDetail_section">
-                    <h2 data-aos="fade-up" class="headerjob">{{ $job->title }}</h2>
-                    <div data-aos="fade-up" class="jobDate">
+                <div class="jobDetail_section">
+                    <h2 class="headerjob">{{ $job->title }}</h2>
+                    <div class="jobDate">
                         <i class="fa fa-location-dot"></i> {{ $job->address }},{{ $job->addCity->title }}<br>
-                        <i class="fa-solid fa-dollar-sign"></i> {{$job->salary}} per/Hrs <br>
+                        <i class="fa-solid fa-dollar-sign"></i> {{$job->salary}}<br>
                         <i class="fa fa-calendar"></i> LastDate: {{ $job->end_date }}
                     </div>
                 </div>
-                <div data-aos="fade-up" class="jobDetail_desc">
-                    <p data-aos="fade-up" class="des">{{ strip_tags($job->description) }}</p>
+                <div class="jobDetail_desc">
+                    <p class="des">{{ strip_tags($job->description) }}</p>
                 </div>
             </div>
         </div>
@@ -50,14 +50,14 @@
             @foreach ($addCities as $addCity)
                 @foreach ($addCity->jobs as $relatedJob)
                 @if($relatedJob->id !== $job->id)
-                    <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div data-aos="fade-up" class="col-lg-3 col-md-3 col-sm-6">
                         <a href="{{ route('jobDetail', $relatedJob) }}">
                         <div class="blog__item">
-                            <div data-aos="fade-up" class="blog__item__pic">
+                            <div class="blog__item__pic">
                                 <img src="{{ $relatedJob->image }}" alt="" style="height: 200px; width:150px;">
                             </div>
-                            <div data-aos="fade-up" class="blog__item__text">
-                                <h5 data-aos="fade-up"><a href="#">{{ $relatedJob->title }}</a></h5>
+                            <div class="blog__item__text">
+                                <h5><a href="#">{{ $relatedJob->title }}</a></h5>
                                 {{ request()->language == 'en' ? Str::limit(strip_tags($relatedJob->description), 100, '..') : Str::limit(strip_tags($relatedJob->description), 100, '..') }}
                                 <br>
                                 <i class="fa-solid fa-dollar-sign"></i> {{$relatedJob->salary}} per/hrs<br>

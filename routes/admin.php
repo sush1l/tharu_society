@@ -38,6 +38,7 @@ use App\Http\Controllers\Admin\{AddCityController, AnnouncementController, Audio
     UserManagement\RoleController,
     UserManagement\UserController,
     VideoGalleryController, WorkCategoryController, WorkController};
+use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\PopupController;
 use Illuminate\Support\Facades\Route;
 
@@ -126,6 +127,11 @@ Route::prefix('works')->group( function (){
     Route::resource('workCategory', WorkCategoryController::class);
     Route::resource('work', WorkController::class);
 });
+
+Route::prefix('blogs')->group( function (){
+    Route::resource('blog', BlogController::class);
+    Route::resource('comment', CommentController::class);
+});
 //file Deletes
 Route::resource('file', FileController::class)->only('destroy');
 
@@ -135,7 +141,7 @@ Route::resource('contactMessage', ContactMessageController::class)->only('index'
 
 Route::resource('color', ColorController::class);
 Route::resource('officeSettingHeader', OfficeSettingHeaderController::class);
-Route::resource('blog', BlogController::class);
+
 
 
 

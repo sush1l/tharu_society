@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Blog\StoreBlogRequest;
 use App\Http\Requests\Blog\UpdateBlogRequest;
 use App\Models\Blog;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 class BlogController extends BaseController
@@ -51,4 +52,5 @@ class BlogController extends BaseController
         toast('Blog deleted successfully', 'success');
         return back();
     }
+    
 }

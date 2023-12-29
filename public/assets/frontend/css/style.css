@@ -2256,3 +2256,33 @@ text-align: justify;
       font-size: 0.9rem; /* Adjust the font size as needed */
   }
 }
+
+.comment {
+  border-radius: 10px;
+  outline-offset: 3px;
+  padding: 10px 1rem;
+  width: 600px;
+}
+
+
+
+button.comment-button {
+    border: 2px solid #d3c2c7;
+    color: #25040e;
+    display: block;
+    font-family: lato-bold-webfont;
+    font-size: 16px;
+    font-weight: normal;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 156px;
+    border-radius: 10px;
+    background: rgb(222, 188, 188);
+    margin-left: 20px;
+    margin-top: 50px;
+}
+button.comment-button:hover{
+  color:#008000;
+}

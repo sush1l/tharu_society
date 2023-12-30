@@ -25,7 +25,7 @@
         </div>
     </button>
 
-    <div class="container-fluid">
+    
         <div class="sub-header-card d-none d-sm-block">
             <div class="row">
                 <div class="col-md-6">
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-    </div>
+   
     @include('frontend.partials.nav')
 
     @yield('content')

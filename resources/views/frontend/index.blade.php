@@ -339,14 +339,12 @@
         </div>
     </div>
 
-    <div data-aos="fade-up" class="container mt-4">
+    <div class="container mt-4">
         <div class="text-center">
-            <h5 class="section bg-intro text-center text-color px-3 mb-0">WOrd From Our Team</h5>
+            <h5 class="section bg-intro text-center text-color px-3 mb-3">WOrd From Our Team</h5>
             {{-- <h1 class="mb-3">What We Say</h1> --}}
         </div>
     </div>
-
-
 
     <section class="testimonial showcase text-center">
         <div class="overlay">

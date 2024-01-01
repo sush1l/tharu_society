@@ -72,9 +72,9 @@
                             href="{{ route('video', ['language' => $language]) }}">{{ __('Video Gallery') }}</a></li>
                 </ul>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('addCity', ['language' => $language]) }}">{{ __('Job Opportunities') }}</a>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('contact', ['language' => $language]) }}">{{ __('Contact') }}</a>

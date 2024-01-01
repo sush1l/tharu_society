@@ -13,9 +13,9 @@ return new class extends Migration
             $table->foreignId('add_city_id')->constrained();
             $table->string('title');
             $table->longText('description');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('address');
-            $table->integer('salary')->nullable();
+            $table->string('salary')->nullable();
             $table->string('date');
             $table->string('end_date');
             $table->integer('position');

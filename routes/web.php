@@ -63,13 +63,14 @@ class listing
         Route::get('detail/{slug}', [FrontendController::class, 'staticMenus'])->name('static');
         Route::get('officeDetail/{officeDetail:slug}', [FrontendController::class, 'officeDetails'])->name('officeDetail');
         Route::get('city', [FrontendController::class, 'city'])->name('city');
-        Route::get('job', [FrontendController::class, 'job'])->name('job');
+        // Route::get('job', [FrontendController::class, 'job'])->name('job');
         Route::get('member', [FrontendController::class, 'member'])->name('member');
         Route::get('search', [FrontendController::class, 'search'])->name('frontend.search');
-        Route::get('addCity', [FrontendController::class, 'city'])->name('addCity');
-        Route::get('city/{addCity:id}', [FrontendController::class, 'job'])->name('city');
-        Route::get('jobDetail/{job:id}', [FrontendController::class, 'jobDetail'])->name('jobDetail');
+        // Route::get('addCity', [FrontendController::class, 'city'])->name('addCity');
+        // Route::get('city/{addCity:id}', [FrontendController::class, 'job'])->name('city');
+        // Route::get('jobDetail/{job:id}', [FrontendController::class, 'jobDetail'])->name('jobDetail');
         Route::get('popup', [FrontendController::class, 'popup'])->name('popup');
+        Route::post('comment',[FrontendController::class,'comment'])->name('comment');
 
     }
 }

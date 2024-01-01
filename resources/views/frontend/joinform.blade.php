@@ -130,21 +130,20 @@
                                         <span class="opacity-50 d-flex align-items-center me-3 fs-2">
                                             <i class="fa fa-phone"></i>
                                         </span>
-                                        <span>+134 1234 1234</span>
+                                        <span>{{$header->office_phone}}</span>
                                     </li>
                                     <li class="d-flex align-items-center r mb-4">
                                         <span class="opacity-50 d-flex align-items-center me-3 fs-2">
                                             <i class="fa fa-envelope"></i>
                                         </span>
-                                        <span>Help@contact.com</span>
+                                        <span>{{ $header->office_email }}</span>
                                     </li>
+                                    
                                     <li class="d-flex justify-content-start align-items-center mb-4">
-                                        <p class="opacity-50 d-flex align-items-center me-3 fs-2">
+                                        <span class="opacity-50 d-flex align-items-center me-3 fs-2">
                                             <i class="fa fa-map"></i>
-                                        </p>
-                                        <span>52 Buddy Ln Conway, <br />
-                                            Arkansas(AR), 72032
                                         </span>
+                                        <span>{{$header->office_address}}</span>
                                     </li>
                                 </ul>
                             </div>

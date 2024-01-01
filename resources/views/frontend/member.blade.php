@@ -16,8 +16,8 @@
                         <img class="rounded" src="{{$members->first()->photo ?? ''}}" height="150" weight="150"
                              alt="{{$members->first()->name ?? ''}}">
 
-                        <p>{{$members->first()->title ?? ''}}</p>
-                        <p>{{$members->first()->membershipCategory->title ?? '' }}</p>
+                        <p class="text-center">{{$members->first()->title ?? ''}}</p>
+                        <p class="text-center">{{$members->first()->membershipCategory->title ?? '' }}</p>
                     </div>
                 </div>
             </div>
@@ -27,8 +27,8 @@
                     <div class="card-container">
                         <img class="rounded" src="{{$member->photo}}" height="150" width="150"
                              alt="{{$member->name ?? ''}}">
-                            <p>{{$member->title ?? '' }}</p>
-                            <p>{{$member->membershipCategory->title ?? '' }}</p>
+                            <p class="text-center">{{$member->title ?? '' }}</p>
+                            <p class="text-center">{{$member->membershipCategory->title ?? '' }}</p>
                     </div>
                 </div>
                 @endforeach

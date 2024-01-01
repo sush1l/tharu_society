@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Comment\StoreCommentRequest;
 use App\Http\Requests\StoreContactMessageRequest;
 use App\Http\Requests\StoreMembershipJoinRequest;
 use App\Models\AddCity;
@@ -9,6 +10,7 @@ use App\Models\Announcement;
 use App\Models\Audio;
 use App\Models\Bill;
 use App\Models\Blog;
+use App\Models\Comment;
 use App\Models\ContactMessage;
 use App\Models\Document;
 use App\Models\DocumentCategory;
@@ -75,9 +77,9 @@ class FrontendController extends BaseController
         $blogs = Blog::limit(6)->get();
         $works = work::limit(8)->get();
         $sliders = Slider::latest()->get();
-        $members= Member::orderby('position')->get();
-        $popups= Popup::whereShowOnIndex(1)->latest()->get();
-        return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups','sliders','popups'));
+        $members = Member::orderby('position')->get();
+        $popups = Popup::whereShowOnIndex(1)->latest()->get();
+        return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups', 'sliders', 'popups'));
 
     }
     public function languageChange($lang)
@@ -85,22 +87,22 @@ class FrontendController extends BaseController
 
         if (config('default.dual_language')) {
             if (!empty($lang) && in_array($lang, config('app.locales'))) {
-                Cache::put('language', $lang, 60*60*12);
+                Cache::put('language', $lang, 60 * 60 * 12);
                 app()->setLocale($lang);
             } else {
-                Cache::put('language', 'ne', 60*60*12);
+                Cache::put('language', 'ne', 60 * 60 * 12);
                 app()->setLocale('ne');
             }
         }
         $url = url()->previous();
         $route = app('router')->getRoutes($url)->match(app('request')->create($url))->getName();
-        if($route == 'welcome'){
-            return redirect(\route($route, ['language'=>$lang]));
-        }else{
+        if ($route == 'welcome') {
+            return redirect(\route($route, ['language' => $lang]));
+        } else {
             $count = Str::length($url);
 
-            $url = Str::substr($url, 0, $count-2);
-            return redirect($url.$lang ?? 'ne');
+            $url = Str::substr($url, 0, $count - 2);
+            return redirect($url . $lang ?? 'ne');
         }
     }
 
@@ -204,7 +206,7 @@ class FrontendController extends BaseController
     public function jobDetail(Job $job, AddCity $addCity)
     {
         $addCities = AddCity::with('jobs')->get();
-        return view('frontend.job.job_detail',compact('job','addCities'));
+        return view('frontend.job.job_detail', compact('job', 'addCities'));
     }
     public function photoGalleryDetail(PhotoGallery $photoGallery)
     {
@@ -231,6 +233,7 @@ class FrontendController extends BaseController
 
     public function contact()
     {
+
         return view('frontend.contact');
     }
     public function join()
@@ -277,7 +280,7 @@ class FrontendController extends BaseController
 
     public function member()
     {
-        $members= Member::with('membershipCategory')->get();
+        $members = Member::with('membershipCategory')->get();
         return view('frontend.member', compact('members'));
     }
 
@@ -297,25 +300,32 @@ class FrontendController extends BaseController
     {
 
         $events = Events::with("videoGalleries")->latest()->get();
-        return view('frontend.pages.event.event',compact('events'));
+        return view('frontend.pages.event.event', compact('events'));
     }
 
     public function eventDetail(Events $events)
     {
-       $events->load("videoGalleries");
-        return view('frontend.pages.event.single_event',compact('events'));
+        $events->load("videoGalleries");
+        return view('frontend.pages.event.single_event', compact('events'));
     }
 
     public function blogs()
     {
         $blogs = Blog::latest()->get();
-        return view('frontend.pages.blog.blog',compact('blogs'));
+        return view('frontend.pages.blog.blog', compact('blogs'));
     }
 
 
     public function blogDetail(Blog $blog)
     {
-        return view('frontend.pages.blog.single_blog',compact('blog'));
+        return view('frontend.pages.blog.single_blog', compact('blog'));
+    }
+
+    public function comment(StoreCommentRequest $request)
+    {
+        Comment::create($request->validated());
+        session()->flash('message', 'Comment Added Successfully');
+        return back();
     }
 
 }

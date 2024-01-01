@@ -42,6 +42,8 @@
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Address</th>
+                            <th>State/Territory</th>
+                            <th>Suburb/Town</th>
                             <th>Action</th>
                         </tr>
                         <!-- end table row-->
@@ -56,12 +58,14 @@
                                 <td>{{$membershipJoin->email}}</td>
                                 <td>{{$membershipJoin->contact_no}}</td>
                                 <td>{{$membershipJoin->address}}</td>
+                                <td>{{$membershipJoin->state}}</td>
+                                <td>{{$membershipJoin->town}}</td>
                                 <td>
                                     <div class="action">
 
-                                        <a href="{{route('admin.joinRequest.show',$membershipJoin)}}" class="btn">
+                                        {{-- <a href="{{route('admin.joinRequest.show',$membershipJoin)}}" class="btn">
                                             <i class="fa fa-eye"></i>
-                                           </a>
+                                           </a> --}}
 
                                         <form action="{{route('admin.joinRequest.destroy',$membershipJoin)}}"
                                               method="POST">

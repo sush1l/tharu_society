@@ -13,7 +13,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="{{route('admin.dashboard')}}">Dashboard</a>
+                                <a href="{{ route('admin.dashboard') }}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Membership Join Request
@@ -34,18 +34,33 @@
                     <h6 class="mb-10">Join Request Detail</h6>
                 </div>
 
-                <div class="text-start mt-3">
 
-                    <p class="text-muted mb-2 font-15"><strong>Name :</strong> <span
-                            class="ms-2">{{$membershipJoin->full_name}}</span>
-                    </p>
+                    <div class="d-flex">
+                        <div class="col-md-6">
+                            <p class="text-muted mb-2 font-15"><strong>Name :</strong> <span
+                                class="ms-2">{{ $membershipJoin->full_name }}</span>
+                        </p>
 
-                    <p class="text-muted mb-2 font-15"><strong>फोन :</strong> <span
-                            class="ms-2">{{$membershipJoin->contact_no}}</span></p>
+                        <p class="text-muted mb-2 font-15"><strong>Contact No :</strong> <span
+                                class="ms-2">{{ $membershipJoin->contact_no }}</span></p>
 
-                    <p class="text-muted mb-2 font-15"><strong>ठेगाना :</strong><span
-                                class="ms-2">{{$membershipJoin->address}}</span></p>
-                </div>
+                        <p class="text-muted mb-2 font-15"><strong>Address :</strong><span
+                                class="ms-2">{{ $membershipJoin->address }}</span></p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p class="text-muted mb-2 font-15"><strong>Subrub/Town :</strong> <span
+                                class="ms-2">{{ $membershipJoin->town }}</span>
+                        </p>
+
+                        <p class="text-muted mb-2 font-15"><strong>State/Territory :</strong> <span
+                                class="ms-2">{{ $membershipJoin->state }}</span></p>
+
+                        <p class="text-muted mb-2 font-15"><strong>email :</strong><span
+                                class="ms-2">{{ $membershipJoin->address }}</span></p>
+                        </div>
+                    </div>
+
 
             </div>
             <!-- end card -->

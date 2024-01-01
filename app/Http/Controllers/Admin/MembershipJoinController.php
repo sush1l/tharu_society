@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\MembershipJoin;
 use Illuminate\Http\Request;
 
+use function GuzzleHttp\Promise\all;
+
 class MembershipJoinController extends Controller
 {
     public function index()
@@ -25,9 +27,7 @@ class MembershipJoinController extends Controller
     public function destroy(MembershipJoin $membershipJoin)
     {
         $membershipJoin->delete();
-
         toast('Membership Message Deleted Successfully', 'success');
-
         return back();
     }
 }

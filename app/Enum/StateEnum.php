@@ -4,14 +4,14 @@ namespace App\Enum;
 
 enum StateEnum: string
 {
-    case NSW  = 'nsw';
-    case VIC = 'vic';
-    case QLD = 'qld';
-    case SA = 'sa';
-    case WA = 'wa';
-    case TAS = 'tas';
-    case ACT = 'act';
-    case NT = 'nt';
+    case NSW  = 'New South Wales (NSW)';
+    case VIC = 'Victoria (VIC)';
+    case QLD = 'Queensland (QLD)';
+    case SA = 'South Australia (SA)';
+    case WA = 'Western Australia (WA)';
+    case TAS = 'Tasmania (TAS)';
+    case ACT = 'Australian Capital Territory (ACT)';
+    case NT = 'Northern territory (NT)';
 
     public function label(): string
     {

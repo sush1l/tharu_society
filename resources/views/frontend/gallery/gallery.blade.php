@@ -19,7 +19,7 @@
                     <div class="col-md-4 mb-2">
                         <div class="card" style="height:60%">
                             <img data-aos="fade-up" class="card-img-top"
-                                 src="{{ asset('storage/'.$photoAlbum->photos->random()->images) }}"
+                                 src="{{ asset('storage/'.$photoAlbum->photos->first()->images) }}"
                                  alt="Card image cap" width="100%" height="300">
                             <div  class="card-body">
                                 <h6 data-aos="fade-up" class="card-text my-2">

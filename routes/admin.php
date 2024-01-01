@@ -119,8 +119,6 @@ Route::prefix('membership')->group( function (){
 Route::prefix('job')->group( function (){
     Route::resource('addCity', AddCityController::class);
     Route::resource('job', JobController::class);
-
-
 });
 
 Route::prefix('works')->group( function (){

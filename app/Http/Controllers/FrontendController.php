@@ -161,7 +161,8 @@ class FrontendController extends BaseController
     public function about_us()
     {
         $officeDetail = OfficeDetail::whereShowOnIndex(1)->whereType('Introduction')->first();
-        return view('frontend.aboutus', compact('officeDetail'));
+        $members = Member::with('membershipCategory')->get();
+        return view('frontend.aboutus', compact('officeDetail', 'members'));
     }
 
     public function work()

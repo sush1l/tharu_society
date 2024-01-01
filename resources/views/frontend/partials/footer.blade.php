@@ -37,8 +37,8 @@
                                     <div class="footer_title mt-3 text-center">{{ __('Contact') }}</div>
                                     <div class="footer_links_container text-white">
                                         <ul>
-                                            <li>{{ __('Email') }}: {{ $header->office_email }}</li>
-                                            <li>{{ __('Phone') }}: {{ $header->office_phone }}</li>
+                                            <li class="fw-bold">{{ __('Email') }}: {{ $header->office_email }}</li>
+                                            <li class="fw-bold">{{ __('Phone') }}: {{ $header->office_phone }}</li>
                                             {{-- <li>{{ request()->language == 'en' ? $header->office_address_en : $header->office_address }} --}}
                                             </li>
                                         </ul>

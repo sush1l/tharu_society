@@ -17,7 +17,7 @@
             
             <div class="row my-4 mb-4">
                 @foreach ($addCities as $addCity)
-                    <div class="col-md-3 mb-2">
+                    <div class="col-md-4 mb-3">
                         <div data-aos="fade-up" class="city">
                             <a  href="{{ route('city', $addCity) }}" class="blog__btn">{{ $addCity->title }} <span
                                     class="arrow_right"></span></a>

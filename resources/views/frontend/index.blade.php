@@ -339,21 +339,19 @@
         </div>
     </div>
 
-    <div data-aos="fade-up" class="container mt-4">
-        <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-            <h5 class="section bg-intro text-center text-color px-3 mb-0">Testominal</h5>
-            <h1 class="mb-3">What We Say</h1>
+    <div class="container mt-4">
+        <div class="text-center">
+            <h5 class="section bg-intro text-center text-color px-3 mb-3">WOrd From Our Team</h5>
+            {{-- <h1 class="mb-3">What We Say</h1> --}}
         </div>
     </div>
-
-
 
     <section class="testimonial showcase text-center">
         <div class="overlay">
             <div class="container-fluid">
                 <div id="testimonial4"
                     class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"
-                    data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+                    data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="5000">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <div class="testimonial4_slide">

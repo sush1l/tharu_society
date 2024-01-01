@@ -70,7 +70,7 @@ class FrontendController extends BaseController
             ->orderBy('position')
             ->get();
 
-        $galleries = PhotoGallery::with('photos')->latest()->get();
+        $galleries = PhotoGallery::with('photos')->get();
         $noticePopups = Document::with('files')->where('popUp', 1)->get();
         $employees = Employee::with('designation', 'department')->orderBy('position')->get();
         $audios = Audio::latest()->get();
@@ -189,7 +189,7 @@ class FrontendController extends BaseController
 
     public function photo()
     {
-        $photoAlbums = PhotoGallery::with('photos')->latest()->paginate(6);
+        $photoAlbums = PhotoGallery::with('photos')->paginate(6);
         return view('frontend.gallery.gallery', compact('photoAlbums'));
     }
 

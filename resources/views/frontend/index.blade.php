@@ -25,7 +25,7 @@
                             <div class="carousel-inner">
                                 @foreach ($popups as $key => $popup)
                                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                        <img class="d-block w-100" src="{{ $popup->image }}" alt="Slide {{ $key + 1 }}"
+                                        <img class="d-block w-100" src="{{ $popup->image }}" alt=""
                                             style="height: 600px; width: 100%;">
                                         {{-- <div class="carousel-caption d-none d-md-block">
                                             <h5><b >{{ $popup->title }}</b></h5>

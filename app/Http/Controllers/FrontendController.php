@@ -12,6 +12,7 @@ use App\Models\Bill;
 use App\Models\Blog;
 use App\Models\Comment;
 use App\Models\ContactMessage;
+use App\Models\Country;
 use App\Models\Document;
 use App\Models\DocumentCategory;
 use App\Models\Employee;
@@ -80,7 +81,6 @@ class FrontendController extends BaseController
         $members = Member::orderby('position')->get();
         $popups = Popup::whereShowOnIndex(1)->latest()->get();
         return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups', 'sliders', 'popups'));
-
     }
     public function languageChange($lang)
     {
@@ -239,7 +239,9 @@ class FrontendController extends BaseController
     }
     public function join()
     {
-        return view('frontend.joinform');
+
+        $countries = Country::all();
+        return view('frontend.joinform', compact('countries'));
     }
 
     public function workDetail(work $work)
@@ -328,6 +330,4 @@ class FrontendController extends BaseController
         session()->flash('message', 'Comment Added Successfully');
         return back();
     }
-
 }
-

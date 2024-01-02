@@ -10,13 +10,15 @@ return new class extends Migration
     {
         Schema::create('membership_joins', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('country_id')->nullable()->constrained();
             $table->string('full_name');
             $table->string('town');
-            $table->string('state');
+            $table->string('state')->nullable();
             $table->string('code');
             $table->string('contact_no');
             $table->string('address');
             $table->string('email');
+            $table->string('district')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

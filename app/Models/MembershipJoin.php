@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class MembershipJoin extends Model
@@ -17,12 +18,19 @@ class MembershipJoin extends Model
     ];
 
     protected $fillable = [
+        'country_id',
         'full_name',
         'town',
         'state',
         'code',
         'contact_no',
         'address',
-        'email'
+        'email',
+        'district'
     ];
+
+    public function country(): BelongsTo
+    {
+        return $this->belongsTo(Country::class);
+    }
 }

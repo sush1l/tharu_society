@@ -13,8 +13,7 @@ class MembershipJoinController extends Controller
     public function index()
     {
 
-        $membershipJoins = MembershipJoin::latest()->get();
-
+        $membershipJoins = MembershipJoin::with('country')->get();
         return view('admin.join_member', compact('membershipJoins'));
     }
 

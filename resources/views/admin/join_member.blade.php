@@ -33,7 +33,7 @@
                 <div style="display: flex;justify-content: space-between">
                     <h6 class="mb-10">Membership Join Request</h6>
                 </div>
-                <div class=" table-responsive table-hover">
+                <div class=" table-responsive  table-hover">
                     <table class="table">
                         <thead>
                         <tr>
@@ -43,14 +43,15 @@
                             <th>Phone</th>
                             <th>Address</th>
                             <th>State/Territory</th>
-                            <th>Suburb/Town</th>
+                            <th>Country</th>
+                            <th>Home District</th>
                             <th>Action</th>
                         </tr>
                         <!-- end table row-->
                         </thead>
                         <tbody>
                         @forelse($membershipJoins as $membershipJoin)
-                            <tr>
+                            <tr class="text-center">
                                 <td>
                                     {{$loop->iteration}}
                                 </td>
@@ -58,8 +59,9 @@
                                 <td>{{$membershipJoin->email}}</td>
                                 <td>{{$membershipJoin->contact_no}}</td>
                                 <td>{{$membershipJoin->address}}</td>
-                                <td>{{$membershipJoin->state}}</td>
-                                <td>{{$membershipJoin->town}}</td>
+                                <td>{{$membershipJoin->state ?? '-'}}</td>
+                                <td>{{$membershipJoin->country->name ?? '-'}}</td>
+                                <td>{{$membershipJoin->district ?? '-'}}</td>
                                 <td>
                                     <div class="action">
 

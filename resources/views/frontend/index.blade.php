@@ -412,7 +412,7 @@
                     <div class="carousel-item">
                         <div class="testimonial4_slide">
                             <div class="d-flex">
-                                <img src="{{ asset('assets/frontend/images/pooja.jpeg') }}"
+                                <img src="{{ asset('assets/frontend/images/pooja.jpg') }}"
                                     class="img-circle img-responsive" />
                                 <img src="{{ asset('assets/frontend/images/umesh.jpeg') }}"
                                     class="img-circle img-responsive" />

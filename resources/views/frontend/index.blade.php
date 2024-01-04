@@ -437,7 +437,8 @@
                                 embodies
                                 the spirit of unity, culture, and progress. We are grateful to be a part of this
                                 incredible organization. </p>
-                            <h4 class="mt-2">Cultural secretary and IT co-ordinator</h4>
+                            <h4 class="mt-2">Cultural secretary and IT co-ordinator<br>
+                            Pooja Chaudhary & Umesh Chaudhary</h4>
                         </div>
                     </div>
                 </div>

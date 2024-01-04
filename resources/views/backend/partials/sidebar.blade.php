@@ -101,9 +101,9 @@
                 </ul>
             </li>
 
-            
-            
-            
+
+
+
             <li class="nav-item">
                 <a href="{{ route('admin.popup.index') }}">
                     <span class="icon">
@@ -265,7 +265,7 @@
                         <a class="{{ request()->is('admin/membership/member') ? 'active' : '' }}"
                             href="{{ route('admin.member.index') }}">Add Member </a>
                         <a class="{{ request()->is('admin/membership/membershipJoin') ? 'active' : '' }}"
-                            href="{{ route('admin.joinRequest.index') }}">Membership Join Request </a>
+                            href="{{ route('admin.membershipJoin.index') }}">Membership Join Request </a>
                     </li>
                 </ul>
             </li>

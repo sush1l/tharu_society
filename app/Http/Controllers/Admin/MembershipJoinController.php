@@ -25,8 +25,9 @@ class MembershipJoinController extends Controller
 
     public function destroy(MembershipJoin $membershipJoin)
     {
+
         $membershipJoin->delete();
-        toast('Membership Message Deleted Successfully', 'success');
+        toast('Request Message Deleted Successfully', 'success');
         return back();
     }
 }

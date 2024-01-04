@@ -69,7 +69,7 @@
                                             <i class="fa fa-eye"></i>
                                            </a> --}}
 
-                                        <form action="{{route('admin.joinRequest.destroy',$membershipJoin)}}"
+                                        <form action="{{route('admin.membershipJoin.destroy',$membershipJoin)}}"
                                               method="POST">
                                             @csrf
                                             @method('DELETE')

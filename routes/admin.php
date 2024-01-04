@@ -111,7 +111,7 @@ Route::prefix('training')->group( function (){
 Route::prefix('membership')->group( function (){
     Route::resource('membershipCategory', MembershipCategoryController::class);
     Route::resource('membership', MembershipController::class);
-    Route::resource('joinRequest', MembershipJoinController::class);
+    Route::resource('membershipJoin', MembershipJoinController::class)->only('index', 'destroy');
     Route::resource('member', MemberController::class);
 
 });

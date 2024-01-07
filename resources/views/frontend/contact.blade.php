@@ -88,8 +88,8 @@
                             <h5 class="text-center fw-bold text-white">{{__('Address')}}</h5>
                         </div>
                         <div class="address">
-                            <h6 class="fw-bold">{{request()->language=='en' ? $header->office_address_en : $header->office_address}}</h6>
-                            <p><b>Address:-</b>  8/9-11 Russell Street Strathfield, NSW, 2135</p>
+                            {{-- <h6 class="fw-bold">{{request()->language=='en' ? $header->office_address_en : $header->office_address}}</h6> --}}
+                            <p><b>Address:-</b>  {{request()->language=='en' ? $header->office_address_en : $header->office_address}}</p>
                             <p><b>Telephone :- </b> {{$header->office_phone}}</p>
                             <p><b>Email :-</b> {{$header->office_email}}</p>
                             <h6><b>Website :-</b> https://tharusociety.techworkcompany.com</h6>

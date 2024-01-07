@@ -93,7 +93,7 @@
                             <p><b>Address:-</b>  {{request()->language=='en' ? $header->office_address_en : $header->office_address}}</p>
                             <p><b>Telephone :- </b> {{$header->office_phone}}</p>
                             <p><b>Email :-</b> {{$header->office_email}}</p>
-                            <h6><b>Website :-</b> https://tharusociety.techworkcompany.com</h6>
+                            <p><b>Website :-</b> https://tharusociety.techworkcompany.com</p>
                         </div>
                         <div data-aos="fade-up" class="card-02 mt-5">
                             <h5 class="text-center fw-bold text-white">{{__('Location')}}</h5>

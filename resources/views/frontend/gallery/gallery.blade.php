@@ -17,10 +17,10 @@
             <div class="row my-4 mb-4">
                 @foreach($photoAlbums as $photoAlbum)
                     <div class="col-md-4 mb-2">
-                        <div class="card" style="height:60%">
-                            <img data-aos="fade-up" class="card-img-top"
+                        <div  style="height:60%">
+                            <img data-aos="fade-up"
                                  src="{{ asset('storage/'.$photoAlbum->photos->first()->images) }}"
-                                 alt="Card image cap" width="100%" height="300">
+                                 alt="Card image cap" width="100%" height="350">
                             <div  class="card-body">
                                 <h6 data-aos="fade-up" class="card-text my-2">
                                     {{request()->language=='en' ? $photoAlbum->title_en : $photoAlbum->title}}

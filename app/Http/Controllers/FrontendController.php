@@ -12,6 +12,7 @@ use App\Models\Bill;
 use App\Models\Blog;
 use App\Models\Comment;
 use App\Models\ContactMessage;
+use App\Models\Country;
 use App\Models\Document;
 use App\Models\DocumentCategory;
 use App\Models\Employee;
@@ -70,7 +71,7 @@ class FrontendController extends BaseController
             ->orderBy('position')
             ->get();
 
-        $galleries = PhotoGallery::with('photos')->latest()->get();
+        $galleries = PhotoGallery::with('photos')->get();
         $noticePopups = Document::with('files')->where('popUp', 1)->get();
         $employees = Employee::with('designation', 'department')->orderBy('position')->get();
         $audios = Audio::latest()->get();
@@ -80,7 +81,6 @@ class FrontendController extends BaseController
         $members = Member::orderby('position')->get();
         $popups = Popup::whereShowOnIndex(1)->latest()->get();
         return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups', 'sliders', 'popups'));
-
     }
     public function languageChange($lang)
     {
@@ -161,7 +161,8 @@ class FrontendController extends BaseController
     public function about_us()
     {
         $officeDetail = OfficeDetail::whereShowOnIndex(1)->whereType('Introduction')->first();
-        return view('frontend.aboutus', compact('officeDetail'));
+        $members = Member::with('membershipCategory')->get();
+        return view('frontend.aboutus', compact('officeDetail', 'members'));
     }
 
     public function work()
@@ -188,7 +189,7 @@ class FrontendController extends BaseController
 
     public function photo()
     {
-        $photoAlbums = PhotoGallery::with('photos')->latest()->paginate(6);
+        $photoAlbums = PhotoGallery::with('photos')->paginate(6);
         return view('frontend.gallery.gallery', compact('photoAlbums'));
     }
 
@@ -238,7 +239,9 @@ class FrontendController extends BaseController
     }
     public function join()
     {
-        return view('frontend.joinform');
+
+        $countries = Country::all();
+        return view('frontend.joinform', compact('countries'));
     }
 
     public function workDetail(work $work)
@@ -327,6 +330,4 @@ class FrontendController extends BaseController
         session()->flash('message', 'Comment Added Successfully');
         return back();
     }
-
 }
-

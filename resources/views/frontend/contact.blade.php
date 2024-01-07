@@ -15,6 +15,7 @@
             </div>
             <div class="row g-3">
                 <div class="row">
+                    <p class="fw-bold mb-3">We'd love to hear from you and appreciate your patience as our dedicated volunteers strive to respond to your message. We'll get back to you as soon as possible, and we truly value your feedback!</p>
                     <div data-aos="fade-up" class="col-md-7">
                         @if(Session::has('message'))
                             <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>

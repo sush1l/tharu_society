@@ -35,8 +35,8 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item"
                             href="{{ route('membershipIntro', ['language' => $language]) }}">{{ __('Introduction') }}</a></li>
-                    <li><a class="dropdown-item"
-                            href="{{ route('member', ['language' => $language]) }}">{{ __('Our Members') }}</a></li>
+                    {{-- <li><a class="dropdown-item"
+                            href="{{ route('member', ['language' => $language]) }}">{{ __('Our Members') }}</a></li> --}}
                             <li><a class="dropdown-item"
                                 href="{{ route('join', ['language' => $language]) }}">{{ __('Membership Join Form') }}</a></li>
 
@@ -50,7 +50,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item"
-                            href="{{ route('eventIntro', ['language' => $language]) }}">{{ __('Introduction') }}</a></li>
+                            href="{{ route('eventIntro', ['language' => $language]) }}">{{ __('Event Details') }}</a></li>
                     <li><a class="dropdown-item"
                             href="{{ route('events', ['language' => $language]) }}">{{ __('UpComing Events') }}</a></li>
                 </ul>

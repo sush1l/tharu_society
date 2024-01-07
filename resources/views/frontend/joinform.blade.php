@@ -57,7 +57,7 @@
 
                                 <div class="col-md-6 p-3">
                                     <label for="state">State/Territory</label>
-                                    <select name="state" id="state" class="form-control">
+                                    <select name="state" id="state" class="form-control mt-2">
                                         <option value="">- - Choose - -</option>
                                         @foreach (\App\Enum\StateEnum::cases() as $case)
                                         <option value="{{ $case->value }}"
@@ -71,6 +71,25 @@
                                             {{ $message }}
                                         </div>
                                     @enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="input-style-1">
+                                        <label for="country_id">Country</label>
+                                        <select name="country_id" id="country_id" class="form-control mt-2">
+                                            <option value="">Select</option>
+                                            @foreach ($countries as $country)
+                                                <option value="{{ $country->id }}"
+                                                    {{ old('country_id') == $country->id ? 'selected' : '' }}>
+                                                    {{ $country->name }}</option>
+                                            @endforeach
+                                        </select>
+                                        @error('country_id')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
                                 </div>
 
                                 <div class="col-md-6 p-3">
@@ -110,6 +129,19 @@
                                     @enderror
                                 </div>
 
+
+                                <div class="col-md-6 p-3">
+                                    <label for="district" class="form-label">Home District (Nepal)<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" value="{{ old('district') }}" class="form-control"
+                                        name="district" id="district" placeholder="District">
+                                    @error('district')
+                                        <div class="text-danger">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+
                                 <div class="text-end mt-4">
                                     <button type="submit" class="btn px-4 py-3 btn-outline-dark">Join Now</button>
                                 </div>
@@ -138,12 +170,12 @@
                                         </span>
                                         <span>{{ $header->office_email }}</span>
                                     </li>
-                                    
+
                                     <li class="d-flex justify-content-start align-items-center mb-4">
                                         <span class="opacity-50 d-flex align-items-center me-3 fs-2">
                                             <i class="fa fa-map"></i>
                                         </span>
-                                        <span>{{$header->office_address}}</span>
+                                        <span>{{$header->office_name_en}}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -154,3 +186,5 @@
         </div>
     </div>
 @endsection
+
+

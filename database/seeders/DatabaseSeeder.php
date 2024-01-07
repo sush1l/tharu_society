@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
             PermissionRoleSeeder::class,
             UserSeeder::class,
             OfficeSettingSeeder::class,
-            ColorSeeder::class
+            ColorSeeder::class,
+            CountrySeeder::class
         ]);
     }
 }

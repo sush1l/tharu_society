@@ -1,4 +1,4 @@
-@extends('layouts.master')
+{{-- @extends('layouts.master')
 @section('content')
     <div data-aos="fade-up" id="body">
         <div data-aos="fade-up" class="about mt-1">
@@ -36,4 +36,4 @@
             @endif
         </div>
     </div>
-@endsection
+@endsection --}}

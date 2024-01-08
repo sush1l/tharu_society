@@ -25,12 +25,12 @@
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowfullscreen></iframe>
                             @endif
-                            <h1>{{ request()->language == 'en' ? $events->title_en : $event->title }}</h1>
+                            <h3>{{ request()->language == 'en' ? $events->title_en : $events->title }}</h3>
                             <span>By Admin on {{ $events->date }}</span>
                             @if (!empty($events->description))
-                                <p>{!! request()->language == 'en' ? $events->description : $events->description !!}</p>
+                                <h6>{!! request()->language == 'en' ? $events->description : $events->description !!}</h6>
                             @endif
-                            <a href="{{ route('events') }}" class="more">Back To Event</a>
+                            <a href="{{ route('events') }}" class="more mt-3">Back To Blog</a>
                         </div>
                     </div>
                 </div>

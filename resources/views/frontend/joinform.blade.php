@@ -3,7 +3,7 @@
     <div id="body">
         <div data-aos="fade-up" class="about mt-2">
             <div data-aos="fade-up" class="container">
-                <h1>{{ __('Membership Join Form') }}</h1>
+                <h1>{{ __('Membership Form') }}</h1>
             </div>
         </div>
     </div>

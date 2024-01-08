@@ -26,7 +26,7 @@
                                     allowfullscreen></iframe>
                             @endif
                             <h3>{{ request()->language == 'en' ? $events->title_en : $events->title }}</h3>
-                            <span>By Admin on {{ $events->date }}</span>
+                            <span class="mb-2">By Admin on {{ $events->date }}</span>
                             @if (!empty($events->description))
                                 <h6>{!! request()->language == 'en' ? $events->description : $events->description !!}</h6>
                             @endif

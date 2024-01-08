@@ -35,8 +35,10 @@
 
 
                                     </p>
-                                    <a data-aos="fade-up" href="{{ route('events.eventDetail',$event) }}"
-                                        class="blog__btn">View More <span class="arrow_right"></span></a>
+                                        <a href="{{ route('events.eventDetail',$event) }}"
+                                        class="btn btn-outline-primary btn-xs">
+                                        {{ __('View More') }}
+                                    </a>
                                 </div>
                             </div>
                         </div>

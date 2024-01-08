@@ -224,7 +224,7 @@
                                 <div class="news_info mt-2">
                                     <a href="{{ route('single_blog') }}">
                                         <h5 class="mb-1" style="color: black">
-                                            {{ request()->language == 'en' ? $blog->title_en : $blog->title }}
+                                            {{ $blog->title }}
                                         </h5>
                                     </a>
                                     <div class="d-flex justify-content-between">

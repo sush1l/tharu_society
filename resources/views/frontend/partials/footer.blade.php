@@ -10,7 +10,7 @@
                                     <div class="footer_logo_container">
                                         <a href="#">
                                             <div class="footer_logo_text mt-4">
-                                                {{ request()->language == 'en' ? $header->office_name_en : $header->office_name }}
+                                                {{ $header->office_name_en}}
                                             </div>
                                         </a>
                                     </div>

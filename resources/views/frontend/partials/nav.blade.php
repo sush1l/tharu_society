@@ -34,7 +34,7 @@
                     {{-- <li><a class="dropdown-item"
                             href="{{ route('member') }}">{{ __('Our Members') }}</a></li> --}}
                             <li><a class="dropdown-item"
-                                href="{{ route('join') }}">{{ __('Membership Join Form') }}</a></li>
+                                href="{{ route('join') }}">{{ __('Membership Form') }}</a></li>
 
                 </ul>
             </li>

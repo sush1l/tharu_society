@@ -18,9 +18,9 @@
                                  alt="Card image cap" width="100%" height="350">
                             <div  class="card-body">
                                 <h6 data-aos="fade-up" class="card-text my-2">
-                                    {{request()->language=='en' ? $photoAlbum->title_en : $photoAlbum->title}}
+                                    {{ $photoAlbum->title_en }}
                                 </h6>
-                                <a data-aos="fade-up" href="{{ route('photoGallery.details',[$photoAlbum->slug,'language'=>$language]) }}"
+                                <a data-aos="fade-up" href="{{ route('photoGallery.details',[$photoAlbum->slugs]) }}"
                                    class="btn btn-outline-primary btn-xs">
                                     {{__('View More')}}
                                 </a>

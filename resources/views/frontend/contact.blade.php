@@ -90,8 +90,7 @@
                             <h5 class="text-center fw-bold text-white">{{__('Address')}}</h5>
                         </div>
                         <div class="address">
-                            {{-- <h6 class="fw-bold">{{request()->language=='en' ? $header->office_address_en : $header->office_address}}</h6> --}}
-                            <p><b>Address:-</b>  {{request()->language=='en' ? $header->office_address_en : $header->office_address}}</p>
+                            <p><b>Address:-</b>  {{ $header->office_address_en }}</p>
                             <p><b>Telephone:</b> <a href="tel:{{$header->office_phone}}">{{$header->office_phone}}</a></p>
                             <p><b>Email:</b> <a href="mailto:{{$header->office_email}}">{{$header->office_email}}</a></p>
 

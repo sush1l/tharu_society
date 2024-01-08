@@ -5,7 +5,11 @@
     <title>{{ config('app.name') }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="{{ asset('assets/frontend/images/logo.jpeg') }}" type="image/x-icon" />
+    <link
+    rel="shortcut icon"
+    href="{{asset('assets/frontend/images/logo.jpeg')}}"
+    type="image/x-icon"
+/>
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/style.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
@@ -26,32 +30,32 @@
     </button>
 
 
-    <div class="sub-header-card d-none d-sm-block">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="sub-header-dt-card">
-                    <i class="fa fa-envelope"> {{ $header->office_email }}</i>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="d-flex justify-content-center">
-                    <div class="phone text-white mx-2">
-                        <i class="fa fa-phone fw-bold"> {{ $header->office_phone }}</i>
+        <div class="sub-header-card d-none d-sm-block">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="sub-header-dt-card">
+                        <i class="fa fa-envelope"> {{ $header->office_email }}</i>
                     </div>
-                    <div class="header-navbar-language">
-                        <ul>
-                            <li>
-                                <a href="{{ route('login') }}" target="_blank">
-                                    <p class="active">LOGIN</p>
-                                </a>
-                            </li>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-end">
+                        <div class="phone text-white mx-5">
+                            <i class="fa fa-phone fw-bold"> {{ $header->office_phone }}</i>
+                        </div>
+                        {{-- <div class="header-navbar-language">
+                            <ul>
+                                <li>
+                                    <a href="{{ route('login') }}" target="_blank">
+                                        <p class="active">LOGIN</p>
+                                    </a>
+                                </li>
 
-                        </ul>
+                            </ul>
+                        </div> --}}
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
     @include('frontend.partials.nav')
 
@@ -125,7 +129,7 @@
 
 
 
-    <script>
+<script>
         $(document).ready(function() {
             $('#exampleModal').modal('show');
             $('#carouselExampleIndicators').on('slid.bs.carousel', function() {
@@ -148,7 +152,7 @@
                 $('#exampleModal').modal('hide');
             });
         });
-    </script>
+    </script>
 
 
 

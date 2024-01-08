@@ -34,7 +34,7 @@
                     {{-- <li><a class="dropdown-item"
                             href="{{ route('member') }}">{{ __('Our Members') }}</a></li> --}}
                             <li><a class="dropdown-item"
-                                href="{{ route('join') }}">{{ __('Membership Join Form') }}</a></li>
+                                href="{{ route('join') }}">{{ __('Membership Form') }}</a></li>
 
                 </ul>
             </li>
@@ -52,9 +52,9 @@
                 </ul>
             </li>
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('blogs') }}">{{ __('Blogs') }}</a>
-            </li>
+            </li> --}}
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"

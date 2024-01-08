@@ -1,8 +1,4 @@
-
-
-
 <nav class="navbar navbar-light navbar-expand-lg shadow py-1 sticky-top" style="background: #fff">
-
     <a href="{{ route('welcome') }}" class="navbar-brand px-3">
         <div class="d-flex flex-row">
             <div class="p-2">
@@ -21,10 +17,10 @@
         <div class="navbar-nav mx-auto p-4 p-lg-0">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page"
-                    href="{{ route('welcome', ['language' => $language]) }}">{{ __('Home') }}</a>
+                    href="{{ route('welcome') }}">{{ __('Home') }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('about-us', ['language' => $language]) }}">{{ __('About Us') }}</a>
+                <a class="nav-link" href="{{ route('about-us') }}">{{ __('About Us') }}</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -34,11 +30,11 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item"
-                            href="{{ route('membershipIntro', ['language' => $language]) }}">{{ __('Introduction') }}</a></li>
+                            href="{{ route('membershipIntro') }}">{{ __('Introduction') }}</a></li>
                     {{-- <li><a class="dropdown-item"
-                            href="{{ route('member', ['language' => $language]) }}">{{ __('Our Members') }}</a></li> --}}
+                            href="{{ route('member') }}">{{ __('Our Members') }}</a></li> --}}
                             <li><a class="dropdown-item"
-                                href="{{ route('join', ['language' => $language]) }}">{{ __('Membership Join Form') }}</a></li>
+                                href="{{ route('join') }}">{{ __('Membership Join Form') }}</a></li>
 
                 </ul>
             </li>
@@ -50,14 +46,14 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item"
-                            href="{{ route('eventIntro', ['language' => $language]) }}">{{ __('Event Details') }}</a></li>
+                            href="{{ route('eventIntro') }}">{{ __('Event Details') }}</a></li>
                     <li><a class="dropdown-item"
-                            href="{{ route('events', ['language' => $language]) }}">{{ __('UpComing Events') }}</a></li>
+                            href="{{ route('events') }}">{{ __('UpComing Events') }}</a></li>
                 </ul>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('blogs', ['language' => $language]) }}">{{ __('Blogs') }}</a>
+                <a class="nav-link" href="{{ route('blogs') }}">{{ __('Blogs') }}</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -67,17 +63,17 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item"
-                            href="{{ route('photo', ['language' => $language]) }}">{{ __('Photo Gallery') }}</a></li>
+                            href="{{ route('photo') }}">{{ __('Photo Gallery') }}</a></li>
                     <li><a class="dropdown-item"
-                            href="{{ route('video', ['language' => $language]) }}">{{ __('Video Gallery') }}</a></li>
+                            href="{{ route('video') }}">{{ __('Video Gallery') }}</a></li>
                 </ul>
             </li>
             {{-- <li class="nav-item">
-                <a class="nav-link" href="{{ route('addCity', ['language' => $language]) }}">{{ __('Job Opportunities') }}</a>
+                <a class="nav-link" href="{{ route('addCity') }}">{{ __('Job Opportunities') }}</a>
             </li> --}}
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('contact', ['language' => $language]) }}">{{ __('Contact') }}</a>
+                <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact') }}</a>
             </li>
             </div>
 

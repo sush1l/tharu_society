@@ -19,7 +19,7 @@
                                     </div>
                                     <div class="footer_social">
                                         <ul>
-                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <li><a href="{{ $header->facebook_iframe }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                             </li>
                                             <li><a href="#"><i class="fa fa-google-plus"
                                                         aria-hidden="true"></i></a>
@@ -37,8 +37,8 @@
                                     <div class="footer_title mt-3 text-center">{{ __('Contact') }}</div>
                                     <div class="footer_links_container text-white">
                                         <ul>
-                                            <li class="fw-bold">{{ __('Email') }}: {{ $header->office_email }}</li>
-                                            <li class="fw-bold">{{ __('Phone') }}: {{ $header->office_phone }}</li>
+                                            <li class="fw-bold">{{ __('Email') }}:<a href="mailto:{{ $header->office_email }}"> {{ $header->office_email }}</a></li>
+                                            <li class="fw-bold">{{ __('Phone') }}:<a href="tel:{{$header->office_phone}}"> {{ $header->office_phone }}</a></li>
                                             {{-- <li>{{ request()->language == 'en' ? $header->office_address_en : $header->office_address }} --}}
                                             </li>
                                         </ul>
@@ -67,7 +67,7 @@
                     <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
                         <div class="col-md-6 fw-bold">
                             Copyright ©
-                            {{ date('Y') }} All rights reserved
+                            {{ date('Y') }} All rights reserved by <a href="https://tharusociety.techworkcompany.com" class="text-white">TSSA</a>
                         </div>
                         <div class="col-md-6 fw-bold">
                             <ul>

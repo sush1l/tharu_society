@@ -4,32 +4,19 @@ use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    if (config('default.dual_language')) {
-        $locale = app()->getLocale();
-        return redirect(route('welcome', ['language'=>$locale]));
-    } else {
-        return redirect(route('welcome'));
-    }
-});
+
 
 Route::middleware('ipMiddleware')->group(function () {
-
-    if (config('default.dual_language')) {
-        Route::middleware('setLanguage')->group(function () {
-            (new listing)->routes();
-        });
-    } else {
-        (new listing)->routes();
-    }
+    (new listing)->routes();
 });
+
 
 class listing
 {
     public function routes(): void
     {
         Route::get('/', [FrontendController::class, 'index'])->name('welcome');
-        Route::get('languageChange/{languageChange}',[FrontendController::class,'languageChange'])->name('language');
+        // Route::get('languageChange/{languageChange}',[FrontendController::class,'languageChange'])->name('language');
         Route::get('about_us', [FrontendController::class, 'about_us'])->name('about-us');
         Route::get('trainingCategory/{trainingCategory}', [FrontendController::class, 'trainingCategory'])->name('trainingCategory');
         Route::get('consultancy', [FrontendController::class, 'consultancy'])->name('consultancy');

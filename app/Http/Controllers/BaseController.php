@@ -42,7 +42,7 @@ class BaseController extends Controller
         view()->share('header', $header);
         view()->share('sharedLinks', $sharedLinks);
         view()->share('sharedMenus', $sharedMenus);
-        view()->share('language', Cache::get('language') ?? $_GET['language'] ?? 'ne');
+        // view()->share('language', Cache::get('language') ?? $_GET['language'] ?? 'ne');
         view()->share('totalVisitors', Ip::distinct('ip_address')->count());
         view()->share('colors',Color::first());
         view()->share('officeSettingHeaders',OfficeSettingHeader::orderBy('position')->get());

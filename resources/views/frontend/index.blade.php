@@ -1,7 +1,5 @@
 @extends('layouts.master')
 @section('content')
-
-
     <!-- Modal popup notice -->
     @if ($popups->count() > 0)
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -26,7 +24,7 @@
                                 @foreach ($popups as $key => $popup)
                                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                                         <img class="d-block w-100" src="{{ $popup->image }}" alt=""
-                                            style="height: 600px; width: 100%;">
+                                            style="height: 700px; width: 100%;">
                                         {{-- <div class="carousel-caption d-none d-md-block">
                                             <h5><b >{{ $popup->title }}</b></h5>
                                             <p class="text-center bg-success">{{ $popup->date }}</p>
@@ -54,8 +52,8 @@
             @foreach ($sliders as $slider)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                     <img src="{{ $slider->photo }}" class="d-block w-100 height-455" ">
-                                        <div class="carousel-caption d-none d-md-block">
-                                          @if (request()->language == 'en')
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                        @if (request()->language == 'en')
                     <p>{{ $slider->title_en }}</p>
                 @else
                     <p>{{ $slider->title }}</p>
@@ -79,7 +77,7 @@
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="col-sm-12 col-lg-12 mt-3">
-                    <h5 class="section bg-intro text-center text-color px-3 mb-0">About Us</h5>
+                    <h5 class="section bg-intro text-center text-color px-3 mb-4">About Us</h5>
                     <h1 class="mb-3"></h1>
                     <div class="row">
                         <div class="col-md-6">
@@ -90,8 +88,7 @@
                                     @else
                                         {!! Str::words(strip_tags($officeDetail->description ?? ''), 200, '...') !!}
                                     @endif
-                                    <a class="intro-title"
-                                        href="{{ route('officeDetail', [$officeDetail->slug ?? '', 'language' => $language]) }}">
+                                    <a class="intro-title" href="{{ route('officeDetail', [$officeDetail->slug ?? '']) }}">
                                         {{ __('View More......') }}
                                     </a>
                             </div>
@@ -106,12 +103,14 @@
             </div>
         </div>
     </section>
+
+
     <section data-aos="fade-up" id="services" class="services mt-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="col-sm-12 col-lg-12 mt-3">
-                    <h5 class="section bg-intro text-center text-color px-3 mb-0">Events Detail</h5>
+                    <h5 class="section bg-intro text-center text-color px-3 mb-4">Events Detail</h5>
                     <h1 class="mb-3"></h1>
                     <div class="row">
                         <div class="col-md-7">
@@ -151,12 +150,15 @@
             </div>
         </div>
     </section>
+
+
+
     <section data-aos="fade-up" id="services" class="services mt-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <div class="col-sm-12 col-lg-12 mt-3">
-                    <h5 class="section bg-intro text-center text-color px-3 mb-0">Join Tharu Society</h5>
+                    <h5 class="section bg-intro text-center text-color px-3 mb-4">Join Tharu Society</h5>
                     <h1 class="mb-3"></h1>
                     <div class="row">
                         <div class="col-md-7">
@@ -202,13 +204,12 @@
         <div class="container mt-3">
             <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <h5 class="section bg-intro text-center text-color px-3 mb-0">Events/Blogs</h5>
-                <h1 class="mb-5">{{ __('Recent Blogs') }}</h1>
+                <h5 class="section bg-intro text-center text-color px-3 mb-4">Events/Blogs</h5>
             </div>
             <div class="row g-3">
                 <div class="row">
                     <div class="d-flex justify-content-end mb-4">
-                        <a href="{{ route('blogs', ['language' => $language]) }}" class="btn btn-outline-primary btn-xs">
+                        <a href="{{ route('blogs') }}" class="btn btn-outline-primary btn-xs">
                             {{ __('View More') }}
                         </a>
                     </div>
@@ -250,8 +251,8 @@
         <div data-aos="fade-up" class="container">
             <div data-aos="fade-up"class="text-center"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <h5 class="section bg-intro text-center text-color px-3 mb-0">Gallery</h5>
-                <h1 class="mb-3">{{ __('Photos') }}</h1>
+                <h5 class="section bg-intro text-center text-color px-3 mb-4">Gallery</h5>
+
             </div>
             <div class="row g-3">
                 <div data-aos="fade-up" class="col-lg-7 col-md-6">
@@ -313,7 +314,7 @@
     <div data-aos="fade-up" class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s"">
         <div class="container">
             <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <h5 class="section bg-intro text-center text-color px-3 mb-3">Members</h5>
+                <h5 class="section bg-intro text-center text-color px-3 mb-4">Members</h5>
                 {{-- <h1 class="mb-3">{{ __('Photos') }}</h1> --}}
             </div>
             <div data-aos="fade-up" class="Container">
@@ -341,12 +342,10 @@
 
     <div class="container mt-4">
         <div class="text-center">
-            <h5 class="section bg-intro text-center text-color px-3 mb-3">WOrd From Our Team</h5>
+            <h5 class="section bg-intro text-center text-color px-3 mb-4">WOrd From Our Team</h5>
             {{-- <h1 class="mb-3">What We Say</h1> --}}
         </div>
     </div>
-
-
     <section class="testimonial text-center">
         <div class="container-fluid">
             <div id="testimonial4"
@@ -356,7 +355,7 @@
                     <div class="carousel-item active">
                         <div class="testimonial4_slide">
                             <img src="{{ asset('assets/frontend/images/dip.jpeg') }}"
-                                    class="img-circle img-responsive" />
+                                class="img-circle img-responsive" />
                             <p class="mt-2">"As the President of Tharu Society Sydney Australia, I am honored to lead an
                                 organization
                                 that unites and empowers the Nepalese Tharu community in Australia. Our society
@@ -380,33 +379,34 @@
                                 incredible journey. Together, we can continue to make a difference and build a
                                 brighter
                                 future for the Nepalese Tharu community in Australia. </p>
-                            <h4 class="mt-2">President<br>
+                            <h4 class="my-5">President<br>
                                 Dip Narayan Chaudhary </h4>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="testimonial4_slide">
                             <img src="{{ asset('assets/frontend/images/arun.jpeg') }}"
-                                    class="img-circle img-responsive" />
-                                    <p class="mt-2">As the Public Relations Officer of Tharu Society Sydney Australia, I am proud to be a
-                                        part of an organization that brings together the Nepalese Tharu community in
-                                        Australia.
-                                        Our society plays a vital role in fostering unity, promoting cultural awareness, and
-                                        creating opportunities for growth and development among Tharu individuals.</p>
+                                class="img-circle img-responsive" />
+                            <p class="mt-2">As the Public Relations Officer of Tharu Society Sydney Australia, I am proud
+                                to be a
+                                part of an organization that brings together the Nepalese Tharu community in
+                                Australia.
+                                Our society plays a vital role in fostering unity, promoting cultural awareness, and
+                                creating opportunities for growth and development among Tharu individuals.</p>
 
-                                    <p>I am dedicated to ensuring that the voice and achievements of Tharu Society Sydney
-                                        Australia are effectively communicated to the wider public. By sharing our stories,
-                                        experiences, and aspirations, we aim to break down stereotypes, promote inclusivity,
-                                        and
-                                        build bridges of understanding between different cultures.I am grateful to be a part
-                                        of
-                                        an organization that is committed to empowering the Tharu community and creating a
-                                        brighter future for all Nepalese Tharu people in Australia. Together, we can
-                                        continue to
-                                        strengthen our community bonds, celebrate our rich heritage, and make a positive
-                                        impact
-                                        on society. </p>
-                                    <h4 class="mt-2">Public Relation officer<br>Arun Aaryan Chaudhary</h4>
+                            <p>I am dedicated to ensuring that the voice and achievements of Tharu Society Sydney
+                                Australia are effectively communicated to the wider public. By sharing our stories,
+                                experiences, and aspirations, we aim to break down stereotypes, promote inclusivity,
+                                and
+                                build bridges of understanding between different cultures.I am grateful to be a part
+                                of
+                                an organization that is committed to empowering the Tharu community and creating a
+                                brighter future for all Nepalese Tharu people in Australia. Together, we can
+                                continue to
+                                strengthen our community bonds, celebrate our rich heritage, and make a positive
+                                impact
+                                on society. </p>
+                            <h4 class="my-5">Public Relation officer<br>Arun Aaryan Chaudhary</h4>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -437,8 +437,8 @@
                                 embodies
                                 the spirit of unity, culture, and progress. We are grateful to be a part of this
                                 incredible organization. </p>
-                            <h4 class="mt-2">Cultural secretary and IT co-ordinator<br>
-                            Pooja Chaudhary & Umesh Chaudhary</h4>
+                            <h4 class="my-5">Cultural secretary and IT co-ordinator<br>
+                                Pooja Chaudhary & Umesh Chaudhary</h4>
                         </div>
                     </div>
                 </div>
@@ -453,19 +453,20 @@
     </section>
 
 
-
-    <div class="container-fluid my-5">
+    <div class="container-fluid my-5 position-relative">
+        <!-- Content -->
         <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-            <h5 class="section bg-intro text-center text-color px-3 mb-3">Contact</h5>
+            <h5 class="section bg-intro text-center text-color px-3 mb-5">Contact</h5>
             {{-- <h1 class="mb-3">{{ __('') }}</h1> --}}
         </div>
+
         <div class="row">
             <div class="parallax"></div>
-            <div style="background-color:rgb(252, 250, 250);font-size:36px">
+            <div style="font-size: 36px">
                 <div class="contact text-center">
-                    <h2 class="text-white fw-bold">Tharu Society Australia</h2>
+                    <h2 class="text-white   fw-bold">Tharu Society Sydney Australia</h2>
                     <a href="{{ route('contact') }}">
-                        <button class="btn text-black ">Connect with us</button>
+                        <button class="btn text-black">Connect with us</button>
                     </a>
                 </div>
             </div>
@@ -473,11 +474,11 @@
     </div>
 
 
-    <div class="container-fluid my-5">
+
+    {{-- <div class="container-fluid my-5">
         <div data-aos="fade-up" class="text-center"
             style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-            <h5 class="section bg-intro text-center text-color px-3 mb-0">Map</h5>
-            <h1 class="mb-3">Our Location</h1>
+            <h5 class="section bg-intro text-center text-color px-3 mb-5">Map</h5>
         </div>
         <div class="row">
             <iframe
@@ -485,5 +486,8 @@
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </div>
+    </div> --}}
+
+
+
 @endsection

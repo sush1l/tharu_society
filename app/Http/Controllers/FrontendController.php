@@ -8,7 +8,6 @@ use App\Http\Requests\StoreMembershipJoinRequest;
 use App\Models\AddCity;
 use App\Models\Announcement;
 use App\Models\Audio;
-use App\Models\Bill;
 use App\Models\Blog;
 use App\Models\Comment;
 use App\Models\ContactMessage;
@@ -18,31 +17,21 @@ use App\Models\DocumentCategory;
 use App\Models\Employee;
 use App\Models\EventDetail;
 use App\Models\Events;
-use App\Models\ExEmployee;
-use App\Models\Faq;
 use App\Models\Job;
 use App\Models\Link;
 use App\Models\Member;
 use App\Models\Membership;
 use App\Models\MembershipJoin;
-use App\Models\News;
 use App\Models\OfficeDetail;
 use App\Models\PhotoGallery;
 use App\Models\Popup;
 use App\Models\Report;
 use App\Models\ReportCategory;
 use App\Models\Slider;
-use App\Models\Smuggling;
-use App\Models\SubDivision\SubDivision;
-use App\Models\SubDivision\SubDivisionDocument;
-use App\Models\SubDivision\SubDivisionEmployee;
 use App\Models\TikTok;
 use App\Models\TrainingCategory;
 use App\Models\VideoGallery;
 use App\Models\work;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Str;
 
 class FrontendController extends BaseController
 {
@@ -82,29 +71,29 @@ class FrontendController extends BaseController
         $popups = Popup::whereShowOnIndex(1)->latest()->get();
         return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups', 'sliders', 'popups'));
     }
-    public function languageChange($lang)
-    {
+    // public function languageChange($lang)
+    // {
 
-        if (config('default.dual_language')) {
-            if (!empty($lang) && in_array($lang, config('app.locales'))) {
-                Cache::put('language', $lang, 60 * 60 * 12);
-                app()->setLocale($lang);
-            } else {
-                Cache::put('language', 'ne', 60 * 60 * 12);
-                app()->setLocale('ne');
-            }
-        }
-        $url = url()->previous();
-        $route = app('router')->getRoutes($url)->match(app('request')->create($url))->getName();
-        if ($route == 'welcome') {
-            return redirect(\route($route, ['language' => $lang]));
-        } else {
-            $count = Str::length($url);
+    //     if (config('default.dual_language')) {
+    //         if (!empty($lang) && in_array($lang, config('app.locales'))) {
+    //             Cache::put('language', $lang, 60 * 60 * 12);
+    //             app()->setLocale($lang);
+    //         } else {
+    //             Cache::put('language', 'ne', 60 * 60 * 12);
+    //             app()->setLocale('ne');
+    //         }
+    //     }
+    //     $url = url()->previous();
+    //     $route = app('router')->getRoutes($url)->match(app('request')->create($url))->getName();
+    //     if ($route == 'welcome') {
+    //         return redirect(\route($route, ['language' => $lang]));
+    //     } else {
+    //         $count = Str::length($url);
 
-            $url = Str::substr($url, 0, $count - 2);
-            return redirect($url . $lang ?? 'ne');
-        }
-    }
+    //         $url = Str::substr($url, 0, $count - 2);
+    //         return redirect($url . $lang ?? 'ne');
+    //     }
+    // }
 
     public function staticMenus($slug)
     {

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <div data-aos="fade-up" id="body">
-        <div data-aos="fade-up" class="about mt-4">
+        <div data-aos="fade-up" class="about mt-2">
             <div class="container">
                 <h1>{{__('Contact')}}</h1>
             </div>
@@ -15,7 +15,8 @@
             </div>
             <div class="row g-3">
                 <div class="row">
-                    <p class="fw-bold mb-3">We'd love to hear from you and appreciate your patience as our dedicated volunteers strive to respond to your message. We'll get back to you as soon as possible, and we truly value your feedback!</p>
+                    <p data-aos="fade-up" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;" class="fw-bold mb-3">We'd love to hear from you and appreciate your patience as our dedicated volunteers strive to respond to your message. We'll get back to you as soon as possible, and we truly value your feedback!</p>
                     <div data-aos="fade-up" class="col-md-7">
                         @if(Session::has('message'))
                             <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
@@ -91,11 +92,11 @@
                         <div class="address">
                             {{-- <h6 class="fw-bold">{{request()->language=='en' ? $header->office_address_en : $header->office_address}}</h6> --}}
                             <p><b>Address:-</b>  {{request()->language=='en' ? $header->office_address_en : $header->office_address}}</p>
-                            <p><b>Telephone :- </b> {{$header->office_phone}}</p>
-                            <p><b>Email :-</b> {{$header->office_email}}</p>
-                            <p><b>Website :-</b> https://tharusociety.techworkcompany.com</p>
+                            <p><b>Telephone:</b> <a href="tel:{{$header->office_phone}}">{{$header->office_phone}}</a></p>
+                            <p><b>Email:</b> <a href="mailto:{{$header->office_email}}">{{$header->office_email}}</a></p>
+
                         </div>
-                        <div data-aos="fade-up" class="card-02 mt-5">
+                        {{-- <div data-aos="fade-up" class="card-02 mt-5">
                             <h5 class="text-center fw-bold text-white">{{__('Location')}}</h5>
                         </div>
                         <div class="map mt-3">
@@ -103,7 +104,7 @@
                                 src="{!! $header->map_iframe !!}"
                                 width="500" height="210" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
+                        </div> --}}
 
                     </div>
 

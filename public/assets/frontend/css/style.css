@@ -714,7 +714,6 @@ p {
 }
 
 
-
 .footer-main {
   padding: 3rem 0;
 }
@@ -1840,7 +1839,7 @@ textarea {
 }
 
 .parallax {
-  background-image: url('../images/land1.jpg');
+  background-image: url('../images/image\(1\).jpg');
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;

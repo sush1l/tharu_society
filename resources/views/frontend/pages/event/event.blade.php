@@ -31,10 +31,11 @@
                                         @endif
                                     </ul>
                                     <h5>{{ $event->title }}</h5>
-                                    <p>{{ trim(Str::limit($event->description, 100, '..')) }}
+                                    <h6>{{ trim(strip_tags(Str::limit($event->description,200, '..'))) }}</h6>
+
 
                                     </p>
-                                    <a data-aos="fade-up" href="{{ route('events.eventDetail', [$event, 'language' => $language]) }}"
+                                    <a data-aos="fade-up" href="{{ route('events.eventDetail',$event) }}"
                                         class="blog__btn">View More <span class="arrow_right"></span></a>
                                 </div>
                             </div>

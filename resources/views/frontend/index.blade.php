@@ -217,7 +217,7 @@
                         <div class="col-md-3">
                             <div class="single__news">
                                 <div class="thumb">
-                                    <a href="{{ route('blog.blogDetail', [$blog, 'language' => $language]) }}">
+                                    <a href="{{ route('blog.blogDetail',$blog) }}">
                                         <img src="{{ $blog->image }}" alt="">
                                     </a>
                                 </div>
@@ -232,7 +232,7 @@
                                                     class="fa fa-calendar"></i>
                                                 {{ $blog->date }}</span>
                                         </p>
-                                        <a href="{{ route('blog.blogDetail', [$blog, 'language' => $language]) }}"
+                                        <a href="{{ route('blog.blogDetail',$blog) }}"
                                             class="btn btn-outline-primary btn-xs">
                                             {{ __('View More') }}
                                         </a>

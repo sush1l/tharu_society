@@ -26,8 +26,8 @@
                             <li><i class="fa fa-calendar"></i> {{$blog->date}}</li>
                         </ul>
                         <h5><a href="#">{{$blog->title}}</a></h5>
-                        <p>{{ Str::limit(strip_tags($blog->description), 100, '..')}} </p>
-                        <a href="{{ route('blog.blogDetail', [$blog,'language'=>$language])}}" class="blog__btn">vIEW MORE <span class="arrow_right"></span></a>
+                        <h6>{{ Str::limit(strip_tags($blog->description), 200, '..')}} </h6>
+                        <a href="{{ route('blog.blogDetail',$blog)}}" class="blog__btn">vIEW MORE <span class="arrow_right"></span></a>
                     </div>
                 </div>
             </div>

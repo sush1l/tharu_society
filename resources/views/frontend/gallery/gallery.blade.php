@@ -20,9 +20,7 @@
                                 <h6 data-aos="fade-up" class="card-text my-2">
                                     {{ $photoAlbum->title_en }}
                                 </h6>
-                                <a data-aos="fade-up" href="{{ route('photoGallery.details',[$photoAlbum->slugs]) }}"
-                                   class="btn btn-outline-primary btn-xs">
-                                    {{__('View More')}}
+                                <a data-aos="fade-up" href="{{ route('photoGallery.details', [$photoAlbum, $photoAlbum->slugs]) }}" class="btn btn-outline-primary btn-xs">                                    {{__('View More')}}
                                 </a>
                             </div>
                         </div>

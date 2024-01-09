@@ -39,7 +39,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     {{ __('Events') }}
@@ -50,11 +50,14 @@
                     <li><a class="dropdown-item"
                             href="{{ route('events') }}">{{ __('UpComing Events') }}</a></li>
                 </ul>
-            </li>
+            </li> --}}
 
             {{-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('blogs') }}">{{ __('Blogs') }}</a>
             </li> --}}
+             <li class="nav-item">
+                <a class="nav-link" href="{{ route('events') }}">{{ __('Event') }}</a>
+            </li>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"

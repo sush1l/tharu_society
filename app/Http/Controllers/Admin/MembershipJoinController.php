@@ -3,12 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Mail\AutoReplyEmail;
 use App\Models\MembershipJoin;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-
-use function GuzzleHttp\Promise\all;
 
 class MembershipJoinController extends Controller
 {

@@ -55,6 +55,28 @@
                                     @enderror
                                 </div>
 
+
+                                <div class="col-md-6 p-3">
+                                    <div class="input-style-1">
+                                        <label for="country_id">Country</label>
+                                        <select name="country_id" id="country_id" class="form-control mt-2" onchange="updateStateDropdown()">
+                                            <option value="" selected>Select</option>
+                                            @foreach ($countries as $country)
+                                                <option value="{{ $country->id }}"
+                                                    {{ old('country_id') == $country->id ? 'selected' : '' }}>
+                                                    {{ $country->name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+
+                                        @error('country_id')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div>
+
                                 <div class="col-md-6 p-3">
                                     <label for="state">State/Territory</label>
                                     <select name="state" id="state" class="form-control mt-2">
@@ -72,26 +94,6 @@
                                         </div>
                                     @enderror
                                 </div>
-
-                                <div class="col-md-6 p-3">
-                                    <div class="input-style-1">
-                                        <label for="country_id">Country</label>
-                                        <select name="country_id" id="country_id" class="form-control mt-2">
-                                            <option value="">Select</option>
-                                            @foreach ($countries as $country)
-                                                <option value="{{ $country->id }}"
-                                                    {{ old('country_id') == $country->id ? 'selected' : '' }}>
-                                                    {{ $country->name }}</option>
-                                            @endforeach
-                                        </select>
-                                        @error('country_id')
-                                            <div class="invalid-feedback">
-                                                {{ $message }}
-                                            </div>
-                                        @enderror
-                                    </div>
-                                </div>
-
                                 <div class="col-md-6 p-3">
                                     <label for="code" class="form-label">Postal Code
                                     <input type="text" value="{{ old('code') }}" class="form-control" name="code"
@@ -182,6 +184,19 @@
                 </div>
             </div>
         </div>
+@push('script')
+<script>
+    function updateStateDropdown() {
+        var countryDropdown = document.getElementById('country_id');
+        var stateDropdown = document.getElementById('state');
+        var isStateEnabled = countryDropdown.value === '9';
+        stateDropdown.disabled = !isStateEnabled;
+        if (!isStateEnabled) {
+            stateDropdown.value = '';
+        }
+    }
+</script>
 
+@endpush
 
 @endsection

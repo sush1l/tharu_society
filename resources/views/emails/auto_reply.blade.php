@@ -1,8 +1,8 @@
-<p>Subject: Welcome to the Tharu Society Sydney Australia!
+<p><b>Subject: </b>Welcome to the Tharu Society Sydney Australia!</p>
 
-    Namaste and a warm welcome to the Tharu Society Sydney Australia!
+   <p>Namaste and a warm welcome to the Tharu Society Sydney Australia!</p>
 
-    We're thrilled that you've joined our vibrant community of individuals passionate about celebrating Tharu culture in Australia and supporting our fellow Tharu immigrants. Your registration means you'll be a part of our exciting journey to:
+    <p>We're thrilled that you've joined our vibrant community of individuals passionate about celebrating Tharu culture in Australia and supporting our fellow Tharu immigrants. Your registration means you'll be a part of our exciting journey to:</p>
 
         Share the beauty of Tharu culture: Through vibrant community events, festivals, and artistic expressions, we'll paint Australia with the rich colors of our traditions. Get ready to participate in joyous celebrations like Dashain, Tihar, and Maghi, alongside workshops, dance performances, and cultural showcases!
         Connect with fellow Tharus: Build meaningful connections with other members who share your heritage and experiences. Our community is a warm and welcoming space where you can find friendship and a sense of belonging.

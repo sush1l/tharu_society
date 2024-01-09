@@ -20,11 +20,11 @@
         </section>
     </div>
 
-    <div class="container-xxl  mt-3 category">
+    <div class="container-xxl mt-5 category">
         <div class="container">
             <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <h5 class="section bg-intro text-center text-color px-3 mb-5">Executive Members</h5>
+                <h5 class="section bg-intro text-center text-color px-3 mb-3">Executive Members</h5>
             </div>
         </div>
     </div>

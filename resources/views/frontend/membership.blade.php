@@ -19,7 +19,7 @@
                     </div>
                 </div>
             @endforeach
-            <a href="https://tharusociety.techworkcompany.com/join">Click Here :- https://tharusociety.techworkcompany.com/join</a>
+            <a  href="https://tharusociety.techworkcompany.com/join"><b>Click Here</b> :- https://tharusociety.techworkcompany.com/join</a>
         </section>
     </div>
 @endsection

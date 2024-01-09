@@ -37,7 +37,7 @@
                             </div>
                             <div class="col-lg-4 footer_col">
                                 <div class="footer_section footer_contact">
-                                    <div class="footer_title mt-4 text-center">{{ __('Contact') }}</div>
+                                    <div class="footer_title mt-4">{{ __('Contact') }}</div>
                                     <div class="footer_links_container text-white">
                                         <ul>
                                             <li class="fw-bold">{{ __('Email') }}:<a

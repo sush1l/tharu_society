@@ -18,7 +18,7 @@ class AutoReplyEmail extends Mailable
      */
     public function __construct()
     {
-        //
+
     }
 
     /**
@@ -28,6 +28,6 @@ class AutoReplyEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.auto_reply');
+        return $this->markdown('emails.auto_reply')->subject(config('app.name'));
     }
 }

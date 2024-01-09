@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Comment\StoreCommentRequest;
 use App\Http\Requests\StoreContactMessageRequest;
 use App\Http\Requests\StoreMembershipJoinRequest;
+use App\Mail\AutoReplyEmail;
 use App\Models\AddCity;
 use App\Models\Announcement;
 use App\Models\Audio;
@@ -32,6 +33,8 @@ use App\Models\TikTok;
 use App\Models\TrainingCategory;
 use App\Models\VideoGallery;
 use App\Models\work;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class FrontendController extends BaseController
 {
@@ -137,8 +140,9 @@ class FrontendController extends BaseController
     public function membershipStore(StoreMembershipJoinRequest $request)
     {
         MembershipJoin::create($request->validated());
+        Mail::to($request->input('email'))->send(new AutoReplyEmail);
         session()->flash('message', 'Message Sent Successfully');
-        return redirect()->back()->withFragment('myDiv');
+        return redirect()->back();
     }
 
     public function announcement()
@@ -154,27 +158,6 @@ class FrontendController extends BaseController
         return view('frontend.aboutus', compact('officeDetail', 'members'));
     }
 
-    public function work()
-    {
-        $works = work::paginate(8);
-        return view('frontend.work', compact('works'));
-    }
-
-    public function trainingCategory(TrainingCategory $trainingCategory)
-    {
-        $trainingCategory->load('trainings');
-        return view('frontend.shortcourse', compact('trainingCategory'));
-    }
-
-    public function consultancy()
-    {
-        return view('frontend.consultancy');
-    }
-
-    public function abroad()
-    {
-        return view('frontend.abroad');
-    }
 
     public function photo()
     {
@@ -209,16 +192,23 @@ class FrontendController extends BaseController
         return view('frontend.gallery.video', compact('videoGalleries'));
     }
 
-    public function tiktok()
-    {
-        $tiktoks = TikTok::latest()->paginate(6);
-        return view('frontend.gallery.tiktok', compact('tiktoks'));
-    }
+    // public function tiktok()
+    // {
+    //     $tiktoks = TikTok::latest()->paginate(6);
+    //     return view('frontend.gallery.tiktok', compact('tiktoks'));
+    // }
 
     public function audio()
     {
         $audios = Audio::latest()->paginate('6');
         return view('frontend.gallery.audio', compact('audios'));
+    }
+
+    public function store()
+    {
+        // Validate and store the form data
+
+        return back();
     }
 
     public function contact()

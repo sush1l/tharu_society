@@ -32,12 +32,4 @@ class MembershipJoinController extends Controller
         toast('Request Message Deleted Successfully', 'success');
         return back();
     }
-    public function store(Request $request)
-{
-    // Validate and store the form data
-    $membershipJoin = MembershipJoin::create($request->all());
-    Mail::to($request->input('email'))->send(new AutoReplyEmail);
-    return back();
-}
-
 }

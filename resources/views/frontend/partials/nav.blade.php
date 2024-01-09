@@ -30,7 +30,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item"
-                            href="{{ route('membershipIntro') }}">{{ __('Introduction') }}</a></li>
+                            href="{{ route('membershipIntro') }}">{{ __('Membership') }}</a></li>
                     {{-- <li><a class="dropdown-item"
                             href="{{ route('member') }}">{{ __('Our Members') }}</a></li> --}}
                             <li><a class="dropdown-item"

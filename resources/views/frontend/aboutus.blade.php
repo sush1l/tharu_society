@@ -9,14 +9,15 @@
     </div>
     <div class="container mt-4">
         <section data-aos="fade-up" class="light-bg inner">
-                <div data-aos="fade-up" class="about-inner">
-                    <div class="content_image">
-                        <img class="img-responsive" src="{{asset('assets/frontend/images/team.jpg')}}" alt="About" align="">
-                        <p style="text-align: justify;">
-                            {!! $officeDetail->description ?? '' !!}
-                        </p>
-                    </div>
+            <div data-aos="fade-up" class="about-inner">
+                <div class="content_image">
+                    <img class="img-responsive" src="{{ asset('assets/frontend/images/team.jpg') }}" alt="About"
+                        align="">
+                    <p style="text-align: justify;">
+                        {!! $officeDetail->description ?? '' !!}
+                    </p>
                 </div>
+            </div>
         </section>
     </div>
 
@@ -28,33 +29,31 @@
             </div>
         </div>
     </div>
-        <div class="row">
-            @if (!empty($members))
+    <div class="row">
+        @if (!empty($members))
             <div class="row">
                 <div data-aos="fade-up" class="col-md-12">
                     <div data-aos="fade-up" id="team_card" class="card-container">
-                        <img class="rounded" src="{{$members->first()->photo ?? ''}}" height="200"
-                             alt="{{$members->first()->name ?? ''}}">
+                        <img class="rounded" src="{{ $members->first()->photo ?? '' }}" height="200"
+                            alt="{{ $members->first()->name ?? '' }}">
 
-                        <p class="text-center mt-2 mb-0"><b>{{$members->first()->title ?? ''}}</b></p>
-                        <p class="text-center">{{$members->first()->membershipCategory->title ?? '' }}</p>
+                        <p class="text-center mt-2 mb-0"><b>{{ $members->first()->title ?? '' }}</b></p>
+                        <p class="text-center">{{ $members->first()->membershipCategory->title ?? '' }}</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                @foreach($members->skip(1) as $member)
-                <div data-aos="fade-up" class="col-md-3">
-                    <div class="card-container">
-                        <img class="rounded" src="{{$member->photo}}" height="200"
-                             alt="{{$member->name ?? ''}}">
-                            <p class="text-center mt-2 mb-0"><b>{{$member->title ?? '' }}</b></p>
-                            <p class="text-center">{{$member->membershipCategory->title ?? '' }}</p>
+                @foreach ($members->skip(1) as $member)
+                    <div data-aos="fade-up" class="col-md-3">
+                        <div class="card-container">
+                            <img class="rounded" src="{{ $member->photo }}" height="200" alt="{{ $member->name ?? '' }}">
+                            <p class="text-center mt-2 mb-0"><b>{{ $member->title ?? '' }}</b></p>
+                            <p class="text-center">{{ $member->membershipCategory->title ?? '' }}</p>
+                        </div>
                     </div>
-                </div>
                 @endforeach
             </div>
-            @endif
-        </div>
+        @endif
+    </div>
 
 @endsection
-

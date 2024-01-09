@@ -36,7 +36,7 @@
                         <img class="rounded" src="{{$members->first()->photo ?? ''}}" height="200"
                              alt="{{$members->first()->name ?? ''}}">
 
-                        <p class="text-center mt-2"><b>{{$members->first()->title ?? ''}}</b></p>
+                        <p class="text-center mt-2 mb-0"><b>{{$members->first()->title ?? ''}}</b></p>
                         <p class="text-center">{{$members->first()->membershipCategory->title ?? '' }}</p>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                     <div class="card-container">
                         <img class="rounded" src="{{$member->photo}}" height="200"
                              alt="{{$member->name ?? ''}}">
-                            <p class="text-center mt-2"><b>{{$member->title ?? '' }}</b></p>
+                            <p class="text-center mt-2 mb-0"><b>{{$member->title ?? '' }}</b></p>
                             <p class="text-center">{{$member->membershipCategory->title ?? '' }}</p>
                     </div>
                 </div>

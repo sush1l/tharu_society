@@ -26,9 +26,9 @@
                                     allowfullscreen></iframe>
                             @endif
                             <h3>{{ request()->language == 'en' ? $events->title_en : $events->title }}</h3>
-                            <span class="my-4"><b>By Admin on {{ $events->date }}</b></span>
+                            <span class="my-4"><b>By Admin on</b> {{ $events->date }}</span>
                             @if (!empty($events->description))
-                                <h6>{!! request()->language == 'en' ? $events->description : $events->description !!}</h6>
+                                <h6 class="mt-3">{!! request()->language == 'en' ? $events->description : $events->description !!}</h6>
                             @endif
                             <a href="{{ route('events') }}" class="more mt-5">Back To Event</a>
                         </div>

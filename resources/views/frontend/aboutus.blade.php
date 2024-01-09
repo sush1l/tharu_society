@@ -33,7 +33,7 @@
             <div class="row">
                 <div data-aos="fade-up" class="col-md-12">
                     <div data-aos="fade-up" id="team_card" class="card-container">
-                        <img class="rounded" src="{{$members->first()->photo ?? ''}}" height="150" weight="150"
+                        <img class="rounded" src="{{$members->first()->photo ?? ''}}" height="200"
                              alt="{{$members->first()->name ?? ''}}">
 
                         <p class="text-center">{{$members->first()->title ?? ''}}</p>

@@ -52,6 +52,17 @@
                         @enderror
                     </div>
                 </div>
+
+                <div class="col-md-6">
+                    <div class="input-style-1">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date"
+                               placeholder="date" value="{{old('date', $popup->date)}}">
+                        @error('date')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
+                </div>
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-sm btn-primary">
                         Submit

@@ -16,7 +16,7 @@ class StorePopupRequest extends FormRequest
     {
         return [
             'title' => ['required'],
-            'image' => ['required'],
+            'image' => ['required', 'mimes:png,jpg,jpeg'],
             'date' => ['required'],
         ];
     }

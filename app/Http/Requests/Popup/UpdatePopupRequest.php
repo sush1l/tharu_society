@@ -15,9 +15,9 @@ class UpdatePopupRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=> 'required',
-            'image'=> 'required',
-            'date' => 'required',
+            'title'=> ['required'],
+            'image'=> ['nullable', 'mimes:png,jpg,jpeg'],
+            'date' => ['required'],
         ];
     }
 }

@@ -31,7 +31,7 @@
                                         @endif
                                     </ul>
                                     <h5>{{ $event->title }}</h5>
-                                    <h6>{{ Str::limit(strip_tags($blog->description), 200, '..') }}</h6>
+                                    <h6>{{ Str::limit(strip_tags($event->description), 200, '..') }}</h6>
                                     </p>
                                         <a href="{{ route('events.eventDetail',$event) }}"
                                         class="btn btn-outline-primary btn-xs">

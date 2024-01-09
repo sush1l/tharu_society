@@ -20,7 +20,7 @@
                             @if (!empty($events->image))
                                 <img src="{{ $events->image }}" alt="" height="500" class="center">
                             @else
-                                <iframe width="100%" height="500" src="{{ $events->videoGalleries->url }}"
+                                <iframe width="100%" height="700" src="{{ $events->videoGalleries->url }}"
                                     title="Online Video" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowfullscreen></iframe>
@@ -30,7 +30,7 @@
                             @if (!empty($events->description))
                                 <h6>{!! request()->language == 'en' ? $events->description : $events->description !!}</h6>
                             @endif
-                            <a href="{{ route('events') }}" class="more mt-3">Back To Blog</a>
+                            <a href="{{ route('events') }}" class="more mt-5">Back To Event</a>
                         </div>
                     </div>
                 </div>

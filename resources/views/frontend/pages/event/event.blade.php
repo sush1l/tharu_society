@@ -25,12 +25,13 @@
                                     @endif
                                 </div>
                                 <div data-aos="fade-up" class="blog__item__text">
-                                    <ul>
-                                        @if (!empty($event->date))
-                                            <li><i class="fa fa-calendar"></i> {{ $event->date }}</li>
-                                        @endif
-                                    </ul>
+                                <div class="d-flex justify-content-between">
                                     <h5>{{ $event->title }}</h5>
+                                    @if (!empty($event->date))
+                                            <i class="fa fa-calendar"> {{ $event->date }}</i> 
+                                        @endif
+                                </div>
+                                    
                                     <h6>{{ Str::limit(strip_tags($event->description), 200, '..') }}</h6>
                                     </p>
                                         <a href="{{ route('events.eventDetail',$event) }}"

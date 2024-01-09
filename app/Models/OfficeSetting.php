@@ -30,6 +30,7 @@ class OfficeSetting extends Model
         'map_iframe',
         'facebook_iframe',
         'twitter_iframe',
+        'meta'
     ];
 
     public function setCoverPhotoAttribute($value)

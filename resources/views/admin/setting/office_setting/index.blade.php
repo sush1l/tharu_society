@@ -160,6 +160,15 @@
                     </div>
                 </div>
                 <div class="col-md-12">
+                    <div class="input-style-1">
+                        <label for="meta">Meta</label>
+                        <textarea name="meta" id="meta" cols="30" rows="4" placeholder="Meta">{{$officeSetting->meta}}</textarea>
+                        @error('meta')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-md-12">
                     <button type="submit" class="btn btn-sm btn-primary">
                         Submit
                     </button>

@@ -23,6 +23,7 @@ return new class extends Migration {
             $table->text('map_iframe')->nullable();
             $table->text('facebook_iframe')->nullable();
             $table->text('twitter_iframe')->nullable();
+            $table->longText('meta')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

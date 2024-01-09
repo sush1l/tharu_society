@@ -31,6 +31,7 @@ class UpdateOfficeSettingRequest extends FormRequest
                 'map_iframe' => ['nullable', 'url'],
                 'facebook_iframe' => ['nullable', 'url'],
                 'twitter_iframe' => ['nullable', 'url'],
+                'meta' => ['nullable'],
             ];
         }
         else
@@ -46,6 +47,7 @@ class UpdateOfficeSettingRequest extends FormRequest
                 'map_iframe' => ['nullable', 'url'],
                 'facebook_iframe' => ['nullable', 'url'],
                 'twitter_iframe' => ['nullable', 'url'],
+                'meta' => ['nullable'],
             ];
         }
 

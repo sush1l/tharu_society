@@ -20,7 +20,7 @@
         </section>
     </div>
 
-    <div class="container-xxl py-5 category">
+    <div class="container-xxl category">
         <div class="container mt-3">
             <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -28,7 +28,6 @@
             </div>
         </div>
     </div>
-    <div class="container my-3">
         <div class="row">
             @if (!empty($members))
             <div class="row">
@@ -56,6 +55,6 @@
             </div>
             @endif
         </div>
-    </div>
+
 @endsection
 

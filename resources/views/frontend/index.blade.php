@@ -358,7 +358,7 @@
                         <div class="testimonial4_slide">
                             <img src="{{ asset('assets/frontend/images/dip.jpeg') }}"
                                 class="img-circle img-responsive" />
-                            <p class="mt-2">"As the President of Tharu Society Sydney Australia, I am honored to lead an
+                            <p class="mt-2">As the President of Tharu Society Sydney Australia, I am honored to lead an
                                 organization
                                 that unites and empowers the Nepalese Tharu community in Australia. Our society
                                 strives

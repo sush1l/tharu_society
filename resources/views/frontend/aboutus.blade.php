@@ -36,7 +36,7 @@
                         <img class="rounded" src="{{$members->first()->photo ?? ''}}" height="200"
                              alt="{{$members->first()->name ?? ''}}">
 
-                        <p class="text-center">{{$members->first()->title ?? ''}}</p>
+                        <p class="text-center mt-2"><b>{{$members->first()->title ?? ''}}</b></p>
                         <p class="text-center">{{$members->first()->membershipCategory->title ?? '' }}</p>
                     </div>
                 </div>
@@ -45,9 +45,9 @@
                 @foreach($members->skip(1) as $member)
                 <div data-aos="fade-up" class="col-md-3">
                     <div class="card-container">
-                        <img class="rounded" src="{{$member->photo}}" height="150" width="150"
+                        <img class="rounded" src="{{$member->photo}}" height="200"
                              alt="{{$member->name ?? ''}}">
-                            <p class="text-center">{{$member->title ?? '' }}</p>
+                            <p class="text-center mt-2"><b>{{$member->title ?? '' }}</b></p>
                             <p class="text-center">{{$member->membershipCategory->title ?? '' }}</p>
                     </div>
                 </div>

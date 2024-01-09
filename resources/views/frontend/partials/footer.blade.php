@@ -14,27 +14,27 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="footer_about_text">
+                                    {{-- <div class="footer_about_text">
                                         <p>{{ $header->office_name }}</p>
-                                    </div>
+                                    </div> --}}
                                     <div class="footer_social">
                                         <ul>
                                             <li><a href="{{ $header->facebook_iframe }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                             </li>
-                                            <li><a href="#"><i class="fa fa-google-plus"
+                                            {{-- <li><a href="#"><i class="fa fa-google-plus"
                                                         aria-hidden="true"></i></a>
                                             </li>
                                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                             </li>
                                             <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 footer_col">
                                 <div class="footer_section footer_contact">
-                                    <div class="footer_title mt-3 text-center">{{ __('Contact') }}</div>
+                                    <div class="footer_title mt-4 text-center">{{ __('Contact') }}</div>
                                     <div class="footer_links_container text-white">
                                         <ul>
                                             <li class="fw-bold">{{ __('Email') }}:<a href="mailto:{{ $header->office_email }}"> {{ $header->office_email }}</a></li>

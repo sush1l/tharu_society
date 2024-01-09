@@ -68,11 +68,12 @@ class FrontendController extends BaseController
         $employees = Employee::with('designation', 'department')->orderBy('position')->get();
         $audios = Audio::latest()->get();
         $blogs = Blog::limit(6)->get();
+        $events= Events::limit(6)->get();
         $works = work::limit(8)->get();
         $sliders = Slider::latest()->get();
         $members = Member::orderby('position')->get();
         $popups = Popup::whereShowOnIndex(1)->latest()->get();
-        return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups', 'sliders', 'popups'));
+        return view('frontend.index', compact('works', 'members', 'blogs', 'audios', 'employees', 'officeDetail', 'tickerFiles', 'categories', 'galleries', 'noticePopups', 'sliders', 'popups','events'));
     }
     // public function languageChange($lang)
     // {

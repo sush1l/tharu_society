@@ -206,7 +206,7 @@
         <div class="container mt-3">
             <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                 style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <h5 class="section bg-intro text-center text-color px-3 mb-4">Events/Blogs</h5>
+                <h5 class="section bg-intro text-center text-color px-3 mb-4">Events</h5>
             </div>
             <div class="row g-3">
                 <div class="row">
@@ -215,26 +215,26 @@
                             {{ __('View More') }}
                         </a>
                     </div>
-                    @foreach ($blogs as $blog)
+                    @foreach ($events as $event)
                         <div class="col-md-3">
                             <div class="single__news">
                                 <div class="thumb">
-                                    <a href="{{ route('blog.blogDetail', $blog) }}">
-                                        <img src="{{ $blog->image }}" alt="">
+                                    <a href="{{ route('events.eventDetail', $event) }}">
+                                        <img src="{{ $event->image }}" alt="">
                                     </a>
                                 </div>
                                 <div class="news_info mt-2">
-                                    <a href="{{ route('single_blog') }}">
+                                  
                                         <h5 class="mb-1" style="color: black">
-                                            {{ $blog->title }}
+                                            {{ $event->title }}
                                         </h5>
-                                    </a>
+                                 
                                     <div class="d-flex justify-content-between">
                                         <p class="d-flex align-items-center"><span style="color: black"><i
                                                     class="fa fa-calendar"></i>
-                                                {{ $blog->date }}</span>
+                                                {{ $event->date }}</span>
                                         </p>
-                                        <a href="{{ route('blog.blogDetail', $blog) }}"
+                                        <a href="{{ route('events.eventDetail', $event) }}"
                                             class="btn btn-outline-primary btn-xs">
                                             {{ __('View More') }}
                                         </a>

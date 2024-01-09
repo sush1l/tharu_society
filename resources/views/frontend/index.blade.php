@@ -210,11 +210,6 @@
             </div>
             <div class="row g-3">
                 <div class="row">
-                    <div class="d-flex justify-content-end mb-4">
-                        <a href="{{ route('blogs') }}" class="btn btn-outline-primary btn-xs">
-                            {{ __('View More') }}
-                        </a>
-                    </div>
                     @foreach ($events as $event)
                         <div class="col-md-3">
                             <div class="single__news">

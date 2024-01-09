@@ -89,7 +89,7 @@
                         <div data-aos="fade-up" class="card-02">
                             <h5 class="text-center fw-bold text-white">{{__('Address')}}</h5>
                         </div>
-                        <div class="address">
+                        <div class="address mt-3">
                             <p><b>Address:-</b>  {{ $header->office_address_en }}</p>
                             <p><b>Telephone:</b> <a href="tel:{{$header->office_phone}}">{{$header->office_phone}}</a></p>
                             <p><b>Email:</b> <a href="mailto:{{$header->office_email}}">{{$header->office_email}}</a></p>

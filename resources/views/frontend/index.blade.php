@@ -51,7 +51,7 @@
         <div class="carousel-inner">
             @foreach ($sliders as $slider)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                    <img src="{{ $slider->photo }}" class="d-block w-100" height="500">
+                    <img src="{{ $slider->photo }}" class="d-block w-100">
                     {{-- <div class="carousel-caption d-none d-md-block">
                         @if (request()->language == 'en')
                             <p>{{ $slider->title_en }}</p>

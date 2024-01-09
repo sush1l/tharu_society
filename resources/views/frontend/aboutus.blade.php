@@ -3,11 +3,11 @@
     <div data-aos="fade-up" id="body">
         <div data-aos="fade-up" class="about mt-2">
             <div class="container">
-                <h1>{{ __('Introduction') }}</h1>
+                <h1>{{ __('About Us') }}</h1>
             </div>
         </div>
     </div>
-    <div class="container my-3">
+    <div class="container mt-4">
         <section data-aos="fade-up" class="light-bg inner">
                 <div data-aos="fade-up" class="about-inner">
                     <div class="content_image">

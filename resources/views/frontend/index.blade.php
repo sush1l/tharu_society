@@ -51,25 +51,27 @@
         <div class="carousel-inner">
             @foreach ($sliders as $slider)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                    <img src="{{ $slider->photo }}" class="d-block w-100 height-455" ">
-                                                                <div class="carousel-caption d-none d-md-block">
-                                                                        @if (request()->language == 'en')
-                    <p>{{ $slider->title_en }}</p>
-                @else
-                    <p>{{ $slider->title }}</p>
-            @endif
+                    <img src="{{ $slider->photo }}" class="d-block w-100" height="500">
+                    {{-- <div class="carousel-caption d-none d-md-block">
+                        @if (request()->language == 'en')
+                            <p>{{ $slider->title_en }}</p>
+                        @else
+                            <p>{{ $slider->title }}</p>
+                        @endif
+                    </div> --}}
+                </div>
+            @endforeach
         </div>
-    </div>
-    @endforeach
-    </div>
-    <button data-aos="fade-up" class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button data-aos="fade-up" class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+        <button data-aos="fade-up" class="carousel-control-prev" type="button" data-bs-target="#slider"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button data-aos="fade-up" class="carousel-control-next" type="button" data-bs-target="#slider"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
     <section data-aos="fade-up" id="services" class="services mt-5">
@@ -217,7 +219,7 @@
                         <div class="col-md-3">
                             <div class="single__news">
                                 <div class="thumb">
-                                    <a href="{{ route('blog.blogDetail',$blog) }}">
+                                    <a href="{{ route('blog.blogDetail', $blog) }}">
                                         <img src="{{ $blog->image }}" alt="">
                                     </a>
                                 </div>
@@ -232,7 +234,7 @@
                                                     class="fa fa-calendar"></i>
                                                 {{ $blog->date }}</span>
                                         </p>
-                                        <a href="{{ route('blog.blogDetail',$blog) }}"
+                                        <a href="{{ route('blog.blogDetail', $blog) }}"
                                             class="btn btn-outline-primary btn-xs">
                                             {{ __('View More') }}
                                         </a>

@@ -1205,6 +1205,20 @@ h1,
   text-transform: none;
 } */
 
+
+.footer_logo_text p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFFFF;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+  }
+
 .sidebar img {
   display: block;
   margin: 0 auto;

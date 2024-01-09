@@ -10,7 +10,8 @@
                                     <div class="footer_logo_container">
                                         <a href="#">
                                             <div class="footer_logo_text mt-4">
-                                                {{ $header->office_name_en}}
+                                                <p>THARU SOCIETY <br>
+                                                    SYDNEY AUSTRALIA </p>
                                             </div>
                                         </a>
                                     </div>

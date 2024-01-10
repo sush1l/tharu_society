@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="sub-header-dt-card">
-                        <i class="fa fa-envelope"> <a class="text-white" href="tel:{{ $header->office_email }}">{{ $header->office_email }}</a></i>
+                        <i class="fa fa-envelope"> <a class="text-white" href="mailto:{{ $header->office_email }}">{{ $header->office_email }}</a></i>
                     </div>
                 </div>
                 <div class="col-md-6">

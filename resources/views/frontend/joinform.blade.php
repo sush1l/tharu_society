@@ -143,7 +143,7 @@
                                 </div>
 
                                 <div class="text-end mt-4">
-                                    <button type="submit" class="btn px-4 py-3 btn-outline-dark">Join Now</button>
+                                    <button type="submit" class="btn btn-outline-primary btn-xs">Join Now</button>
                                 </div>
                             </form>
                         </div>
@@ -162,20 +162,20 @@
                                         <span class="opacity-50 d-flex align-items-center me-3 fs-2">
                                             <i class="fa fa-phone"></i>
                                         </span>
-                                        <span>{{ $header->office_phone }}</span>
+                                        <span><a class="text-white" href="tel:{{ $header->office_phone }}">{{ $header->office_phone }}</a></span>
                                     </li>
                                     <li class="d-flex align-items-center r mb-4">
                                         <span class="opacity-50 d-flex align-items-center me-3 fs-2">
                                             <i class="fa fa-envelope"></i>
                                         </span>
-                                        <span>{{ $header->office_email }}</span>
+                                        <span><a class="text-white" href="mailto:{{ $header->office_email }}">{{ $header->office_email }}</a></span>
                                     </li>
 
                                     <li class="d-flex justify-content-start align-items-center mb-4">
                                         <span class="opacity-50 d-flex align-items-center me-3 fs-2">
                                             <i class="fa fa-map"></i>
                                         </span>
-                                        <span>{{ $header->office_name_en }}</span>
+                                        <span>{{ $header->office_address }}</span>
                                     </li>
                                 </ul>
                             </div>

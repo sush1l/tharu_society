@@ -80,7 +80,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-outline-primary btn-xs">Submit</button>
                                 </div>
                             </form>
                         </div>

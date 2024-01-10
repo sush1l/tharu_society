@@ -34,13 +34,13 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="sub-header-dt-card">
-                        <i class="fa fa-envelope"> {{ $header->office_email }}</i>
+                        <i class="fa fa-envelope"> <a class="text-white" href="tel:{{ $header->office_email }}">{{ $header->office_email }}</a></i>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex justify-content-end">
-                        <div class="phone text-white mx-5">
-                            <i class="fa fa-phone fw-bold"> {{ $header->office_phone }}</i>
+                        <div class="sub-header-dt-card">
+                            <i class="fa fa-phone fw-bold"><a class="text-white" href="tel:{{ $header->office_phone }}"> {{ $header->office_phone }}</a></i>
                         </div>
                         {{-- <div class="header-navbar-language">
                             <ul>

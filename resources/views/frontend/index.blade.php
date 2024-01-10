@@ -24,7 +24,7 @@
                                 @foreach ($popups as $key => $popup)
                                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                                         <img class="d-block w-100" src="{{ $popup->image }}" alt=""
-                                            style="height: 700px; width: 100%;">
+                                            style=" width: 100%;">
                                         {{-- <div class="carousel-caption d-none d-md-block">
                                             <h5><b >{{ $popup->title }}</b></h5>
                                             <p class="text-center bg-success">{{ $popup->date }}</p>
@@ -219,11 +219,11 @@
                                     </a>
                                 </div>
                                 <div class="news_info mt-2">
-                                  
+
                                         <h5 class="mb-1" style="color: black">
                                             {{ $event->title }}
                                         </h5>
-                                 
+
                                     <div class="d-flex justify-content-between">
                                         <p class="d-flex align-items-center"><span style="color: black"><i
                                                     class="fa fa-calendar"></i>

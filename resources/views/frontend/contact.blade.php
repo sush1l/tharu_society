@@ -11,7 +11,7 @@
         <div class="container mt-3">
             <div data-aos="fade-up" class="text-center wow fadeInUp" data-wow-delay="0.1s"
                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <h5 class="section bg-intro text-center text-color px-3 mb-5">{{__('Get In Touch')}}</h5>
+                {{-- <h5 class="section bg-intro text-center text-color px-3 mb-5">{{__('Get In Touch')}}</h5> --}}
             </div>
             <div class="row g-3">
                 <div class="row">

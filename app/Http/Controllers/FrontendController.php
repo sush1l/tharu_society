@@ -13,9 +13,6 @@ use App\Models\Blog;
 use App\Models\Comment;
 use App\Models\ContactMessage;
 use App\Models\Country;
-use App\Models\Document;
-use App\Models\DocumentCategory;
-use App\Models\Employee;
 use App\Models\EventDetail;
 use App\Models\Events;
 use App\Models\Job;
@@ -29,11 +26,8 @@ use App\Models\Popup;
 use App\Models\Report;
 use App\Models\ReportCategory;
 use App\Models\Slider;
-use App\Models\TikTok;
-use App\Models\TrainingCategory;
 use App\Models\VideoGallery;
 use App\Models\work;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class FrontendController extends BaseController

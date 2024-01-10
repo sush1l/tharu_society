@@ -77,7 +77,7 @@
                             {{ date('Y') }} All rights reserved by <a
                                 href="https://tharusociety.techworkcompany.com" class="text-white">TSSA</a>
                         </div>
-                        <div class="col-md-6 fw-bold">
+                        <div class="col-md-6 fw-bold text-end">
                             <ul>
                                 <li>Design & Developed By :<a href="https://ninjainfosys.com.np" target="_blank"
                                         class="text-white"> Techwork Company Pvt. Ltd.</a></li>

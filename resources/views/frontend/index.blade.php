@@ -278,21 +278,28 @@
 
 
                     @foreach ($galleries as $key => $data)
-                        @if ($key == 1 || $key == 2)
-                            <div data-aos="fade-up" class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s"
-                                style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
-                                <a class="position-relative d-block overflow-hidden" href="">
-                                    <img class="img" src="{{ asset('storage/' . $data->photos->images) }}"
-                                        alt="">
-                                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
-                                        style="margin: 1px;">
-                                        <h5 class="m-0">
-                                            {{ request()->language == 'en' ? $data->title_en : $data->title }}</h5>
-                                    </div>
-                                </a>
-                            </div>
-                        @endif
-                    @endforeach
+                    @if ($key == 1 || $key == 2)
+                        <div data-aos="fade-up" class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s"
+                            style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                @if ($data->photos->isNotEmpty())
+                                    @foreach ($data->photos as $photo)
+                                        <img class="img" src="{{ asset('storage/' . $photo->images) }}" alt="">
+                                        @break
+                                    @endforeach
+                                @else
+                                    <img class="img" src="{{ asset('placeholder-image.jpg') }}" alt="Placeholder Image">
+                                @endif
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">
+                                        {{ request()->language == 'en' ? $data->title_en : $data->title }}
+                                    </h5>
+                                </div>
+                            </a>
+                        </div>
+                    @endif
+                @endforeach
+
                 </div>
             </div>
             @foreach ($galleries as $key => $data)

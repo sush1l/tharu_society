@@ -10,8 +10,7 @@
                                     <div class="footer_logo_container">
                                         <a href="#">
                                             <div class="footer_logo_text mt-4">
-                                                <h5 class="fw-bold my-3">THARU <span
-                                                        >SOCIETY<br><span>SYDNEY</span>
+                                                <h5 class="fw-bold my-3">THARU <span>SOCIETY<br><span>SYDNEY</span>
                                                         AUSTRALIA</span> </h5>
                                             </div>
                                         </a>
@@ -20,18 +19,24 @@
                                         <p>{{ $header->office_name }}</p>
                                     </div> --}}
                                     <div class="footer_social">
-                                        <ul>
-                                            <li><a href="{{ $header->facebook_iframe }}"><i class="fa fa-facebook"
-                                                        aria-hidden="true"></i></a>
-                                            </li>
-                                            {{-- <li><a href="#"><i class="fa fa-google-plus"
-                                                        aria-hidden="true"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            </li> --}}
-                                        </ul>
+                                        <div class="footer_title mt-4">{{ __('Follow Us On :-') }}</div>
+
+                                            <ul>
+                                                <li class="mx-2"><a href="{{ $header->facebook_iframe }}"><i
+                                                            class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                </li>
+                                                {{-- <li><a href="#"><i class="fa fa-google-plus"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                                </li> --}}
+                                            </ul>
+
+                                    </div>
+                                    <div class="footer_social">
+
                                     </div>
                                 </div>
                             </div>

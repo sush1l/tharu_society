@@ -470,7 +470,7 @@
 </section>
 
 
-<div class="container-fluid my-5 position-relative">
+<div class="container-fluid mt-5 mb-1 position-relative">
 <!-- Content -->
 <div class="text-center" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
     <h5 class="section bg-intro text-center text-color px-3 mb-5">Contact</h5>

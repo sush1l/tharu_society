@@ -21,18 +21,18 @@
                                     <div class="footer_social">
                                         <div class="footer_title mt-4">{{ __('Follow Us On :-') }}</div>
 
-                                            <ul>
-                                                <li class="mx-2"><a href="{{ $header->facebook_iframe }}"><i
-                                                            class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                </li>
-                                                {{-- <li><a href="#"><i class="fa fa-google-plus"
+                                        <ul>
+                                            <li class="mx-2"><a href="{{ $header->facebook_iframe }}"><i
+                                                        class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            </li>
+                                            {{-- <li><a href="#"><i class="fa fa-google-plus"
                                                             aria-hidden="true"></i></a>
                                                 </li>
                                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                                 </li>
                                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                                 </li> --}}
-                                            </ul>
+                                        </ul>
 
                                     </div>
                                     <div class="footer_social">
@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-md-6 fw-bold text-end">
                             <ul>
-                                <li>Design & Developed By :<a href="https://ninjainfosys.com.np" target="_blank"
+                                <li>Design & Developed By :<a href="https://techworkcompany.com/" target="_blank"
                                         class="text-white"> Techwork Company Pvt. Ltd.</a></li>
                             </ul>
                         </div>

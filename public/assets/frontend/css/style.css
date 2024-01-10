@@ -216,7 +216,7 @@ body {
 
 .footer_title {
   font-family: 'Roboto Slab', serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   color: #FFFFFF;
   line-height: 0.75;
@@ -274,7 +274,7 @@ ul {
 }
 
 .footer_links_container {
-  margin-top: 33px;
+  margin-top: 25px;
 }
 
 .footer_links_container ul li a {

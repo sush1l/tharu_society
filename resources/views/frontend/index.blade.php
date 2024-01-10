@@ -312,22 +312,23 @@
             </div>
         </div>
         @foreach ($galleries as $key => $data)
-            @if ($key == 3)
-                <div data-aos="fade-up" class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s"
-                    style="min-height: 350px; visibility: visible; animation-delay: 0.7s; animation-name: zoomIn;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img position-absolute w-100 h-100"
-                            src="{{ asset('storage/' . $data->photos->random()->images) }}" alt=""
-                            style="object-fit: cover;">
-                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
-                            style="margin:  1px;">
-                            <h5 class="m-0">{{ request()->language == 'en' ? $data->title_en : $data->title }}
-                            </h5>
-                        </div>
-                    </a>
-                </div>
-            @endif
-        @endforeach
+        @if ($key == 3)
+            <div data-aos="fade-up" class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s"
+                style="min-height: 350px; visibility: visible; animation-delay: 0.7s; animation-name: zoomIn;">
+                <a class="position-relative d-block h-100 overflow-hidden" href="">
+                    <img class="img position-absolute w-100 h-100"
+                        src="{{ asset('storage/' . $data->photos->first()->images) }}" alt=""
+                        style="object-fit: cover;">
+                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                        style="margin:  1px;">
+                        <h5 class="m-0">{{ request()->language == 'en' ? $data->title_en : $data->title }}
+                        </h5>
+                    </div>
+                </a>
+            </div>
+        @endif
+    @endforeach
+
     </div>
 </div>
 </div>

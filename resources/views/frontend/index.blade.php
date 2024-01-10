@@ -95,7 +95,7 @@
                                     </a> --}}
                                 </p>
                                 <a href="{{ route('officeDetail', [$officeDetail->slug ?? ''])}}"
-                                    class="btn btn-outline-primary btn-xs ">
+                                    class="btn btn-outline-primary btn-xs mb-3 ">
                                     {{ __('View More') }}
                                 </a>
                             </div>

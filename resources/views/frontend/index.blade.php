@@ -125,7 +125,7 @@
                             <div class="h-100">
                                 <p class="text-withlink">
                                     <b>Tharu Events in Australia :</b><br>
-                                    &emsp;&emsp;&emsp;&emsp;TSSA is organizing an event for celebrating Tharu Maghi festival
+                                    TSSA is organizing an event for celebrating Tharu Maghi festival
                                     in Sydney,Australia on
                                     January 15, 2024. The festival will be held at Gough Whitlam Park, located at Bayview
                                     Avenue, Earlwood, 2206.
@@ -173,7 +173,6 @@
                             <div class="h-100">
                                 <p class="text-withlink">
                                     <b>Join Tharu Society:</b><br>
-                                    &emsp;&emsp;&emsp;&emsp;
                                     Joining the Tharu Society Sydney offers individuals an opportunity to become part of a
                                     community that celebrates and promotes Tharu culture and traditions. By becoming a
                                     member of the Tharu Society Sydney Australia, you gain access to various benefits.

@@ -34,7 +34,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->middleware('api')
                 ->group(base_path('routes/api.php'));
 
-            Route::middleware('web')
+            Route::middleware(['web','ipMiddleware'])
                 ->group(base_path('routes/web.php'));
 
             Route::middleware(['web', 'auth:sanctum', 'verified', 'permissionCheck'])
@@ -42,9 +42,6 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('admin')
                 ->group(base_path('routes/admin.php'));
 
-            Route::prefix('installer')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/installer.php'));
         });
     }
 

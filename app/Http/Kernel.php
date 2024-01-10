@@ -11,7 +11,6 @@ use App\Http\Middleware\IpMiddleware;
 use App\Http\Middleware\PermissionCheck;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use App\Http\Middleware\RedirectIfAuthenticated;
-use App\Http\Middleware\setLanguage;
 use App\Http\Middleware\TrimStrings;
 use App\Http\Middleware\TrustProxies;
 use App\Http\Middleware\VerifyCsrfToken;
@@ -95,7 +94,6 @@ class Kernel extends HttpKernel
         'permissionCheck' => PermissionCheck::class,
         'install' => CanInstall::class,
         'update' => CanUpdate::class,
-        'ipMiddleware' => IpMiddleware::class,
-        'setLanguage'=>setLanguage::class
+        'ipMiddleware' => IpMiddleware::class
     ];
 }

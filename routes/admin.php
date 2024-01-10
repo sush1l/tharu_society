@@ -6,18 +6,13 @@ use App\Http\Controllers\Admin\{AddCityController, AnnouncementController, Audio
     ColorController,
     ContactMessageController,
     DashboardController,
-    DepartmentController,
-    DesignationController,
     DocumentCategoryController,
     DocumentController,
-    EmployeeController,
     EventController,
     EventDetailController,
-    ExEmployeeController,
     FileController,
     FileUploadController,
     JobController,
-    JobOpportunitiesCategoryController,
     LinkController,
     MemberController,
     MembershipCategoryController,
@@ -32,12 +27,10 @@ use App\Http\Controllers\Admin\{AddCityController, AnnouncementController, Audio
     ReportController,
     SliderController,
     TikTokController,
-    TrainingCategoryController,
-    TrainingController,
     UserManagement\ProfileController,
     UserManagement\RoleController,
     UserManagement\UserController,
-    VideoGalleryController, WorkCategoryController, WorkController};
+    VideoGalleryController};
 use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\PopupController;
 use Illuminate\Support\Facades\Route;
@@ -59,12 +52,7 @@ Route::prefix('userManagement')->group(function () {
     Route::resource('user', UserController::class);
 });
 
-Route::prefix('employees')->group(function () {
-    Route::resource('department', DepartmentController::class);
-    Route::resource('designation', DesignationController::class);
-    Route::resource('employee', EmployeeController::class);
-    Route::resource('exEmployee', ExEmployeeController::class);
-});
+
 
 Route::get('documentCategory/{documentCategory}/showOnIndex', [DocumentCategoryController::class, 'showOnIndex'])->name('documentCategory.showOnIndex');
 Route::resource('documentCategory', DocumentCategoryController::class);
@@ -93,7 +81,7 @@ Route::prefix('gallery')->group(function () {
 
 Route::post('file-upload/chunkStore', [FileUploadController::class, 'chunkFileStore'])->name('fileUpload.chunkStore');
 //link
-Route::resource('work', WorkController::class);
+
 Route::resource('link', LinkController::class);
 Route::resource('announcement', AnnouncementController::class);
 Route::resource('slider', SliderController::class);
@@ -103,10 +91,7 @@ Route::prefix('report')->group( function (){
     Route::resource('reportCategory', ReportCategoryController::class);
     Route::resource('report', ReportController::class);
 });
-Route::prefix('training')->group( function (){
-    Route::resource('trainingCategory', TrainingCategoryController::class);
-    Route::resource('training', TrainingController::class);
-});
+
 
 Route::prefix('membership')->group( function (){
     Route::resource('membershipCategory', MembershipCategoryController::class);
@@ -121,10 +106,7 @@ Route::prefix('job')->group( function (){
     Route::resource('job', JobController::class);
 });
 
-Route::prefix('works')->group( function (){
-    Route::resource('workCategory', WorkCategoryController::class);
-    Route::resource('work', WorkController::class);
-});
+
 
 Route::prefix('blogs')->group( function (){
     Route::resource('blog', BlogController::class);

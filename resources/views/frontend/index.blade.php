@@ -85,11 +85,7 @@
                         <div class="col-md-6">
                             <div class="h-100">
                                 <p class="text-withlink">
-                                    @if (request()->language == 'en')
-                                        {!! Str::words(strip_tags($officeDetail->description_en ?? ''), 200, '...') !!}
-                                    @else
-                                        {!! Str::words(strip_tags($officeDetail->description ?? ''), 200, '...') !!}
-                                    @endif
+                                    {!! Str::words(strip_tags($officeDetail->description ?? ''), 200, '...') !!}
                                     {{-- <a class="intro-title" href="{{ route('officeDetail', [$officeDetail->slug ?? '']) }}">
                                         {{ __('View More......') }}
                                     </a> --}}
@@ -300,7 +296,7 @@
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                     style="margin: 1px;">
                                     <h5 class="m-0">
-                                        {{ request()->language == 'en' ? $data->title_en : $data->title }}
+                                        {{ $data->title_en }}
                                     </h5>
                                 </div>
                             </a>
@@ -320,7 +316,7 @@
                         style="object-fit: cover;">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                         style="margin:  1px;">
-                        <h5 class="m-0">{{ request()->language == 'en' ? $data->title_en : $data->title }}
+                        <h5 class="m-0">{{  $data->title_en  }}
                         </h5>
                     </div>
                 </a>

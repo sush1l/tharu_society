@@ -45,13 +45,13 @@
                         >
                             <li>
                                 <a href="{{route('admin.profile.show')}}">
-                                    <i class="lni lni-user"></i> प्रोफाइल
+                                    <i class="lni lni-user"></i> Profile
                                 </a>
                             </li>
                             @can('role_access')
                                 <li>
                                     <a href="{{route('admin.role.index')}}">
-                                        <i class="lni lni-users"></i>प्रयोगकर्ता भूमिकाहरू
+                                        <i class="lni lni-users"></i>User Roles
                                     </a>
                                 </li>
                             @endcan
@@ -59,7 +59,7 @@
                             @can('user_access')
                                 <li>
                                     <a href="{{route('admin.user.index')}}">
-                                        <i class="lni lni-user"></i> प्रयोगकर्ता
+                                        <i class="lni lni-user"></i> User
                                     </a>
                                 </li>
                             @endcan
@@ -67,7 +67,7 @@
                             @can('document_category_access')
                                 <li>
                                     <a href="{{route('admin.documentCategory.index')}}">
-                                        <i class="lni lni-list"></i> मुख्य बर्गहरु
+                                        <i class="lni lni-list"></i> Main Category
                                     </a>
                                 </li>
                             @endcan

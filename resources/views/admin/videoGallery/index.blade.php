@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2>भिडियो ग्यालरी</h2>
+                    <h2>Video Galery </h2>
                 </div>
             </div>
             <!-- end col -->
@@ -15,7 +15,7 @@
                             <li class="breadcrumb-item">
                                 <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="">भिडियो ग्यालरी लिस्ट</a></li>
+                            <li class="breadcrumb-item"><a href="">Video Gallery list</a></li>
 
                         </ol>
                     </nav>

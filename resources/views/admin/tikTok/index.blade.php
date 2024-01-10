@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2> टिकटक</h2>
+                    <h2> Tiktok</h2>
                 </div>
             </div>
             <!-- end col -->
@@ -15,7 +15,7 @@
                             <li class="breadcrumb-item">
                                 <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="">  टिकटक </a></li>
+                            <li class="breadcrumb-item"><a href="">  Tiktok </a></li>
 
                         </ol>
                     </nav>
@@ -32,9 +32,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="input-style-1">
-                        <label for="title">शीर्षक</label>
+                        <label for="title">Tilte</label>
                         <input type="text" id="title" name="title"
-                               placeholder="शीर्षक" value="{{old('title')}}">
+                               placeholder="Tilte" value="{{old('title')}}">
                         @error('title')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
@@ -43,9 +43,9 @@
                 @if(config('default.dual_language'))
                     <div class="col-md-4">
                         <div class="input-style-1">
-                            <label for="title_en">शीर्षक (English)</label>
+                            <label for="title_en">Title (English)</label>
                             <input type="text" id="title_en" name="title_en"
-                                   placeholder="शीर्षक English" value="{{old('title_en')}}">
+                                   placeholder="Title English" value="{{old('title_en')}}">
                             @error('title_en')
                             <p class="text-danger">{{$message}}</p>
                             @enderror
@@ -63,13 +63,13 @@
                     </div>
                 </div>
                 <div class="col-md-12 mb-2">
-                    <label for="video" class="form-label">भिडियो * </label>
+                    <label for="video" class="form-label">Video * </label>
                     <input type="hidden" name="video" id="video">
                     @error('video')
                     <div class="invalid-feedback">{{$message}}</div>
                     @enderror
                     <button type="button" class="btn btn-outline-primary form-control" id="browseFile">
-                        <i class="fa fa-cloud-upload-alt"></i> कृपया MP4 भिडियो उपलोड गर्नुहोला
+                        <i class="fa fa-cloud-upload-alt"></i> Please Upload Mp4 Video
                     </button>
                     <div class="progress mt-3" style="display: none;height: 25px">
                         <div class="progress-bar progress-bar-striped progress-bar-animated"
@@ -93,7 +93,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card-style mb-30">
-                <h6 class="mb-10">  टिकटक लिस्ट</h6>
+                <h6 class="mb-10">  Tiktok List </h6>
 
                 <div class="table-wrapper table-responsive table-hover">
                     <table class="table">

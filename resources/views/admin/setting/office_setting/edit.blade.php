@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2>कार्यालय सेटिंग</h2>
+                    <h2>Office Setting</h2>
                 </div>
             </div>
             <!-- end col -->
@@ -13,10 +13,10 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="{{route('admin.dashboard')}}">ड्यासबोर्ड</a>
+                                <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item">
-                                कार्यालय सेटिंग
+                                Office Setting 
                             </li>
                         </ol>
                     </nav>
@@ -43,7 +43,7 @@
             </div>
             <div class="col-md-6">
                 <div class="input-style-1">
-                    <label for="nepali">नाम *</label>
+                    <label for="nepali">Name *</label>
                     <input type="text" id="nepali" name="nepali"
                            placeholder="Nepali" value="{{old('nepali',$officeSettingHeader->nepali)}}">
                     @error("nepali")

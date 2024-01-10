@@ -34,9 +34,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="title">शीर्षक</label>
+                        <label for="title">Title</label>
                         <input type="text" id="title" name="title"
-                               placeholder="शीर्षक" value="{{old('title')}}">
+                               placeholder="Title" value="{{old('title')}}">
                         @error('title')
                         <p class="text-danger">{{$message}}</p>
                         @enderror

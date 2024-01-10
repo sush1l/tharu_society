@@ -13,7 +13,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="{{route('admin.dashboard')}}">ड्यासबोर्ड</a>
+                                <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item">
                                 <a href="{{route('admin.menu.index')}}">
@@ -38,9 +38,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="title">शीर्षक</label>
+                        <label for="title">Title</label>
                         <input type="text" id="title" name="title"
-                               placeholder="शीर्षक" value="{{old('title',$menu->title)}}">
+                               placeholder="Title" value="{{old('title',$menu->title)}}">
                         @error('title')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
@@ -49,9 +49,9 @@
                 @if(config('default.dual_language'))
                     <div class="col-md-6">
                         <div class="input-style-1">
-                            <label for="title_en">शीर्षक English</label>
+                            <label for="title_en">Title English</label>
                             <input type="text" id="title_en" name="title_en"
-                                   placeholder="शीर्षक English" value="{{old('title_en',$menu->title_en)}}">
+                                   placeholder="Title English" value="{{old('title_en',$menu->title_en)}}">
                             @error('title_en')
                             <p class="text-danger">{{$message}}</p>
                             @enderror
@@ -73,7 +73,7 @@
                     <div class="input-style-1">
                         <label for="menu_id">Parent Menu</label>
                         <select name="menu_id" id="menu_id" class="form-control">
-                            <option value="">- - छान्नुहोस् - -</option>
+                            <option value="">- - Select Options - -</option>
                             @foreach($mainMenus as $mainMenu)
                                 <option value="{{$mainMenu->id}}" @selected($mainMenu->id==$menu->menu_id)>
                                     {{$mainMenu->title}}

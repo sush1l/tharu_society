@@ -33,8 +33,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="title">शीर्षक</label>
-                        <input type="text" id="title" name="title" placeholder="शीर्षक"
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Title"
                             value="{{ old('title', $work->title) }}">
                         @error('title')
                             <p class="text-danger">{{ $message }}</p>
@@ -44,8 +44,8 @@
                 @if (config('default.dual_language'))
                     <div class="col-md-6">
                         <div class="input-style-1">
-                            <label for="title_en">शीर्षक English</label>
-                            <input type="text" id="title_en" name="title_en" placeholder="शीर्षक English"
+                            <label for="title_en">Title English</label>
+                            <input type="text" id="title_en" name="title_en" placeholder="Title English"
                                 value="{{ old('title_en', $work->title_en) }}">
                             @error('title_en')
                                 <p class="text-danger">{{ $message }}</p>

@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2>मेनु</h2>
+                    <h2>Menu</h2>
                 </div>
             </div>
             <!-- end col -->
@@ -16,7 +16,7 @@
                                 <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                मेनु लिस्ट
+                                Menu List
                             </li>
                         </ol>
                     </nav>

@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2>कार्यालय विवरण</h2>
+                    <h2>Office Name</h2>
                 </div>
             </div>
             <!-- end col -->
@@ -13,12 +13,12 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="{{route('admin.dashboard')}}">ड्यासबोर्ड</a>
+                                <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="{{route('admin.officeDetail.index')}}">कार्यालय विवरण
-                                    लिस्ट</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.officeDetail.index')}}">Office Detail
+                                    List</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                कार्यालय विवरण थप्नुहोस
+                                Add  Office Detail 
                             </li>
                         </ol>
                     </nav>
@@ -34,9 +34,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="title">शीर्षक</label>
+                        <label for="title">Title</label>
                         <input type="text" id="title" name="title"
-                               placeholder="शीर्षक" value="{{old('title')}}">
+                               placeholder="Title" value="{{old('title')}}">
                         @error('title')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
@@ -45,9 +45,9 @@
                 @if(config('default.dual_language'))
                     <div class="col-md-6">
                         <div class="input-style-1">
-                            <label for="title_en">शीर्षक English</label>
+                            <label for="title_en">Title English</label>
                             <input type="text" id="title_en" name="title_en"
-                                   placeholder="शीर्षक English" value="{{old('title_en')}}">
+                                   placeholder="Title English" value="{{old('title_en')}}">
                             @error('title_en')
                             <p class="text-danger">{{$message}}</p>
                             @enderror
@@ -78,7 +78,7 @@
                         <div class="select-position">
                             <label for="type">Type</label>
                             <select name="type" id="type" class="form-control">
-                                <option value="">- - छान्नुहोस् - -</option>
+                                <option value="">- - Select options - -</option>
                                 @foreach(config('types') as $type)
                                     <option value="{{$type}}">{{$type}}</option>
                                 @endforeach

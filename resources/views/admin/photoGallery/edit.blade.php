@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2>फोटो ग्यालरी</h2>
+                    <h2>Photo Gallery</h2>
                 </div>
             </div>
             <!-- end col -->
@@ -15,7 +15,7 @@
                             <li class="breadcrumb-item">
                                 <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="">फोटो ग्यालरी</a></li>
+                            <li class="breadcrumb-item"><a href="">Photo Gallery</a></li>
 
                         </ol>
                     </nav>
@@ -31,7 +31,7 @@
             <div class="col-lg-12">
                 <!-- input style start -->
                 <div class="card-style mb-30">
-                    <h6 class="mb-25">फोटो ग्यालरी अपडेट</h6>
+                    <h6 class="mb-25"> Update Photo Gallery</h6>
                     <form action="{{route('admin.photoGallery.update',$photoGallery)}}" enctype="multipart/form-data" method="POST">
                         @csrf
                         @method('put')
@@ -48,9 +48,9 @@
                         @if(config('default.dual_language'))
 
                                 <div class="input-style-1">
-                                    <label for="title_en">शीर्षक (English)</label>
+                                    <label for="title_en">Title (English)</label>
                                     <input type="text" id="title_en" name="title_en"
-                                           placeholder="शीर्षक English" value="{{old('title_en',$photoGallery->title_en)}}">
+                                           placeholder="title English" value="{{old('title_en',$photoGallery->title_en)}}">
                                     @error('title_en')
                                     <p class="text-danger">{{$message}}</p>
                                     @enderror

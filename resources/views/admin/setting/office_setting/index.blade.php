@@ -33,9 +33,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="office_name">कार्यालयको नाम *</label>
+                        <label for="office_name">Office Name *</label>
                         <input type="text" id="office_name" name="office_name"
-                               placeholder="कार्यालयको नाम" value="{{old('office_name',$officeSetting->office_name)}}">
+                               placeholder="Office Name" value="{{old('office_name',$officeSetting->office_name)}}">
                         @error('office_name')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
@@ -44,9 +44,9 @@
                 @if(config('default.dual_language'))
                     <div class="col-md-6">
                         <div class="input-style-1">
-                            <label for="office_name_en">कार्यालयको नाम * English</label>
+                            <label for="office_name_en">Office Name * English</label>
                             <input type="text" id="office_name_en" name="office_name_en"
-                                   placeholder="कार्यालयको नाम English" value="{{old('office_name_en',$officeSetting->office_name_en)}}">
+                                   placeholder="Office Name English" value="{{old('office_name_en',$officeSetting->office_name_en)}}">
                             @error('office_name_en')
                             <p class="text-danger">{{$message}}</p>
                             @enderror
@@ -55,9 +55,9 @@
                 @endif
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="office_address">कार्यालय ठेगाना *</label>
+                        <label for="office_address">Office Address *</label>
                         <input type="text" id="office_address" name="office_address"
-                               placeholder="कार्यालय ठेगाना" value="{{old('office_address',$officeSetting->office_address)}}">
+                               placeholder="Office Address" value="{{old('office_address',$officeSetting->office_address)}}">
                         @error('office_address')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
@@ -66,9 +66,9 @@
                 @if(config('default.dual_language'))
                     <div class="col-md-6">
                         <div class="input-style-1">
-                            <label for="office_address_en">कार्यालय ठेगाना *English</label>
+                            <label for="office_address_en">Office Address *English</label>
                             <input type="text" id="office_address_en" name="office_address_en"
-                                   placeholder="कार्यालय ठेगाना English" value="{{old('office_address_en',$officeSetting->office_address_en)}}">
+                                   placeholder="Office Address English" value="{{old('office_address_en',$officeSetting->office_address_en)}}">
                             @error('office_address_en')
                             <p class="text-danger">{{$message}}</p>
                             @enderror
@@ -77,9 +77,9 @@
                 @endif
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="office_phone">फोन नं. *</label>
+                        <label for="office_phone">Phone No. *</label>
                         <input type="text" id="office_phone" name="office_phone"
-                               placeholder="फोन नं." value="{{old('office_phone',$officeSetting->office_phone)}}">
+                               placeholder="Phone No." value="{{old('office_phone',$officeSetting->office_phone)}}">
                         @error('office_phone')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
@@ -87,9 +87,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="input-style-1">
-                        <label for="office_email">इमेल</label>
+                        <label for="office_email">Email</label>
                         <input type="text" id="office_email" name="office_email"
-                               placeholder="इमेल" value="{{old('office_email',$officeSetting->office_email)}}">
+                               placeholder="Email" value="{{old('office_email',$officeSetting->office_email)}}">
                         @error('office_email')
                         <p class="text-danger">{{$message}}</p>
                         @enderror

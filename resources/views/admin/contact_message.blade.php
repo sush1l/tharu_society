@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="title mb-30">
-                    <h2>सम्पर्क सन्देशहरू</h2>
+                    <h2>Contact messages </h2>
                 </div>
             </div>
             <!-- end col -->
@@ -16,7 +16,7 @@
                                 <a href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                सम्पर्क सन्देशहरू
+                                Contact Messages 
                             </li>
                         </ol>
                     </nav>
@@ -31,7 +31,7 @@
         <div class="col-lg-12">
             <div class="card-style mb-30">
                 <div style="display: flex;justify-content: space-between">
-                    <h6 class="mb-10">सम्पर्क सन्देशहरू</h6>
+                    <h6 class="mb-10">Contact Messages</h6>
                 </div>
                 <div class=" table-responsive table-hover">
                     <table class="table">

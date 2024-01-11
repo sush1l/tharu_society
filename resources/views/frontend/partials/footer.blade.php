@@ -48,9 +48,16 @@
                                             <li class="fw-bold">{{ __('Email') }}:<a
                                                     href="mailto:{{ $header->office_email }}">
                                                     {{ $header->office_email }}</a></li>
-                                            <li class="fw-bold">{{ __('Phone') }}:<a
-                                                    href="tel:{{ $header->office_phone }}">
-                                                    {{ $header->office_phone }}</a></li>
+                                            <li class="fw-bold">{{ __('Phone') }}:
+                                                @foreach ($header->phone_array as $phone)
+                                    <a href="tel:{{ $phone }}">
+                                        {{ $phone }} @if (!$loop->last)
+                                            ,
+                                        @endif
+                                    </a>
+                                @endforeach
+                                                
+                                                </li>
                                             {{-- <li>{{ request()->language == 'en' ? $header->office_address_en : $header->office_address }} --}}
                                             </li>
                                         </ul>

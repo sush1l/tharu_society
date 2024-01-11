@@ -162,8 +162,13 @@
                                     <span class="opacity-50 d-flex align-items-center me-3 fs-2">
                                         <i class="fa fa-phone"></i>
                                     </span>
-                                    <span><a class="text-white"
-                                            href="tel:{{ $header->office_phone }}">{{ $header->office_phone }}</a></span>
+                                    <span>@foreach ($header->phone_array as $phone)
+                                    <a class="text-white" href="tel:{{ $phone }}">
+                                        {{ $phone }} @if (!$loop->last)
+                                            ,
+                                        @endif
+                                    </a>
+                                @endforeach</span>
                                 </li>
                                 <li class="d-flex align-items-center r mb-4">
                                     <span class="opacity-50 d-flex align-items-center me-3 fs-2">

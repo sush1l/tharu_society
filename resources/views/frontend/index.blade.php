@@ -257,7 +257,7 @@
                     <div class="row g-3">
                         <div data-aos="fade-up" class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s"
                             style="visibility: visible; animation-delay: 0.1s; animation-name: zoomIn;">
-                            <a class="position-relative d-block overflow-hidden" href="#">
+                            <a class="position-relative d-block overflow-hidden" href="{{route('photo')}}">
                                 @if ($galleries->isNotEmpty() && $galleries->first()->photos->isNotEmpty())
                                     @foreach ($galleries->first()->photos as $photo)
                                         <img class="img" src="{{ asset('storage/' . $photo->images) }}"

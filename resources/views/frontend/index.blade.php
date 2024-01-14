@@ -123,8 +123,7 @@
                                     <b>Tharu Events in Australia :</b><br>
                                     TSSA is organizing an event for celebrating Tharu Maghi festival
                                     in Sydney,Australia on
-                                    January 15, 2024. The festival will be held at Gough Whitlam Park, located at Bayview
-                                    Avenue, Earlwood, 2206.
+                                    January 15, 2024. The festival will be held at Indreni Function Centre, 588 Princes Hwy, Rockdale NSW 2216.
                                     Tharu Maghi festival is an important cultural event for the Tharu community. It marks
                                     the beginning of the Magh month in the Nepali calendar and is observed with great
                                     enthusiasm and joy. This festival is an occasion for Tharu people to come together,

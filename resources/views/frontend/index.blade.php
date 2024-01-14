@@ -282,7 +282,7 @@
                         @if ($key == 1 || $key == 2)
                             <div data-aos="fade-up" class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s"
                                 style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
-                                <a class="position-relative d-block overflow-hidden" href="">
+                                <a class="position-relative d-block overflow-hidden" href="{{route('photo')}}">
                                     @if ($data->photos->isNotEmpty())
                                         @foreach ($data->photos as $photo)
                                             <img class="img" src="{{ asset('storage/' . $photo->images) }}"
@@ -310,7 +310,7 @@
         @if ($key == 3)
             <div data-aos="fade-up" class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s"
                 style="min-height: 350px; visibility: visible; animation-delay: 0.7s; animation-name: zoomIn;">
-                <a class="position-relative d-block h-100 overflow-hidden" href="">
+                <a class="position-relative d-block h-100 overflow-hidden" href="{{route('photo')}}">
                     <img class="img position-absolute w-100 h-100"
                         src="{{ asset('storage/' . $data->photos->first()->images) }}" alt=""
                         style="object-fit: cover;">

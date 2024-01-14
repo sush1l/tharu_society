@@ -21,18 +21,18 @@
                                     <div class="footer_social">
                                         <div class="footer_title mt-4">{{ __('Follow Us On :-') }}</div>
 
-                                            <ul>
-                                                <li class="mx-2"><a href="{{ $header->facebook_iframe }}"><i
-                                                            class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                </li>
-                                                {{-- <li><a href="#"><i class="fa fa-google-plus"
+                                        <ul>
+                                            <li class="mx-2"><a href="{{ $header->facebook_iframe }}"><i
+                                                        class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            </li>
+                                            {{-- <li><a href="#"><i class="fa fa-google-plus"
                                                             aria-hidden="true"></i></a>
                                                 </li>
                                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                                 </li>
                                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                                 </li> --}}
-                                            </ul>
+                                        </ul>
 
                                     </div>
                                     <div class="footer_social">
@@ -48,9 +48,16 @@
                                             <li class="fw-bold">{{ __('Email') }}:<a
                                                     href="mailto:{{ $header->office_email }}">
                                                     {{ $header->office_email }}</a></li>
-                                            <li class="fw-bold">{{ __('Phone') }}:<a
-                                                    href="tel:{{ $header->office_phone }}">
-                                                    {{ $header->office_phone }}</a></li>
+                                            <li class="fw-bold">{{ __('Phone') }}:
+                                                @foreach ($header->phone_array as $phone)
+                                    <a href="tel:{{ $phone }}">
+                                        {{ $phone }} @if (!$loop->last)
+                                            ,
+                                        @endif
+                                    </a>
+                                @endforeach
+                                                
+                                                </li>
                                             {{-- <li>{{ request()->language == 'en' ? $header->office_address_en : $header->office_address }} --}}
                                             </li>
                                         </ul>
@@ -84,7 +91,7 @@
                         </div>
                         <div class="col-md-6 fw-bold text-end">
                             <ul>
-                                <li>Design & Developed By :<a href="https://ninjainfosys.com.np" target="_blank"
+                                <li>Design & Developed By :<a href="https://techworkcompany.com/" target="_blank"
                                         class="text-white"> Techwork Company Pvt. Ltd.</a></li>
                             </ul>
                         </div>

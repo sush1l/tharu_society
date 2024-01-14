@@ -33,6 +33,10 @@ class OfficeSetting extends Model
         'meta'
     ];
 
+    public function getPhoneArrayAttribute(){
+        return !empty($this->attributes['office_phone']) ? explode(',',$this->attributes['office_phone']) : [];
+    }
+
     public function setCoverPhotoAttribute($value)
     {
         if (!empty($value) && !is_string($value)) {
